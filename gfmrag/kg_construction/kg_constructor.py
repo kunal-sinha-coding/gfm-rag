@@ -12,6 +12,7 @@ import pandas as pd
 from hydra.utils import instantiate
 from omegaconf import DictConfig, OmegaConf
 from tqdm import tqdm
+import time
 
 from gfmrag.kg_construction.utils import KG_DELIMITER, processing_phrases
 
@@ -296,7 +297,7 @@ class KGConstructor(BaseKGConstructor):
         document2entities = {doc["title"]: doc["entities"] for doc in passage_info}
         return document2entities
 
-    def open_ie_extraction(self, raw_path: str) -> str:
+    def open_ie_extraction(self, raw_path: str, throttle: int = 1) -> str:
         """
         Perform open information extraction on the dataset corpus
 
@@ -337,11 +338,23 @@ class KGConstructor(BaseKGConstructor):
         if len(remining_passages) > 0:
             with open(open_ie_result_path, "a") as f:
                 with ThreadPool(processes=self.num_processes) as pool:
-                    for result in tqdm(
-                        pool.imap(self.open_ie_model, remining_passages),
+                    last_call_time = None
+                    for passage in tqdm(
+                        remining_passages,
                         total=len(remining_passages),
                         desc="Perform OpenIE",
                     ):
+                        current_time = time.time()
+                        next_call_time = last_call_time + throttle
+                        if (last_call_time and current_time < next_call_time):
+                            time.sleep(next_call_time - current_time)                        
+                        result = self.open_ie_model(passage)
+                        last_call_time = time.time()
+                    # for result in tqdm(
+                    #     pool.imap(self.open_ie_model, remining_passages),
+                    #     total=len(remining_passages),
+                    #     desc="Perform OpenIE",
+                    # ):
                         if isinstance(result, dict):
                             passage_title = passage_to_title[result["passage"]]
                             result["title"] = passage_title
