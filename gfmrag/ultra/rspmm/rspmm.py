@@ -224,7 +224,6 @@ def load_extension(name, sources, extra_cflags=None, extra_cuda_cflags=None, **k
                 if not cpp_extension._is_cuda_file(source):
                     new_sources.append(source)
             sources = new_sources
-    import pdb; pdb.set_trace()
     return cpp_extension.load(name, sources, extra_cflags, extra_cuda_cflags, **kwargs)
 
 

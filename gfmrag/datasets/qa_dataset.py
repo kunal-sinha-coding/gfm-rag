@@ -246,7 +246,6 @@ class QADataset(InMemoryDataset):
             num_sample = 0
             with open(path) as fin:
                 data = json.load(fin)
-                import pdb; pdb.set_trace()
                 for index, item in enumerate(data):
                     question_entities = [
                         self.ent2id[x]
@@ -265,7 +264,6 @@ class QADataset(InMemoryDataset):
                     ]
 
                     # Skip samples if any of the entities or documens are empty
-                    import pdb; pdb.set_trace()
                     if any(
                         len(x) == 0
                         for x in [
@@ -300,7 +298,6 @@ class QADataset(InMemoryDataset):
             questions,
             is_query=True,
         ).cpu()
-        import pdb; pdb.set_trace()
         question_entities_masks = torch.stack(question_entities_masks)
         supporting_entities_masks = torch.stack(supporting_entities_masks)
         supporting_docs_masks = torch.stack(supporting_docs_masks)

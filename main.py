@@ -34,44 +34,29 @@ max_new_tokens = {
     "meta-llama/Llama-2-7b-chat-hf": 2048
 }
 
-LLAMA_PROMPT = (
-    '''
-    [INST] <<SYS>>
-    <</SYS>>
-    {prompt}
-    {context}
-    [/INST]
-    '''
-)
+LMUNIT_TEST = "Is the response correct? Groundtruth: {groundtruth}"
 
-def generate(prompt, context=""): # Comes from GNN-RAG generate_dataset_from_hf.py file
-    if "llama" in model_name.lower():
-        llm_prompt = LLAMA_PROMPT.format(prompt=prompt, context=context)
-    elif "qwen" in model_name.lower():
-        messages = [
-            {"role": "system", "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."},
-            {"role": "user", "content": prompt},
-        ]
-        llm_prompt = [tokenizer.apply_chat_template(
-            messages,
-            tokenize=False,
-            add_generation_prompt=True
-        )]
+def generate(messages, context=""): # Comes from GNN-RAG generate_dataset_from_hf.py file
+    llm_prompt = [tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True
+    )]
     inputs = tokenizer(llm_prompt, return_tensors="pt").to(device)
     inputs_len = inputs.input_ids.size(-1)
     outputs = llm_model.generate(**inputs, max_new_tokens=max_new_tokens[model_name])
     response = tokenizer.decode(outputs[0][inputs_len:], skip_special_tokens=True)
     return response
 
-def evaluate_llm(prompt, groundtruth, throttle_time=1): # Comes from models/ReaRev/rearev.py file
+def evaluate_llm(messages, groundtruth, throttle_time=1): # Comes from models/ReaRev/rearev.py file
     score = 0
     start_time = time.time()
     try:
-        prediction = generate(prompt).strip()
+        prediction = generate(messages).strip()
     except:
         print("Failed on generate sentence")
-        print(f"Curr input: {prompt}")
-    unit_test = f"Is the response correct? Groundtruth: {groundtruth}"
+        print(f"Curr input: {messages}")
+    unit_test = LMUNIT_TEST.format(groundtruth=groundtruth)
     url = "https://api.contextual.ai/v1/lmunit"
     lm_unit_api_key = os.getenv("LM_UNIT_API_KEY")
     headers = {
@@ -80,10 +65,11 @@ def evaluate_llm(prompt, groundtruth, throttle_time=1): # Comes from models/ReaR
         "Content-Type": "application/json"
     }
     payload = {
-        "query": prompt,
+        "query": messages[-1]["content"],
         "response": prediction,
         "unit_test": unit_test
     }
+    print(payload)
     time_elapsed = time.time() - start_time
     if time_elapsed < throttle_time:
         time.sleep(throttle_time - time_elapsed)
@@ -109,7 +95,7 @@ def main(cfg: DictConfig) -> None:
     docs = retriever.retrieve(current_query, top_k=1)
 
     qa_prompt_builder = QAPromptBuilder(cfg.qa_prompt)
-    prompt = qa_prompt_builder.build_input_prompt(current_query, docs)
-    print(evaluate_llm(prompt, groundtruth))
+    messages = qa_prompt_builder.build_input_prompt(current_query, docs)
+    print(evaluate_llm(messages, groundtruth))
 
 main()
