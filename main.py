@@ -92,7 +92,7 @@ def main(cfg: DictConfig) -> None:
     current_query = "Who is the president of France?"
     groundtruth = "The president of France is Emmanuel Macron"
     retriever = GFMRetriever.from_config(cfg)
-    docs = retriever.retrieve(current_query, top_k=1)
+    docs = retriever.retrieve(current_query, [0], top_k=1)
 
     qa_prompt_builder = QAPromptBuilder(cfg.qa_prompt)
     messages = qa_prompt_builder.build_input_prompt(current_query, docs)

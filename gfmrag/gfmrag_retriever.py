@@ -67,7 +67,7 @@ class GFMRetriever:
         self.entities_weight = entities_weight
 
     @torch.no_grad()
-    def retrieve(self, query: str, top_k: int) -> list[dict]:
+    def retrieve(self, query: str, entity_ids: list, top_k: int) -> list[dict]:
         """
         Retrieve documents from the corpus based on the given query.
 
@@ -86,7 +86,7 @@ class GFMRetriever:
         """
 
         # Prepare input for deep graph retriever
-        graph_retriever_input = self.prepare_input_for_graph_retriever(query)
+        graph_retriever_input = self.prepare_input_for_graph_retriever(query, entity_ids)
         graph_retriever_input = query_utils.cuda(
             graph_retriever_input, device=self.device
         )
@@ -102,7 +102,7 @@ class GFMRetriever:
 
         return retrieved_docs
 
-    def prepare_input_for_graph_retriever(self, query: str) -> dict:
+    def prepare_input_for_graph_retriever(self, query: str, entity_ids: list) -> dict:
         """
         Prepare input for the graph retriever model by processing the query through entity detection, linking and embedding generation. The function performs the following steps:
 
@@ -135,12 +135,12 @@ class GFMRetriever:
         #    )
         #    mentioned_entities = [query]
         #linked_entities = self.el_model(mentioned_entities, topk=1)
-        linked_entities = {0: [{"entity": "Bob"}]}
-        entity_ids = [
-            self.qa_data.ent2id[ent[0]["entity"]]
-            for ent in linked_entities.values()
-            if ent[0]["entity"] in self.qa_data.ent2id
-        ]
+        # linked_entities = {0: [{"entity": "Bob"}]}
+        # entity_ids = [
+        #     self.qa_data.ent2id[ent[0]["entity"]]
+        #     for ent in linked_entities.values()
+        #     if ent[0]["entity"] in self.qa_data.ent2id
+        # ]
         question_entities_masks = (
             entities_to_mask(entity_ids, self.num_nodes).unsqueeze(0).to(self.device)
         )  # 1 x num_nodes
