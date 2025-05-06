@@ -125,17 +125,19 @@ class ColbertELModel(BaseELModel):
             indexer.index(
                 name=self.phrase_index_name, collection=phrases, overwrite="reuse"
             )
-
-        with Run().context(
-            RunConfig(nranks=1, experiment=exp_name, root=colbert_config["root"])
-        ):
-            config = ColBERTConfig(
-                root=colbert_config["root"],
-            )
-            phrase_searcher = Searcher(
-                index=colbert_config["phrase_index_name"], config=config, verbose=1
-            )
-        self.phrase_searcher = phrase_searcher
+        #with Run().context(
+        #    RunConfig(nranks=1, experiment=exp_name, root=colbert_config["root"])
+        #):
+        #    import pdb; pdb.set_trace()
+        #    config = ColBERTConfig(
+        #        root=colbert_config["root"],
+        #    )
+        #    import pdb; pdb.set_trace()
+        #    phrase_searcher = Searcher(
+        #        index=colbert_config["phrase_index_name"], config=config, verbose=1
+        #    )
+        #    import pdb; pdb.set_trace()
+        #self.phrase_searcher = phrase_searcher
 
     def __call__(self, ner_entity_list: list, topk: int = 1) -> dict:
         """

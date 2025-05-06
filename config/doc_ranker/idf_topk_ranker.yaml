@@ -1,2 +1,2 @@
 _target_: gfmrag.doc_rankers.IDFWeightedTopKRanker
-top_k: 20
+top_k: 1

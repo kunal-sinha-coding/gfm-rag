@@ -86,19 +86,24 @@ class GFMRetriever:
         """
 
         # Prepare input for deep graph retriever
+        import pdb; pdb.set_trace()
         graph_retriever_input = self.prepare_input_for_graph_retriever(query)
+        import pdb; pdb.set_trace()
         graph_retriever_input = query_utils.cuda(
             graph_retriever_input, device=self.device
         )
+        import pdb; pdb.set_trace()
 
         # Graph retriever forward pass
         ent_pred = self.graph_retriever(
             self.graph, graph_retriever_input, entities_weight=self.entities_weight
         )
+        import pdb; pdb.set_trace()
         doc_pred = self.doc_ranker(ent_pred)[0]  # Ent2docs mapping, batch size is 1
 
         # Retrieve the supporting documents
         retrieved_docs = self.doc_retriever(doc_pred.cpu(), top_k=top_k)
+        import pdb; pdb.set_trace()
 
         return retrieved_docs
 
@@ -128,13 +133,15 @@ class GFMRetriever:
         """
 
         # Prepare input for deep graph retriever
-        mentioned_entities = self.ner_model(query)
-        if len(mentioned_entities) == 0:
-            logger.warning(
-                "No mentioned entities found in the query. Use the query as is for entity linking."
-            )
-            mentioned_entities = [query]
-        linked_entities = self.el_model(mentioned_entities, topk=1)
+        import pdb; pdb.set_trace()
+        #mentioned_entities = self.ner_model(query)
+        #if len(mentioned_entities) == 0:
+        #    logger.warning(
+        #        "No mentioned entities found in the query. Use the query as is for entity linking."
+        #    )
+        #    mentioned_entities = [query]
+        #linked_entities = self.el_model(mentioned_entities, topk=1)
+        linked_entities = {0: [{"entity": "Bob"}]}
         entity_ids = [
             self.qa_data.ent2id[ent[0]["entity"]]
             for ent in linked_entities.values()
