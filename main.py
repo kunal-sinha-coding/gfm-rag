@@ -1,8 +1,12 @@
 import logging
 import os
 import time
+import json
 import requests
 import torch
+import numpy as np
+import networkx as nx
+
 import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -28,6 +32,9 @@ llm_model = AutoModelForCausalLM.from_pretrained(
     cache_dir=cache_dir,
     torch_dtype=torch.float16
 ).to(device)
+DST_FOLDER = os.path.join("data", "hotpotqa_test")
+SRC_FOLDER = os.path.join("..", "GNN-RAG", "data", "finqa-debug")
+KG_DELIMITER = ","
 
 max_new_tokens = {
     "Qwen/Qwen2.5-7B-Instruct": 2048,
@@ -80,22 +87,126 @@ def evaluate_llm(messages, groundtruth, throttle_time=1): # Comes from models/Re
         print(f"Response not ok: {response.json()}")         
     return score
 
+def build_graph(graph: list) -> nx.Graph:
+    G = nx.Graph()
+    for triplet in graph:
+        h, r, t = triplet
+        G.add_edge(h, t, relation=r.strip())
+    return G
+
+def path_to_string(path: list) -> str: #Taken from utils.py
+    result = ""
+    for i, p in enumerate(path):
+        if i == 0:
+            h, r, t = p
+            result += f"{h} -> {r} -> {t}"
+        else:
+            _, r, t = p
+            result += f" -> {r} -> {t}"
+    return result.strip()
+
+def get_shortest_path(q_entity: list, graph: nx.Graph, t: str, include_all_paths: bool) -> list: #Taken from graph_utils.py
+    paths = []
+    for h in q_entity:
+        if include_all_paths:
+            try:
+                for p in nx.all_shortest_paths(graph, h, t):
+                    paths.append(p)
+            except:
+                continue
+        else:
+            try:
+                path = nx.shortest_path(graph, h, t)
+                return [path]
+            except:
+                continue
+    return paths
+
+def get_truth_paths(q_entity: list, a_entity: list, graph: nx.Graph, include_all_paths: bool = False) -> list: #Taken from graph utils
+    '''
+    Get shortest paths connecting question and answer entities.
+    '''
+    # Select paths
+    paths = []
+    for t in a_entity:
+        paths += get_shortest_path(q_entity, t, graph, include_all_paths)
+    # Add relation to paths
+    result_paths = []
+    for p_idx, p in enumerate(paths):
+        tmp = []
+        for i in range(len(p)-1):
+            u = p[i]
+            v = p[i+1]
+            relation = "related" #Default dummy relation for dummy path
+            if u in graph and v in graph[u] and 'relation' in graph[u][v]:
+                relation = graph[u][v]['relation']
+            tmp.append((u, relation, v))
+        result_paths.append(tmp)
+    return result_paths
+
+def get_reasoning_paths(q_entity: list, a_entity: list, tuples: list):
+    graph = build_graph(tuples)
+    result_paths = get_truth_paths(q_entity, a_entity, graph)
+    reasoning_paths = [path_to_string(path) for path in result_paths]
+    return reasoning_paths
+
+def process_id_dict(entities_file, ent2id_file):
+    ent2id = {}
+    with open(entities_file, "r") as f:
+        for i, line in enumerate(f.readlines()):
+            ent2id[line] = i
+    with open(ent2id_file, "w"):
+        f.write(f"{json.dumps(ent2id)}\n")
+    id2ent = {v: k for k, v in ent2id.items()}
+    return ent2id, id2ent
+
+def update_subgraph(question_dict,
+               entities_file=os.path.join(SRC_FOLDER, "entities.txt"),
+               relations_file=os.path.join(SRC_FOLDER, "relations.txt"),
+               ent2id_file=os.path.join(DST_FOLDER, "processed", "stage2", "ent2id.json"),
+               rel2id_file=os.path.join(DST_FOLDER, "processed", "stage2", "rel2id.json"),
+               kg_file=os.path.join(DST_FOLDER, "processed", "stage1", "kg.txt"),
+               doc2ent_file=os.path.join(DST_FOLDER, "processed", "stage1", "document2entities.json"),
+               corpus_file=os.path.join(DST_FOLDER, "raw", "dataset_corpus.json")):
+    subgraph = question_dict["subgraph"]
+    ent2id, id2ent = process_id_dict(entities_file, ent2id_file)
+    rel2id, id2rel = process_id_dict(relations_file, rel2id_file)
+    all_entities = list(ent2id.keys())
+    with open(kg_file, "w") as f: # Get kg.txt tuples from subgraph tuples
+        for h, r, t in subgraph["tuples"]:
+            triple = KG_DELIMITER.join([id2ent[h], id2rel[r], id2ent[t]])
+            f.write(f"{triple.strip()}\n")
+    # We could get away with commenting out this stuff if we don't need it in our case
+    with open(doc2ent_file, "w") as f: # Save document2entities file. Since we dont have docs, let the doc title just be the entity
+        document2entities = { ent: [ent] for ent in all_entities }
+        f.write(json.dumps(document2entities))
+    with open(corpus_file, "w") as f: # Each document for an entity is just the shortest path associated with it
+        dataset_corpus = {}
+        reasoning_paths = get_reasoning_paths(
+           q_entity=question_dict["entities"], 
+           a_entity=all_entities,
+           tuples=subgraph["tuples"]
+        )
+        for i, ent in enumerate(all_entities):
+            dataset_corpus[ent] = reasoning_paths[i]
+
 @hydra.main(
     config_path="config", config_name="stage3_qa_ircot_inference", version_base=None
 )
-def main(cfg: DictConfig) -> None:
-    output_dir = HydraConfig.get().runtime.output_dir
-    logger.info(f"Config:\n {OmegaConf.to_yaml(cfg)}")
-    logger.info(f"Current working directory: {os.getcwd()}")
-    logger.info(f"Output directory: {output_dir}")
-
-    current_query = "Who is the president of France?"
-    groundtruth = "The president of France is Emmanuel Macron"
+def main(cfg: DictConfig, data_split="dev", top_k=5) -> None:
     retriever = GFMRetriever.from_config(cfg)
-    docs = retriever.retrieve(current_query, [0], top_k=1)
-
     qa_prompt_builder = QAPromptBuilder(cfg.qa_prompt)
-    messages = qa_prompt_builder.build_input_prompt(current_query, docs)
-    print(evaluate_llm(messages, groundtruth))
+    scores = []
+    with open(os.path.join(SRC_FOLDER, f"{data_split}.json"), "r") as f:
+        for line in f.readlines():
+            question_dict = json.loads(line)
+            update_subgraph(question_dict) #Update to make sure we are focusing on relevant subgraph and query entities
+            docs = retriever.retrieve(question_dict["question"], question_dict["entities"], top_k=5)
+            messages = qa_prompt_builder.build_input_prompt(question_dict["question"], docs)
+            score = evaluate_llm(messages, question_dict["answer"])
+            scores.append(score)
+            print(score)
+    print(np.mean(scores))
+    import pdb; pdb.set_trace()
 
 main()
