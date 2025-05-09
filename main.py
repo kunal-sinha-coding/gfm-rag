@@ -6,6 +6,7 @@ import requests
 import torch
 import numpy as np
 import networkx as nx
+from tqdm import tqdm
 
 import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -63,6 +64,7 @@ def evaluate_llm(messages, groundtruth, throttle_time=1): # Comes from models/Re
     try:
         prediction = generate(messages).strip()
     except:
+        import pdb; pdb.set_trace()
         print("Failed on generate sentence")
         print(f"Curr input: {messages}")
     unit_test = LMUNIT_TEST.format(groundtruth=groundtruth)
@@ -78,7 +80,6 @@ def evaluate_llm(messages, groundtruth, throttle_time=1): # Comes from models/Re
         "response": prediction,
         "unit_test": unit_test
     }
-    print(payload)
     time_elapsed = time.time() - start_time
     if time_elapsed < throttle_time:
         time.sleep(throttle_time - time_elapsed)
@@ -211,21 +212,25 @@ def main(cfg: DictConfig, data_split="dev", top_k=5) -> None:
     qa_prompt_builder = QAPromptBuilder(cfg.qa_prompt)
     scores = []
     with open(os.path.join(SRC_FOLDER, f"{data_split}.json"), "r") as f:
-        for line in f.readlines():
+        for line in tqdm(f.readlines()):
+            start_time = time.time()
             question_dict = json.loads(line)
             update_subgraph(question_dict) #Update to make sure we are focusing on relevant subgraph and query entities
-            import pdb; pdb.set_trace()
+            subgraph_time = time.time()
+            print(f"Update subgraph time: {subgraph_time - start_time}")
             retriever = GFMRetriever.from_config(cfg) # Currently have to reinit each time for updated graph files
-            import pdb; pdb.set_trace()
+            init_time = time.time()
+            print(f"Init time: {init_time - subgraph_time}")
             query_entities = get_local_query_entities(question_dict)
             docs = retriever.retrieve(question_dict["question"], query_entities, top_k=5)
-            import pdb; pdb.set_trace()
+            retrieval_time = time.time()
+            print(f"Retrieval time: {retrieval_time - init_time}")
             messages = qa_prompt_builder.build_input_prompt(question_dict["question"], docs)
-            import pdb; pdb.set_trace()
             score = evaluate_llm(messages, question_dict["answer"])
+            eval_time = time.time()
+            print(f"Eval time: {eval_time - retrieval_time}")
             scores.append(score)
-            print(score)
-    print(np.mean(scores))
-    import pdb; pdb.set_trace()
+            print(f"Score: {score}")
+    print(f"Mean of scores: {np.mean(scores)}")
 
 main()

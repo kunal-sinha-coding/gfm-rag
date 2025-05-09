@@ -1,1826 +1,1723 @@
-American Express,,relation.has_payment_volume,,total_payment_volume
-total_payment_volume,,relation.divided_by,,total_transactions
-total_transactions,,relation.results_in,,average_payment_volume_per_transaction
-average_payment_volume_per_transaction,,value,,127.40
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_YoY_growth_in_Q4FY25,,10%
-Citi,,relation.has_stock_symbol,,C
-C,,relation.returned_percent_cumulatively_over_five_years_to_end_date,,31-dec-2017
-31-dec-2017,,relation.equal_to,,93.5%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,23%
-Microsoft,,relation.produces,,Azure AI solutions
-Azure AI solutions,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-Total_Oil_and_Gas_mmboe,,relation.came_from,,Canada
-Canada,,relation.comprises_percentage,,24.69%
-Apple,,relation.announced_product,,iPhone 15
-iPhone 15,,relation.released_in,,September 2023
-NVIDIA,,relation.had_net_revenue_change_in_2010,,18.6 million
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,16%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions
-Fuel Cost Recovery Revenues,,relation.revise_deferred_fuel_costs,,Deferred Fuel Costs
-Deferred Fuel Costs,,relation.revised_as_percentage_of_increase,,60.3%
-Apple,,relation.announced_product_launch,,iPhone 15
-iPhone 15,,relation.in_month,,September
-CompanyX,,relation.operating_income_in_2016,,1000 million
-1000 million,,relation.operating_income_in_2017,,1688 million
-CompanyY,,relation.operating_income_in_2016,,500 million
-500 million,,relation.operating_income_in_2017,,1188 million
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
-JPMorgan Chase & Co,,relation.has_financial_ratio,,common equity tier 1 (CET1) ratio
-common equity tier 1 (CET1) ratio,,relation.value_in_year,,2008
-2008,,relation.equal_to,,10.94%
-Bank of America,,relation.has_financial_ratio,,return on assets (ROA)
-return on assets (ROA),,relation.value_in_year,,2008
-2008,,relation.equal_to,,0.75%
-Derivatives,,relation.designated_as_hedging_instruments_under_gAAP,,GAAP
-GAAP,,relation.notional_value_at_end_of_2014,,X
-GAAP,,relation.reports_notional_value,,Derivatives
-Derivatives,,relation.relates_to_fair_value_percent,,3044%
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_YoY_growth_in_Q4FY25,,10%
-Class A Common Stock Issued and Outstanding,,relation.increased_by,,995 thousand
-995 thousand,,relation.between_years,,previous_year_and_current_year
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
-BankOfAmerica,,relation.has_financial_data,,ResidentialMortgages
-ResidentialMortgages,,relation.balance_for_year,,2013
-2013,,relation.value_in_millions,,3576
-BankOfAmerica,,relation.has_financial_data,,ResidentialMortgages
-ResidentialMortgages,,relation.balance_for_year,,2012
-2012,,relation.value_in_millions,,3576
-NVIDIA,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_Q4FY25_revenue,,$32.5 billion
-NVIDIA,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_YoY_growth_in_Q4FY25,,87%
-NVIDIA,,relation.produces,,A100 AI supercomputers
-A100 AI supercomputers,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-NVIDIA,,relation.gross_margin_in_FY2003,,.4
-.4,,relation.declined_to_FY2004,,.2
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.1 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,18%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.has_purchase_commitments,,TotalCommitments
-TotalCommitments,,relation.split_by_year,,split1
-split1,,relation.after_2014,,56%OfTotal
-CompanyY,,relation.has_purchase_commitments,,TotalCommitments
-TotalCommitments,,relation.split_by_year,,split2
-split2,,relation.after_2014,,56%OfTotal
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,21%
-CompanyX,,relation.reported_financials_for_year,,2013
-2013,,relation.weighted_average_common_shares_outstanding_diluted,,1,000
-1,000,,relation.reported_financials_for_year,,2012
-2012,,relation.weighted_average_common_shares_outstanding_diluted,,1,001
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,17%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Tax-related_amount_unrealized_losses_reclassification_2011,,relation.totaled,,303 million
-303 million,,relation.after_tax,,189 million
-Apple,,relation.announced_product_launch,,iPhone 14
-iPhone 14,,relation.during_time_period,,Q4 FY23
-Development Costs 2007,,relation.increased_by,,150
-150,,relation.then_increased_by_same_amount_in_2008,,2057
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.9 billion
-Contractual_Obligations,,relation.comprises,,Purchase_Obligations
-Purchase_Obligations,,relation.account_for_percentage,,34%
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$18.7 billion
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,32%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Loan Receivable Net of Allowance,,relation.changed_by_percentage,,-52.5%
--52.5%,,relation.during_year,,2010
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.8 billion
-CompanyX,,relation.has_long_term_debt_obligations_due_after_2011,,Debt_After_2011
-Debt_After_2011,,relation.as_percentage_of_total_long_term_debt_obligations,,35.1%
-CompanyY,,relation.has_long_term_debt_obligations_due_after_2011,,Debt_After_2011
-Debt_After_2011,,relation.as_percentage_of_total_long_term_debt_obligations,,35.1%
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,27%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Lease_Payments,,relation.expected_obligation,,Current_Future_Minimum_Lease_Payments
-Current_Future_Minimum_Lease_Payments,,relation.declined_by,,25%
-Minimum_Lease_Payments,,relation.projected_decrease,,Following_Years_Obligation
-Following_Years_Obligation,,relation.by_percentage,,25%
-Apple,,relation.has_corporate_office_in,,Cupertino
-Cupertino,,relation.within,,California
-Apple Cupertino office,,relation.employs,,employees
-employees,,relation.of_total_workforce,,10%
-CompanyX,,relation.reports_net_sales,,2019
-2019,,relation.in_year,,2018
-2018,,relation.amount_in_billions,,7.22
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.6 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,23%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.has_amortization_expense,,amount1
-amount1,,relation.in_year,,2015
-2015,,relation.average_of,,amounts
-amounts,,relation.over_years,,[2015, 2016, 2017, 2018, 2019],
-[2015, 2016, 2017, 2018, 2019],,,relation.equals,,44.8
-CorpY,,relation.has_amortization_expense,,amount2
-amount2,,relation.in_year,,2016
-2016,,relation.average_of,,amounts
-amounts,,relation.over_years,,[2015, 2016, 2017, 2018, 2019],
-[2015, 2016, 2017, 2018, 2019],,,relation.equals,,44.8
-BusinessZ,,relation.has_amortization_expense,,amount3
-amount3,,relation.in_year,,2017
-2017,,relation.average_of,,amounts
-amounts,,relation.over_years,,[2015, 2016, 2017, 2018, 2019],
-[2015, 2016, 2017, 2018, 2019],,,relation.equals,,44.8
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$16.8 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
-Microsoft,,relation.produces,,Azure AI solutions
-Azure AI solutions,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-PensionTrustAssets_2017,,relation.equivalent_to,,value_2017
-value_2017,,relation.is_ratio_of,,PensionTrustAssets_2018
-PensionTrustAssets_2018,,relation.to,,value_2018
-value_2018,,relation.calculated_as,,1.16
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_Q4FY25_revenue,,$90.2 billion
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_YoY_growth_in_Q4FY25,,10%
-CompanyX,,relation.has_inventory,,InventoryX
-InventoryX,,relation.ready_for_liquidation_in,,2003
-2003,,relation.percent_of_total_inventory,,72.83%
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,18%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-company.X,,relation.has_net_operating_loss_carryforwards,,4575515
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
-CompanyX,,relation.has_financial_metric,,long-term debt maturities
-long-term debt maturities,,relation.change_from_2016_to_2017,,276%
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
-S&P Global Ratings,,relation.rated_securities,,securities
-securities,,relation.rating_change_from_2008_to_2009,,-1 percentage point
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
-Interest_Expense,,relation.showed_percentage_increase,,2.6%
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-Intel,,relation.has_amortization_expense,,expense_A
-expense_A,,relation.compared_to_previous_year,,expense_B
-expense_B,,relation.showed_change,,-3.0%
--3.0%,,relation.between_years,,2016_and_2017
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds_of_millions
-Entergy Arkansas,,relation.has_payment_percentage,,Payments_Arkansas
-Payments_Arkansas,,relation.is_percentage_of,,Payments_Louisiana
-Payments_Louisiana,,relation.equivalent_to,,33.3%
-Entergy Louisiana,,relation.has_total_payments,,Payments_Louisiana
-Payments_Louisiana,,relation.contains_percentage,,33.3%
-Microsoft,,relation.has_payment_percentage,,Payments_Washington
-Payments_Washington,,relation.is_percentage_of,,Payments_Oregon
-Payments_Oregon,,relation.equivalent_to,,25.8%
-Accounts Payable and Other Liabilities,,relation.comprises_of,,Accrued Wages and Vacation
-Accrued Wages and Vacation,,relation.as_of_date,,December 31, 2008
-December 31, 2008,,relation.has_percentage,,14.3%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,23%
-Settlements_period_2016,,relation.average_amount,,11.3_millions
-NVIDIA,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_Q4FY25_revenue,,$32.1 billion
-CorporateDebt,,relation.has_future_principal_payments_after,,2012
-2012,,relation构成比例,,87%
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$90.2 billion
-NetGoodwill_2010,,relation.change_from_previous_year,,NetGoodwill_2011
-NetGoodwill_2011,,relation.percentage_change,,-21%
-NetGoodwill_2010,,relation.decreased_by,,NetGoodwill_21%
-NetGoodwill_21%,,relation.from_year,,2010
-2010,,relation.to_year,,2011
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,23%
-SquareFeetEntity1,,relation.has_expiry_date,,2020-12-31
-2020-12-31,,relation.area_in_square_feet,,778000
-SquareFeetEntity2,,relation.has_expiry_date,,2020-01-31
-2020-01-31,,relation.area_in_square_feet,,778000
-AMD,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_Q4FY25_revenue,,$2.1 billion
-AMD,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_YoY_growth_in_Q4FY25,,27%
-CompanyX,,relation.had_common_stock_high_sale_price_in_Q4_2002,,HighPrice
-HighPrice,,relation.difference_from_low_price,,2.62
-CompanyX,,relation.had_common_stock_low_sale_price_in_Q4_2002,,LowPrice
-LowPrice,,relation.equivalent_to,,HighPrice - 5.24
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-StatutoryCapitalAndSurplus,,relation.to,,4.9
-4.9,,relation.in_year,,2010
-StatutoryNetIncome,,relation.to,,4.9
-4.9,,relation.in_year,,2010
-2010,,relation.ratio_of,,StatutoryCapitalAndSurplus
-Apple,,relation.to,,2.8
-2.8,,relation.in_year,,2011
-2011,,relation.ratio_of,,StatutoryNetIncome
-CompanyX,,relation.has_financial_statement,,2014 balance sheet
-2014 balance sheet,,relation.shows_total_debt,,100 million
-100 million,,relation.compared_to,,CompanyX
-CompanyX,,relation.has_financial_statement,,2015 balance sheet
-2015 balance sheet,,relation.shows_total_debt,,103.4 million
-103.4 million,,relation.calculate_percentage_change,,3.4%
-Apple,,relation.has_financial_statement,,2014 income statement
-2014 income statement,,relation.shows_net_income,,57.4 billion
-57.4 billion,,relation.compared_to,,Apple
-Apple,,relation.has_financial_statement,,2015 income statement
-2015 income statement,,relation.shows_net_income,,53.3 billion
-53.3 billion,,relation.calculate_percentage_change,,-7.1%
-e*trade financial corporation,,relation.return_percentage_for_five_years,,37.81%
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.9 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,16%
-Cisco,,relation.operating_profit_americas,,X
-X,,relation.in_year,,2003
-2003,,relation.as_percentage_of_net_sales,,Y1
-Cisco,,relation.operating_profit_americas,,X
-X,,relation.in_year,,2001
-2001,,relation.as_percentage_of_net_sales,,Z
-Y1,,relation.difference_from,,Z
-Z,,relation.is_equal_to,,3.8%
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,18%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-company.A,,relation.has_financial_statement,,statement1
-statement1,,relation.long_term_debt_in_2014,,value1
-value1,,statement1,,relation.is_for_year
-company.A,,relation.has_financial_statement,,statement2
-statement2,,relation.long_term_debt_in_2012,,value2
-value2,,statement2,,relation.is_for_year
-value1,,relation.change_from,,value2
-value2,,relation.is,,28987
-Tesla,,relation.has_business_segment,,Automotive
-Automotive,,relation.had_Q4FY25_revenue,,$21.4 billion
-$21.4 billion,,Automotive,,relation.is_for_year
-CompanyX,,relation.has_financial_statement,,Balance Sheet as of 12/31/2003
-Balance Sheet as of 12/31/2003,,relation.shows_long_term_debt_due_within_36_months,,1041.5 million
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
-Space Systems,,relation.had_operating_profit_growth_rate_in_year,,2011
-2011,,relation.equal_to,,3.2%
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$4.8 billion
-NVIDIA,,relation.had_operating_profit_in_2017,,value1
-value1,,relation.grew_to,,value2
-value2,,relation.in_2018,,relation.calculated_growth_rate
-Tesla,,relation.had_operating_profit_in_2017,,value3
-value3,,relation.grew_to,,value4
-value4,,relation.in_2018,,relation.calculated_growth_rate
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.3 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,23%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds_of_millions
-McDonalds,,relation.has_sales_channels,,restaurants
-restaurants,,relation.change_in_percentage_of_sales_from_2018_to_2019,,0%
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-CompanyX,,relation.has_long_term_debt_maturities_2007,,DebtX
-DebtX,,relation.requires_sinking_fund_percentage,,6.35%
-6.35%,,relation.including_other_requirements,,DebtX_cash_sinking_fund
-DebtX,,relation.has_sinking_fund_requirements,,SinkingFundX
-SinkingFundX,,relation.is_percentage_of,,6.35%
-6.35%,,relation.of_long_term_debt_maturities_2007,,DebtX
-Apple,,relation.has_long_term_debt_maturities_2007,,DebtY
-DebtY,,relation.requires_sinking_fund_percentage,,4.10%
-4.10%,,relation.including_other_requirements,,DebtY_cash_sinking_fund
-DebtY,,relation.has_sinking_fund_requirements,,SinkingFundY
-SinkingFundY,,relation.is_percentage_of,,4.10%
-4.10%,,relation.of_long_term_debt_maturities_2007,,DebtY
-CompanyX,,relation.had_inventory_value_in_2002,,Value1
-Value1,,relation.increased_to,,Value2
-Value2,,relation.between_years,,2002_and_2003
-2002_and_2003,,relation.percent_increase,,104.85%
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-NVIDIA,,relation.market_capitalization_on,,February 11, 2011
-February 11, 2011,,relation.equal_to,,22556579533.3
+CompanyX,,relation.had_consolidated_net_sales_in_2019,,22.19
+22.19,,relation.corresponding_year,,2009
 AMD,,relation.has_business_segment,,Graphics Processing Units
 Graphics Processing Units,,relation.had_Q4FY25_revenue,,$3.8 billion
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,12%
-AMD,,relation.produces,,Radeon GPUs
-Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-European Central Bank,,relation.issued,,euro notes
-euro notes,,relation.in_year,,2014
-2014,,relation.convert_to_millions_of_dollars,,3098
-JP Morgan Chase,,relation.has_business_segment,,Consumer Banking
-Consumer Banking,,relation.had_Q4FY23_revenue,,$27.1 billion
-JP Morgan Chase,,relation.has_business_segment,,Consumer Banking
-Consumer Banking,,relation.had_YoY_growth_in_Q4FY23,,7%
-Exelon,,relation.has_division,,Non-Utility Nuclear
-Non-Utility Nuclear,,relation.reported_earnings_increase,,57%
-57%,,during_year,,2002
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.reported_Q4FY25_revenue,,$18.1 billion
-$18.1 billion,,during_year,,2022
-IBM,,relation.had_currency_translation_adjustments,,-6806_millions
--6806_millions,,relation.during_years,,2013-2015
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$4.7 billion
-GallonsHedged_2017,,relation.to,,Value_2017
-Value_2017,,relation.divided_by,,GallonsHedged_2018
-GallonsHedged_2018,,relation.to,,Value_2018
-Apple,,relation.owns,,Tesla
-Tesla,,relation.invested_in,,Microsoft
-AcmeCorp,,relation.purchased_target,,BetaTech
-BetaTech,,relation.with_goodwill_amount,,120 million
-120 million,,relation.total_purchase_price,,545 million
-GammaInc,,relation.acquired_company,,DeltaSoft
-DeltaSoft,,relation.goodwill_percentage,,22%
-Apple,,relation.owns_stock,,Alibaba
-Alibaba,,relation.value_of_investment,,20 billion USD
-Apple,,relation.licenses_technology_from,,Qualcomm
-Qualcomm,,relation.license_agreement_duration,,5 years
-AccruedTradeLiabilities_2019,,relation.compared_to,,AccruedTradeLiabilities_2018
-AccruedTradeLiabilities_2018,,relation.showed_percentage_change,,-3.2%
-Tesla,,relation.announced_partnership,,Ford
-Ford,,relation.during_time_period,,Q4 FY25
-Tesla Ford partnership,,relation.affects_revenue,,North-American region
-AAPL,,relation.change_in_ending_available_for_sale_investment_securities,,28434
-28434,,relation.from_year_to_year,,2017_to_2018
+CompanyX,,relation.generated_revenue_from_discontinued_operations,,738.5_million
+738.5_million,,relation.in_year,,2013
+CompanyY,,relation.generated_revenue_from_discontinued_operations,,738.5_million
+738.5_million,,relation.in_year,,2011
 AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-Foreign exchange products,,relation.has_average_var,,average_var1
-average_var1,,relation.is_more_than_interest_rate_products_by,,44%
-Apple,,relation.has_average_var,,average_var2
-average_var2,,relation.is_more_than_interest_rate_products_by,,55%
-CompanyX,,relation.had_total_redeemable_stock_of_subsidiaries_in_2015,,1000 million
-1000 million,,relation.to,,CompanyX
-CompanyX,,relation.had_total_redeemable_stock_of_subsidiaries_in_2016,,1244 million
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon RX 7900 XT
-Radeon RX 7900 XT,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-NASDAQ Composite,,relation.has_performance_metric,,return on investment
-return on investment,,relation.for_period,,2008-2009
-2008-2009,,relation.value,,-41.0%
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,27%
-AMD,,relation.produces,,Radeon VII
-Radeon VII,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Walmart,,relation.has_warehouse_locations,,North_America
-North_America,,relation.comprises_percentage_of_total_warehouse_locations,,21.3%
-Amazon,,relation.has_warehouse_locations,,North_America
-North_America,,relation.comprises_percentage_of_total_warehouse_locations,,21.3%
-Intel,,relation.has_business_segment,,Client Computing Group
-Client Computing Group,,relation.had_Q4FY25_revenue,,$7.8 billion
-Intel,,relation.has_business_segment,,Client Computing Group
-Client Computing Group,,relation.had_YoY_growth_in_Q4FY25,,12%
-Expected_future_pension_benefits_after_2012,,relation.expected_as_of_date,,December 31, 2006
-December 31, 2006,,relation.compared_to,,Expected_future_pension_benefits_after_2012
-Expected_future_pension_benefits_after_2012,,relation.expected_as_of_date,,December 31, 2008
-December 31, 2008,,relation.ratio,,6.4
-Apple,,relation.has_corporate_asset,,Cash and Cash Equivalents
-Cash and Cash Equivalents,,relation.expected_as_of_date,,December 31, 2007
-December 31, 2007,,relation.compared_to,,Apple
-Apple,,relation.has_corporate_asset,,Cash and Cash Equivalents
-Cash and Cash Equivalents,,relation.expected_as_of_date,,December 31, 2009
-December 31, 2009,,relation.ratio,,5.2
-CompanyX,,relation.implemented_cost_reduction_initiatives,,initiativeA
-initiativeA,,relation.resulted_in_income_increase,,166%_of_operating_income
-CompanyY,,relation.enacted_cost_savings_measures,,measureB
-measureB,,relation.contributed_to_income_growth_rate,,166%
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,18%
-JPMorgan Chase,,relation.estimated_sensitivity_to_credit_spreads,,1 million
-1 million,,relation.time_period_difference,,2017-2016
-Microsoft,,relation.estimated_sensitivity_to_credit_spreads,,500 thousand
-500 thousand,,relation.time_period_difference,,2018-2017
-CompanyX,,relation.spent_on_ipr_d,,X billion dollars
-X billion dollars,,relation.net_of_cash_acquired,,Y billion dollars
-Y billion dollars,,relation.represented_percentage_of_cash_purchase_price,,59%
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-AAPL,,relation.average_price_per_share_in_year,,2010
-2010,,relation.increased_by,,25.9%
-25.9%,,relation.to,,2011
-MSFT,,relation.average_price_per_share_in_year,,2010
-2010,,relation.increased_by,,25.9%
-25.9%,,relation.to,,2011
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,22%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.has_notes_payable,,TotalNotesPayable
-TotalNotesPayable,,relation.composed_of,,USCommercialPaper
-USCommercialPaper,,relation.representing_percentage,,78.3%
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$90.2 billion
-PMI,,relation.has_financial_metric,,net earnings
-net earnings,,relation.changed_by_percentage,,-13.3%
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
-Total_future_minimum_commitments_under_existing_non-cancelable_operating_leases_and_purchase_obligations,,relation.comprised_of,,purchase_obligations_for_2008
-purchase_obligations_for_2008,,relation.accounted_for_percentage,,93%
-93%,,at_date,,December_31_2007
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_YoY_growth_in_Q4FY25,,10%
-Commodities,,relation.had_net_commodities_change,,-35.6%
--35.6%,,relation.between_years,,2016-2017
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
-Defined_Contribution_Plans_Foreign_Countries,,relation.increased_by_percentage,,7.5%
-7.5%,,relation.from_year,,2007
-2007,,relation.to_year,,2008
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
-Impella,,relation.has_contingent_payments,,5583331
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-Consumer Packaging,,relation.had_foodservice_net_sales_percentage,,16%
-16%,,relation.in_year,,2006
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
-NASDAQ,,relation.includes_stock,,AAPL
-AAPL,,relation.has_rate_of_return,,-3.6% during 2017-2018
-NASDAQ,,relation.includes_stock,,MSFT
-MSFT,,relation.has_rate_of_return,,-3.6% during 2017-2018
-NASDAQ,,relation.includes_stock,,GOOGL
-GOOGL,,relation.has_rate_of_return,,-3.6% during 2017-2018
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.5 billion
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon GPUs
-Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-Loews,,relation.has_stock,,Loews common stock
-Loews common stock,,relation.change_from_2013_to_2014,,-12.4%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.8 billion
-SOLEXA,,relation.investment_date,,November 12, 2006
-November 12, 2006,,relation.investment_price_per_share,,$9.7
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$3.9 billion
-Total Investment in 2011,,relation.is_allocated_to,,Mutual Funds
-Mutual Funds,,relation.comprises_percentage,,65.1%
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
-Shell,,relation.has_product_line,,Refined Products
-Refined Products,,relation.sales_price_per_barrel,,$11.08
-$11.08,,relation.sales_volume_for_year,,363336363.64 barrels
-363336363.64 barrels,,relation.calculate_total_revenue,,$40444920
-BP,,relation.has_product_line,,Refined Products
-Refined Products,,relation.sales_price_per_barrel,,$11.08
-$11.08,,relation.sales_volume_for_year,,363336363.64 barrels
-363336363.64 barrels,,relation.calculate_total_revenue,,$40444920
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,23%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-MTN,,relation.involves_post_closing_adjustments,,1.7 million
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
-Entergy Louisiana, Inc.,,relation.has_financial_data_for_year,,2003
-2003,,relation.growth_rate_in_net_revenue,,5.5%
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-Industrial Packaging Sales,,relation.comprises,,European Industrial Packaging Net Sales
-European Industrial Packaging Net Sales,,relation.represented_percentage,,21%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
-Tower,,relation.contributes_to,,adjusted consolidated cash flow
-adjusted consolidated cash flow,,relation.for_period,,twelve months ended december 31, 2005
-twelve months ended december 31, 2005,,relation.amount_as_percentage,,105.0%
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_YoY_growth_in_Q4FY25,,20%
-Cabinets,,relation.had_sales_growth_from_year_to_year,,2016_to_2017
-2016_to_2017,,relation.growth_percentage,,2.9%
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
-NVIDIA,,relation.has_business_segments,,Segment A
-Segment A,,relation.net_sales_in_2008,,value1
-value1,,relation.net_sales_in_2009,,value2
-value2,,relation.ratio_of_net_sales_2008_to_2009,,1.69
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,27%
-AMD,,relation.produces,,Radeon GPUs
-Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-PensionPlanDiscountRate_2014,,relation.is_discount_rate_for,,U.S._pension_plans_2014
-U.S._pension_plans_2014,,relation.has_value,,X
-U.S._pension_plans_2014,,relation.has_discount_rate_change_to,,U.S._pension_plans_2015
-U.S._pension_plans_2015,,relation.has_discount_rate,,Y
-Y,,relation.change_from,,X
-X,,relation.is_percentage_change,,8.9%
-GoldPrice_2014,,relation.is_commodity_price_for,,Commodities_market_2014
-Commodities_market_2014,,relation.has_value,,Z
-Commodities_market_2014,,relation.has_price_change_to,,Commodities_market_2015
-Commodities_market_2015,,relation.has_commodity_price,,W
-W,,relation.change_from,,Z
-Z,,relation.is_percentage_change,,7.5%
-NVIDIA,,relation.operating_income_of_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.compared_to_total_operating_income_in_2009,,22.55%
-AMD,,relation.operating_income_of_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.compared_to_total_operating_income_in_2009,,22.55%
-Intel,,relation.has_business_segment,,Internet of Things
-Internet of Things,,relation.had_Q4FY25_revenue,,$2.8 billion
-Intel,,relation.has_business_segment,,Internet of Things
-Internet of Things,,relation.had_YoY_growth_in_Q4FY25,,12%
-Cadence Design Systems, Inc.,,relation.has_stock_symbol,,CDNS
-CDNS,,relation.had_cumulative_total_return_to_shareholders,,-20.04%
--20.04%,,during_time_period,,period ended December 30, 2006
-Cadence Design Systems, Inc.,,relation.has_stock_symbol,,CDNS
-CDNS,,relation.had_cumulative_total_return_to_shareholders_for_period,,-20.04%
--20.04%,,time_period,,ended December 30, 2006
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
-LeasedAsset,,relation.has_minimum_annual_rental_payment,,Payment2010
-Payment2010,,relation.value_in_2010,,$100
-$100,,LeasedAsset,,relation.has_minimum_annual_rental_payment
-relation.has_minimum_annual_rental_payment,,Payment2011,,relation.value_in_2011
-LeasedAsset,,relation.has_minimum_annual_rental_payment,,Payment2010
-Payment2010,,relation.value_in_2010,,$100
-$100,,LeasedAsset,,relation.has_minimum_annual_rental_payment
-relation.has_minimum_annual_rental_payment,,Payment2011,,relation.percent_change_between_2010_and_2011
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$3.8 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,27%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-UnrecognizedTaxBenefits_2015,,relation.change_from_year,,-1%
--1%,,relation.to_year,,2016
-UnrecognizedTaxBenefits,,relation.change_from_year,,relation.
-relation.,,relation.to_year,,2016
-2016,,relation.percentage_change,,-1%
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_Q4FY25_revenue,,$8.1 billion
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_YoY_growth_in_Q4FY25,,7%
-CompanyX,,relation.reported_financials,,2008
-2008,,relation.average_potential_anti_dilutive_share_conversions,,708716.6
-CompanyY,,relation.reported_financials,,2009
-2009,,relation.average_potential_anti_dilutive_share_conversions,,708716.6
-CompanyZ,,relation.reported_financials,,2010
-2010,,relation.average_potential_anti_dilutive_share_conversions,,708716.6
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$4.9 billion
-CompanyX,,relation.has_financial_statement,,2011 Annual Report
-2011 Annual Report,,relation.shows_rent_expense,,120 million
-120 million,,relation.compared_to,,CompanyX
-CompanyX,,relation.has_financial_statement,,2012 Annual Report
-2012 Annual Report,,relation.shows_rent_expense,,146 million
-146 million,,relation.calculated_difference,,26 million
-Apple,,relation.has_financial_statement,,2010 Annual Report
-2010 Annual Report,,relation.shows_rent_expense,,80 million
-80 million,,relation.compared_to,,Apple
-Apple,,relation.has_financial_statement,,2011 Annual Report
-2011 Annual Report,,relation.shows_rent_expense,,100 million
-100 million,,relation.calculated_difference,,20 million
-BankOfAmerica,,relation.net_credit_income_in_2016,,X million dollars
-X million dollars,,relation.decreased_to,,Y million dollars_in_2017
-Y million dollars_in_2017,,relation.percentage_change,,-39.9%
-JPMorganChase,,relation.net_credit_income_in_2016,,Z million dollars
-Z million dollars,,relation.decreased_to,,W million dollars_in_2017
-W million dollars_in_2017,,relation.percentage_change,,-39.9%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.6 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
-Microsoft,,relation.develops,,Azure AI solutions
-Azure AI solutions,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-CompanyX,,relation.underwent_reverse_stock_split,,True
-True,,relation.caused_reduction_in_common_stock_outstanding,,69.24%
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$18.4 billion
-RestrictedCash,,relation.as_of_date,,12/31/2019
-12/31/2019,,relation.source_of_funds,,ProceedsFromIssuanceOfTaxExemptBonds
-ProceedsFromIssuanceOfTaxExemptBonds,,relation.comprises_percentage_of,,RestrictedCash
-RestrictedCash,,relation.value_as_of_12312019,,39.3%
-Apple,,relation.owns,,Apple Park
-Apple Park,,relation.completed_in,,2017
-Apple Park,,relation.is_located_in,,Cupertino
-Cupertino,,relation.of_company,,Apple
-CompanyX,,relation.has_financial_liabilities,,NotesDueBy2017
-NotesDueBy2017,,relation.carrying_value,,2448 million $
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.9 billion
-S&P500_index,,relation.has_performance_metric,,return_on_investment
-return_on_investment,,relation.for_period,,2006-2009
-return_on_investment,,relation.equivalent_to,,-34.3%
--34.3%,,relation.for_period,,2006-2009
-Tesla,,relation.has_business_segment,,Automotive
-Automotive,,relation.had_Q4FY25_revenue,,$31.8 billion
-Tesla,,relation.has_business_segment,,Automotive
-Automotive,,relation.had_YoY_growth_in_Q4FY25,,7%
-Hologic,,relation.used_to_acquire,,Suros
-Suros,,relation.fair_value_of_common_stock_paid,,46.3
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-CompanyX,,relation.had_operating_leases_rental_expense_in_2008,,Amount1
-Amount1,,relation.changed_to,,Amount2
-Amount2,,relation.calculated_percentage_change_from_2008_to_2009,,17%
-CompanyY,,relation.had_operating_leases_rental_expense_in_2008,,Amount3
-Amount3,,relation.changed_to,,Amount4
-Amount4,,relation.calculated_percentage_change_from_2008_to_2009,,17%
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.9 billion
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon RX 7900 XT
-Radeon RX 7900 XT,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Entity1,,relation.has_unrealized_gains_on_derivative_instruments,,DerivativeInstruments1
-DerivativeInstruments1,,relation.change_over_period,,Change1
-Entity2,,relation.has_unrealized_gains_on_derivative_instruments,,DerivativeInstruments2
-DerivativeInstruments2,,relation.change_over_period,,Change2
-Entity3,,relation.has_unrealized_gains_on_derivative_instruments,,DerivativeInstruments3
-DerivativeInstruments3,,relation.change_over_period,,Change3
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$4.8 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CurrencyHedge_2012,,relation.change_from_previous_year,,CurrencyHedge_2013
-CurrencyHedge_2013,,relation.in_millions,,383
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon VII
-Radeon VII,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Acquisition,,relation.involves,,Total_assets
-Total_assets,,relation.composed_of,,Goodwill
-Goodwill,,relation.accounting_for_percentage,,69.7%
+Graphics,,relation.had_Q4FY25_revenue,,$2.5 billion
+Global Headquarters,,relation.has_operating_leases,,Contractual Obligations
+Contractual Obligations,,relation.as_of_date,,December 31, 2013
+December 31, 2013,,relation.comprises_percent_of_total,,47.3%
 Microsoft,,relation.has_business_segment,,Cloud Services
 Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
 Microsoft,,relation.has_business_segment,,Cloud Services
 Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,24%
-Bank_of_America,,relation.change_in_total_capital_tier_1_tier_2,,-13.2 billion
--13.2 billion,,relation.from_year_to_year,,2007_to_2008
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
-CompanyX,,relation.purchased_shares_in_October,,48.2_percent_of_total
-48.2_percent_of_total,,relation.during_time_period,,Q4 FY2006
+WTI Crude Oil,,relation.has_price,,High WTI Crude Oil Price
+High WTI Crude Oil Price,,relation.difference_from,,Western Canadian Select Price
+Western Canadian Select Price,,relation.has_price,,Western Canadian Select Price
+Western Canadian Select Price,,relation.price_difference,,$ 30.34
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_YoY_growth_in_Q4FY25,,10%
+ParentCompany1,,relation.guarantees_for_year,,2007
+2007,,relation.amount_in_millions,,312.4
+ParentCompany2,,relation.guarantees_for_year,,2008
+2008,,relation.amount_in_millions,,270.4
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_Q4FY25_revenue,,$15.2 billion
+CompanyX,,relation.had_net_income_in_2015,,Amount1
+Amount1,,relation.increased_to,,Amount2
+Amount2,,relation.between_years,,2015
+2015,,2016,,relation.percentage_increase
+CorpY,,relation.had_net_income_in_2015,,Amount3
+Amount3,,relation.increased_to,,Amount4
+Amount4,,relation.between_years,,2015
+2015,,2016,,relation.percentage_increase
 AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$17.8 billion
-CompanyX,,relation.has_free_cash_flow,,FCF_2015
-FCF_2015,,relation.in_percent_change_from,,FCF_2014
-FCF_2014,,relation.is,,39%
-CompanyY,,relation.has_free_cash_flow,,FCF_2015
-FCF_2015,,relation.in_percent_change_from,,FCF_2014
-FCF_2014,,relation.is,,39%
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$4.9 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,17%
 AMD,,relation.produces,,Radeon VII GPUs
 Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.has_financial_statement,,2005 annual report
-2005 annual report,,relation.shows_long_term_debt,,1581236
-1581236,,relation.compared_to,,2004 annual report
-2004 annual report,,relation.shows_long_term_debt,,1285188
-1285188,,relation.calculated_difference,,296048
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$90.2 billion
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_YoY_growth_in_Q4FY25,,7%
-CompanyX,,relation.has_contractual_commitments,,40294 million
-ProjectY,,relation.involves_contractual_commitments,,40294 million
-AgreementZ,,relation.results_in_contractual义务,,40294 million
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_Q4FY25_revenue,,$8.1 billion
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_YoY_growth_in_Q4FY25,,8%
-CompanyX,,relation.reported_discontinued_operations_tax_expense,,7
-7,,relation.for_year,,2013
+Life Operations,,relation.has_associated_capital,,Capital_Amount
+Capital_Amount,,relation.as_of_year,,2008
+2008,,relation.comprises_percent_of,,Total_GAAP_Stockholders_Equity_and_Aggregate_Statutory_Capital
+Total_GAAP_Stockholders_Equity_and_Aggregate_Statutory_Capital,,relation.value,,43.9%
+Apple,,relation.has_associated_capital,,Capital_B
+Capital_B,,relation.as_of_year,,2010
+2010,,relation.comprises_percent_of,,Total_Non-GAAP_Stockholders_Equity_and_Aggregate_Statutory_Capital
+Total_Non-GAAP_Stockholders_Equity_and_Aggregate_Statutory_Capital,,relation.value,,37.5%
+CompanyX,,relation.had_return_on_total_assets,,4.2%
+4.2%,,relation.during_year,,2013
 AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.3 billion
-PMI_common_stock,,relation.return_percentage,,X
-X,,relation.compared_to,,S&P_500_index
-S&P_500_index,,relation.over_period,,five_years
-PMI_common_stock,,relation.return_percentage,,Y
-Y,,relation.compared_to,,S&P_500_index
-S&P_500_index,,relation.over_period,,five_years
-X,,relation.difference_from,,Y
-Y,,relation.is,,53.8%
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+NOL_value_90 million,,relation.calculates_to_tax_refund_percentage,,23.7%
+23.7%,,relation.for_year,,2003
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+Cabinet_and_Related_Products,,relation.comprises_percent_of,,Gross_Goodwill
+Gross_Goodwill,,relation.as_of_date,,December_31_2010
+December_31_2010,,relation.value,,13.9%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
+Loews common stock,,relation.invested_from,,2010
+2010,,relation.to,,2011
+2011,,relation.generated_ROI,,-2.6%
+Apple,,relation.invested_from,,2012
+2012,,relation.to,,2013
+2013,,relation.generated_ROI,,-1.8%
+NVIDIA,,relation.reported_gross_margin_percentage,,27.9
+27.9,,relation.during_time_period,,2022-2024
+Tesla,,relation.reported_gross_margin_percentage,,27.9
+27.9,,relation.during_time_period,,2022-2024
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,12%
+Cigna,,relation.has_fixed_maturities_and_cash,,15.5 billion
+15.5 billion,,relation.as_of_date,,december 31, 2015
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$4.8 billion
+Acquisition,,relation.acquired_assets,,Assets
+Assets,,relation.composition,,Non-tangible Assets 96%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+CompanyX,,relation.has_inventory_breakdown,,Finished Goods: 62%, Work in Process: 28%, Raw Materials: 10%
+Finished Goods: 62%, Work in Process: 28%, Raw Materials: 10%,,relation.as_of_year,,2007
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.9 billion
+CompanyX,,relation.recognized_tax_related_interest_and_penalties,,amount1
+amount1,,relation.change_from_previous_year,,15.8%
+15.8%,,relation.in_year,,2011
+CorpY,,relation.recognized_tax_related_interest_and_penalties,,amount2
+amount2,,relation.increased_by_percentage,,15.8%
+15.8%,,relation.compared_to,,2010
+Microsoft,,relation.recognized_tax_related_interest_and_penalties,,amount3
+amount3,,relation.change_from_previous_year,,10.5%
+10.5%,,relation.in_year,,2012
+Google,,relation.recognized_tax_related_interest_and_penalties,,amount4
+amount4,,relation.increased_by_percentage,,10.5%
+10.5%,,relation.compared_to,,2011
+Connected Fitness,,relation.has_operating_margin,,-68.0%
+-68.0%,,relation.for_year,,2014
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$4.7 billion
+Discovery Channel,,relation.has_international_subscribers,,X million
+X million,,relation.difference_from,,Animal Planet
+Animal Planet,,relation.has_international_subscribers,,Y million
+Y million,,relation.calculate_difference,,63 million
+Animal Planet,,relation.has_international_subscribers,,Y million
+Y million,,relation.difference_from,,Discovery Channel
+Discovery Channel,,relation.has_international_subscribers,,X million
+X million,,relation.calculate_difference,,63 million
 Tesla,,relation.has_business_segment,,Automobiles
 Automobiles,,relation.had_Q4FY25_revenue,,$31.8 billion
 Tesla,,relation.has_business_segment,,Automobiles
 Automobiles,,relation.had_YoY_growth_in_Q4FY25,,7%
-CompanyX,,relation.has_financial_statement,,2002_Financial_Statement
-2002_Financial_Statement,,relation.contains,,inventories_net_2002
-inventories_net_2002,,value_2002,,1000.1
-CompanyX,,relation.has_financial_statement,,2003_Financial_Statement
-2003_Financial_Statement,,relation.contains,,inventories_net_2003
-inventories_net_2003,,value_2003,,1270.2
-value_2003,,relation.change_from,,value_2002
-value_2002,,relation.is,,change_in_inventories_net_millions
-Apple,,relation.has_business_segment,,iPhone
-iPhone,,relation.had_Q4FY25_revenue,,$89.6 billion
-Apple,,relation.has_business_segment,,iPhone
-iPhone,,relation.had_YoY_growth_in_Q4FY25,,16%
-Apple,,relation.produces,,iPhone 15 Pro Max
-iPhone 15 Pro Max,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-CompanyX,,relation.reports_financials,,AnnualReport
-AnnualReport,,relation.contains_diluted_earnings_per_share,,DilutedEarningsPerShareData
-DilutedEarningsPerShareData,,relation.calculated_using,,WeightedAverageCommonSharesOutstanding
-WeightedAverageCommonSharesOutstanding,,relation.for_years,,2011-2013
-2011-2013,,relation.average_of,,331.6
-Apple,,relation.reports_financials,,QuarterlyReport
-QuarterlyReport,,relation.contains_diluted_earnings_per_share,,DilutedEPS
-DilutedEPS,,relation.calculated_using,,WeightedAverageCommonStockOutstanding
-WeightedAverageCommonStockOutstanding,,relation.for_years,,2012-2014
-2012-2014,,relation.average_of,,318.2
-CompanyX,,relation.has_financial_statement,,Balance Sheet as of Dec 31, 2003
-Balance Sheet as of Dec 31, 2003,,relation.shows_long_term_debt_due_within_24_months,,965.6 million
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-CompanyX,,relation.highest_per_share_sale_price,,PriceA
-PriceA,,relation.on_date,,March 31, 2008
-March 31, 2008,,relation.change_from,,PriceB
-PriceB,,relation.on_date,,March 31, 2007
-March 31, 2007,,relation.percent_change,,33.1%
-33.1%,,relation.lowest_per_share_sale_price,,PriceB
-CompanyY,,relation.highest_per_share_sale_price,,PriceC
-PriceC,,relation.on_date,,March 31, 2008
-March 31, 2008,,relation.change_from,,PriceD
-PriceD,,relation.on_date,,March 31, 2007
-March 31, 2007,,relation.percent_change,,33.1%
-33.1%,,relation.lowest_per_share_sale_price,,PriceD
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.9 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon VII
-Radeon VII,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.repurchased_shares,,shares
-shares,,relation.average_price_per_share,,$48
-$48,,relation.during_year,,2010
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-CompanyX,,relation.generated_operating_revenues,,total_revenue
-total_revenue,,relation.in_year,,2008
-2008,,relation.composed_of,,other_revenues
-other_revenues,,relation.accounted_for_by_percent,,4.74%
-Apple,,relation.has_business_segment,,Services
-Services,,relation.had_Q4FY25_revenue,,$19.6 billion
-Cash_contributions_funded_plans,,relation.decreased_by,,42.32%
-42.32%,,relation.during_time_period,,2015-2016
-Unfunded_plans,,relation.observed_decrease_in,,cash_contributions
-cash_contributions,,relation.of_amount,,42.32%
-42.32%,,relation.during_time_period,,2015-2016
-Apple,,relation.observed_decrease_in,,unfunded_plans
-unfunded_plans,,relation.during_time_period,,2015-2016
-Apple unfunded_plans,,relation.affects_financial_health,,company_stocks
-Entergy Arkansas,,relation.has_payment_difference,,Entergy Louisiana
-Entergy Louisiana,,relation.amt_in_millions,,4
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
-CompanyX,,relation.has_financial_statement,,Annual Report 2012
-Annual Report 2012,,relation.shows_interest_expense,,12.6 million
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-Company A,,relation.expensed_amount_in_2009,,X
-X,,relation.composed_of,,Y
-Y,,relation.from_source,,discretionary company contributions
-discretionary company contributions,,relation.accounted_for_percentage,,10.83%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,24%
-CompanyX,,relation.has_owned_facilities,,FacilitiesInOtherCountries
-FacilitiesInOtherCountries,,relation.covers_square_feet,,SquareFeetInOtherCountries
-SquareFeetInOtherCountries,,relation.represent_percentage_of_total,,35.8%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,20%
-UnrecognizedTaxBenefits_2017,,relation.has_value,,amount1
-amount1,,relation.change_from_year_to_year,,UnrecognizedTaxBenefits_2018
-UnrecognizedTaxBenefits_2018,,relation.has_value,,amount2
-amount2,,relation.calculate_percentage_change,,13.4%
-Apple,,relation.has_value,,revenue1
-revenue1,,relation.change_from_year_to_year,,Apple
-Apple,,relation.has_value,,revenue2
-revenue2,,relation.calculate_percentage_change,,10.2%
-CompanyX,,relation.generated_cash_flow,,-454.2
--454.2,,relation.in_year,,2018
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-CompanyX,,relation.generated_free_cash_flow,,X1 billion
-X1 billion,,relation.in_year,,2015
-2015,,relation.was_ratio_of,,relation.cash_provided_by_operating_activities
-relation.cash_provided_by_operating_activities,,X14 billion,,relation.in_year
-relation.in_year,,2015,,relation.ratio
-Apple,,relation.generated_free_cash_flow,,Y1.2 billion
-Y1.2 billion,,relation.in_year,,2016
-2016,,relation.was_ratio_of,,relation.cash_provided_by_operating_activities
-relation.cash_provided_by_operating_activities,,Y15.8 billion,,relation.in_year
-relation.in_year,,2016,,relation.ratio
-NetRevenue_2007,,relation.changed_by,,NetRevenueChange_2007_to_2008
-NetRevenueChange_2007_to_2008,,relation.due_to,,RiderRevenueChange_2007_to_2008
-RiderRevenueChange_2007_to_2008,,relation.accounted_for_percent,,18%
-NVIDIA,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_Q4FY25_revenue,,$32.5 billion
-CompanyX,,relation.has_restructuring_balance,,LIABILITY_2008
-LIABILITY_2008,,relation.is_change_from,,LIABILITY_2006
-LIABILITY_2006,,relation.equal_to,,-19 million
-Microsoft,,relation.has_restructuring_balance,,ASSET_2008
-ASSET_2008,,relation.is_change_from,,ASSET_2006
-ASSET_2006,,relation.equal_to,,-15 million
-Eurasia SBU,,relation.contributes_to,,total_revenue
-total_revenue,,relation.in_year,,2017
-2017,,relation.amount_as_percentage,,15%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.9 billion
-JPMorgan Chase,,relation.has_segment,,Investment Banking
-Investment Banking,,relation.contributed_to_total_operations,,34.8%
-34.8%,,during_year,,2005
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.contributed_to_total_revenue,,41.7%
-41.7%,,during_year,,2005
-FairValue,,relation.is_7_51_percent_higher_than,,CarryingValue
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
-Transmission,,relation.contributed_to_net_change_in_revenue,,15.6%
-15.6%,,relation.between_years,,2006-2007
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
-NVIDIA,,relation.had_Q4FY2016_revenue,,relation.grew_by
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY2016_revenue,,$1.5 billion
-AAA_rated_facilities_2008,,relation.have_average_percentage,,16.5%
-16.5%,,relation.for_year,,2008
-AAA_rated_facilities_2009,,relation.have_average_percentage,,16.5%
-16.5%,,relation.for_year,,2009
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
-CompanyX,,relation.reported_net_profit_margin,,4.392%
-4.392%,,relation.for_year,,2015
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-Heavy Fuel Oil,,relation.sales_in_period,,tbd
-tbd,,relation.total_sales_over_period,,three year period
-three year period,,relation.sales_value,,71
-NVIDIA,,relation.has_business_segment,,GPU
-GPU,,relation.had_Q4FY25_revenue,,$35.6 billion
-CompanyX,,relation.has_financial_metric,,operating_margin
-operating_margin,,relation.has_highest_value,,25%
-25%,,relation.has_average_value,,22.5%
-CompanyY,,relation.has_financial_metric,,operating_margin
-operating_margin,,relation.has_highest_value,,28%
-28%,,relation.has_average_value,,25.5%
-Intel,,relation.has_business_segment,,Client Computing
-Client Computing,,relation.had_Q4FY25_revenue,,$16.7 billion
-Intel,,relation.has_business_segment,,Client Computing
-Client Computing,,relation.had_YoY_growth_in_Q4FY25,,6%
-Kichler,,relation.revised_purchase_price_composed_of,,Goodwill
-Goodwill,,relation.accounting_for,,11.7%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
-CompanyX,,relation.realized_tax_benefits,,66 million
-66 million,,relation.for_period,,2007-2006
-CorpY,,relation.excess_deductions_over_stock_based_comp_expense,,66 million
-66 million,,relation.in_years,,2007-2006
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
-NVIDIA,,relation.reported_financial_results,,2016
-2016,,relation.net_income_increased_ratio_to_net_revenues,,0.061
+PensionPlanDiscountRate,,relation.change_from_2014_to_2015,,percentage_change
+percentage_change,,relation.is_equal_to,,-12.5%
+Apple,,relation.change_from_2014_to_2015,,percentage_change
+percentage_change,,relation.is_equal_to,,8.3%
+FSA,,relation.has_financial_metric,,minimum_total_assets_available_for_default
+minimum_total_assets_available_for_default,,relation.compared_to,,guaranty_fund_contributions
+guaranty_fund_contributions,,relation.percent_of,,26.4%
+MSFT,,relation.has_business_segment,,Cloud
+Cloud,,relation.had_Q4FY25_revenue,,$18.6 billion
+CompanyX,,relation.reported_effective_tax_rate_for_year,,2012
+2012,,relation.growth_compared_to_previous_year,,0.9%
+0.9%,,relation.compared_to_year,,2013
+CompanyY,,relation.reported_effective_tax_rate_for_year,,2012
+2012,,relation.growth_compared_to_previous_year,,0.9%
+0.9%,,relation.compared_to_year,,2013
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_YoY_growth_in_Q4FY25,,18%
 AMD,,relation.produces,,Radeon VII GPUs
 Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.has_financial_metric,,weighted average common shares outstanding
-weighted average common shares outstanding,,relation.within_year_range,,2015-2017
-2015-2017,,relation.has_average_value,,302.8
-AMD,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_Q4FY25_revenue,,$25.8 billion
-AMD,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_YoY_growth_in_Q4FY25,,47%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.holds_total_other_assets,,TotalOtherAssets2011
-TotalOtherAssets2011,,relation.comprised_of,,GoodwillAndIdentifiableIntangibles
-GoodwillAndIdentifiableIntangibles,,relation.as_percentage_of,,24%
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-ClassB3,,relation.has_votes,,1300
-1300,,relation.valid_in_year,,2017
+CompanyX,,relation.reported_net_margin_for_year,,2007-12-30
+2007-12-30,,relation.net_margin_value,,4.7%
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
 AMD,,relation.produces,,Radeon VII GPUs
 Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.holds_investment_securities,,HTM_investments
-HTM_investments,,relation.decrease_percentage_from_2017_to_2018,,34.1%
+Entity_A,,relation.has_accumulated_other_comprehensive_losses,,accumulated_other_comprehensive_losses_2013
+accumulated_other_comprehensive_losses_2013,,relation.increased_to,,accumulated_other_comprehensive_losses_2014
+accumulated_other_comprehensive_losses_2014,,relation.compared_to,,percentage_increase_62.9%
+Entity_B,,relation.has_accumulated_other_comprehensive_losses,,accumulated_other_comprehensive_losses_2013
+accumulated_other_comprehensive_losses_2013,,relation.increased_by_percentage,,62.9%
+62.9%,,relation.to_year,,2014
 AMD,,relation.has_business_segment,,Graphics Processing Unit
 Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
-undeveloped_acres,,relation.located_in,,U.S.
-U.S.,,relation.percentage_of_total,,12.6%
-12.6%,,relation.time_period,,2018
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_Q4FY25_revenue,,$8.7 billion
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_YoY_growth_in_Q4FY25,,8%
-CompanyX,,relation.reported_revenue,,8.6 billion
-8.6 billion,,relation.in_year,,2012
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds_of_millions_of_dollars
+Entergy Texas, Inc.,,relation.net_change_in_net_revenue,,7
+7,,relation.during_year,,2016
 AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-Program1,,relation.has_liability_as_of,,december 31, 2008
-december 31, 2008,,relation.value_in_millions,,2.13
-Program2,,relation.has_liability_as_of,,december 31, 2008
-december 31, 2008,,relation.value_in_millions,,1.42
-Program3,,relation.has_liability_as_of,,december 31, 2008
-december 31, 2008,,relation.value_in_millions,,0.72
-average,,relation.calculated_from,,Program1 Program2 Program3
-Program1 Program2 Program3,,relation.equal_to,,4.27
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+Cadence Design Systems Inc.,,relation.had_stock_return,,211.13%
+211.13%,,relation.as_of_date,,12/29/2018
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$3.8 billion
+SNAP,,relation.performance_ratio_to,,S&P_500
+S&P_500,,relation.in_year,,2012
+AMD,,relation.has_business_segment,,GPU
+GPU,,relation.had_Q4FY25_revenue,,$28.7 billion
+Consulting,,relation.generated_percentage_of_total_revenues,,17%
+17%,,relation.corresponds_to_year,,2009
+2009,,relation.total_revenues_in_millions,,7452.94
 Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.9 billion
 Microsoft,,relation.has_business_segment,,Cloud Services
 Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,23%
-Microsoft,,relation.produces,,Azure
-Azure,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-NVIDIA,,relation.operating_income_for_year,,2013
-2013,,relation.is_ratio_of,,sales_to_operating_income
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,17%
-AMD,,relation.produces,,Radeon VII
-Radeon VII,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Deferred_policy_acquisition_costs_and_present_value_of_future_profits,,relation.showed_percentage_change_in,,2010
-2010,,relation.was,,-7.8%
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$90.2 billion
-ProvisionRecapture_PurchasedImpairedLoans_2015,,relation.equivalent_to_millions,,86.5
-86.5,,relation.for_year,,2015
-ProvisionRecapture_PurchasedImpairedLoans_2014,,relation.equivalent_to_millions,,86.5
-86.5,,relation.for_year,,2014
-ProvisionRecapture_PurchasedImpairedLoans,,relation.average_of,,86.5
-86.5,,relation.over_years,,[2014, 2015],
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_Q4FY25_revenue,,$90.2 billion
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_YoY_growth_in_Q4FY25,,10%
-Federal_Reserve,,relation.purchases_of_reserves,,-13
--13,,relation.in_year,,2016
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
-Securities_rated_AAA,,relation.shares_increased_between_years,,2008
-2008,,relation.compared_to,,2009
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_Q4FY25_revenue,,$90.2 billion
-Contractual_Obligations_Total_Debt_2005,,relation.change_between_years,,2009_to_2008
-2009_to_2008,,relation.equal_to,,2022
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$4.1 billion
-Lockheed Martin,,relation.has_division,,Space Systems
-Space Systems,,relation.generated_net_sales,,9198 million
-9198 million,,relation.during_years,,2013-2015
-Intel,,relation.has_business_segment,,Client Computing Group
-Client Computing Group,,relation.had_Q4FY25_revenue,,$7.8 billion
-Intel,,relation.has_business_segment,,Client Computing Group
-Client Computing Group,,relation.had_YoY_growth_in_Q4FY25,,14%
-Ball_stock,,relation.has_five_year_return,,34.96
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.9 billion
-CompanyX,,relation.has_cash_flow_statement,,Cash Flow StatementX
-Cash Flow StatementX,,relation.shows_change_in_cash_used_for_working_capital_from_2013_to_2014,,-121.5
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-Company X,,relation.has_facilities,,Facilities
-Facilities,,relation.are_located_in,,Rest_of_the_world
-Rest_of_the_world,,relation.comprises_portion,,31.3%
-Global_company,,relation.has_facilities,,Worldwide_facilities
-Worldwide_facilities,,relation.comprises_portion,,31.3%
-31.3%,,relation.divided_into,,Domestic_and_International
-Domestic_and_International,,relation.International_portion,,31.3%
-Apple,,relation.has_facilities,,European_facilities
-European_facilities,,relation.comprises_portion,,28.7%
-28.7%,,relation.are_located_in,,Europe
-NVIDIA Data Center segment,,relation.has_operating_income,,846 million dollars
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$1.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,14%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Borrowing_Hedging,,relation.hedged_borrowings_and_bank_deposits,,6999
-6999,,relation.corresponding_year,,2014
-Borrowing_Hedging,,relation.hedged_borrowings_and_bank_deposits,,6999
-6999,,relation.corresponding_year,,2013
-Borrowing_Hedging,,relation.hedged_borrowings_and_bank_deposits,,6999
-6999,,relation.corresponding_year,,2012
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon GPUs
-Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-FuelHedge_2014,,relation.has_aggregate_fair_value,,value1
-value1,,relation.changed_by_percentage_to,,FuelHedge_2015
-FuelHedge_2015,,relation.has_aggregate_fair_value,,value2
-value2,,relation.growth_rate,,9.9%
-Apple,,relation.has_aggregate_fair_value,,value1
-value1,,relation.changed_by_percentage_to,,Samsung
-Samsung,,relation.has_aggregate_fair_value,,value2
-value2,,relation.growth_rate,,9.9%
-BreastImplantReceivables,,relation.divided_by,,BreastImplantLiabilities
-BreastImplantLiabilities,,relation.equal_to,,18.6
+CompanyX,,relation.allowance_for_purchased_distressed_loans_at,,16%
+16%,,relation.as_of_date,,December 31, 2010
 Apple,,relation.has_business_segment,,Consumer Electronics
 Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
-CompanyX,,relation.accounted_for_at_fair_value,,PositionsNotInVAR
-PositionsNotInVAR,,relation.comprised_of,,EquityIn2017
-EquityIn2017,,relation.percentage_of_total_market_risk,,57%
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_Q4FY25_revenue,,$8.1 billion
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_YoY_growth_in_Q4FY25,,8%
-Tencent,,relation.generated_operating_income,,total_amount
-total_amount,,relation.split_by_region,,Asia-Pacific
-Asia-Pacific,,relation.comprises_percentage_of_total,,9%
-9%,,relation.in_year,,2015
-Alibaba,,relation.has_business_segment,,Retail
-Retail,,relation.had_Q4FY23_revenue,,$20.7 billion
-CompanyX,,relation.has_backlog,,backlog_value_2015
-backlog_value_2015,,relation.year_end,,2015
-2015,,relation.average_over_years,,[backlog_value_2013, backlog_value_2014, backlog_value_2015],
-[backlog_value_2013, backlog_value_2014, backlog_value_2015],,,relation.calculate_average,,197000
-CompanyX,,relation.has_backlog,,backlog_value_2014
-backlog_value_2014,,relation.year_end,,2014
-2014,,relation.average_over_years,,[backlog_value_2013, backlog_value_2014, backlog_value_2015],
-[backlog_value_2013, backlog_value_2014, backlog_value_2015],,,relation.calculate_average,,197000
-CompanyX,,relation.has_backlog,,backlog_value_2013
-backlog_value_2013,,relation.year_end,,2013
-2013,,relation.average_over_years,,[backlog_value_2013, backlog_value_2014, backlog_value_2015],
-[backlog_value_2013, backlog_value_2014, backlog_value_2015],,,relation.calculate_average,,197000
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-TotalOilAndGasMMBOE,,relation.came_from,,Canada
-Canada,,relation.accounted_for_percentage,,24.69%
-ExxonMobil,,relation.came_from,,USA
-USA,,relation.accounted_for_percentage,,15.87%
-Intel,,relation.reported_impairment_charges,,1700 million dollars
-1700 million dollars,,relation.revenue_for_year,,340000 million dollars
-340000 million dollars,,relation.percent_of_impairment_to_revenue,,0.5%
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,18.5 billion dollars
-FairValueDerivatives2007,,relation.net_change_between_years,,FairValueDerivatives2008
-FairValueDerivatives2008,,relation.in_thousands,,233629
-AMD,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_Q4FY25_revenue,,$15.2 billion
-CompanyX,,relation.had_net_revenue_in_2016,,1500 million
-1500 million,,relation.had_net_revenue_in_2017,,1543 million
-1543 million,,relation.calculate_average,,1521.55 million
-CompanyY,,relation.had_net_revenue_in_2016,,1510 million
-1510 million,,relation.had_net_revenue_in_2017,,1533 million
-1533 million,,relation.calculate_average,,1521.55 million
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.held_net_fair_value_of_derivatives_outstanding_at,,2007
-2007,,relation.changed_by_percentage,,928%
-928%,,relation.to,,2008
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.5 billion
-Additions,,relation.growth_during,,2003
-2003,,relation.is,,x%
-x%,,relation.compared_to,,Deductions
-Deductions,,relation.growth_during,,2003
-2003,,relation.is,,y%
-y%,,relation.growth_difference,,x%
-x%,,relation.is,,92%
-92%,,relation.compared_to,,Deductions
-Deductions,,relation.growth_during,,2004
-Additions,,relation.growth_during,,2004
-2004,,relation.is,,z%
-z%,,relation.compared_to,,Deductions
-Deductions,,relation.growth_during,,2004
-2004,,relation.is,,w%
-w%,,relation.growth_difference,,z%
-z%,,relation.is,,92%
-92%,,relation.compared_to,,Deductions
-Apple,,relation.announced_product_launch,,iPhone 15
-iPhone 15,,relation.during_time_period,,Q4 FY25
-Apple iPhone 15,,relation.led_to_increase_in,,iOS app store revenue
-iOS app store revenue,,relation.compared_to,,previous_year
-previous_year,,relation.increase_of,,89%
-Development_project_1654,,relation.incurred_cost_during_period,,period_1654
-period_1654,,relation.total_cost,,1311.7
-Development_project_1251,,relation.incurred_cost_during_period,,period_1251
-period_1251,,relation.total_cost,,1311.7
-Development_project_1030,,relation.incurred_cost_during_period,,period_1030
-period_1030,,relation.total_cost,,1311.7
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.6 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
-Microsoft,,relation.develops,,Azure AI solutions
-Azure AI solutions,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-UnrecognizedTaxBenefits_2014,,relation.has_value,,X
-X,,relation.percentage_change_to,,UnrecognizedTaxBenefits_2015
-UnrecognizedTaxBenefits_2015,,relation.is,,-5%
-Apple,,relation.has_value,,Y
-Y,,relation.percentage_change_to,,Google
-Google,,relation.is,,10%
-Mondovi,,relation.acquired_remaining_net_assets,,1042490.2
-1042490.2,,relation.after_sale_of_excess_assets,,deal
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
-CompanyX,,relation.has_facility,,FacilityA
-FacilityA,,relation.square_footage,,100000
-100000,,relation.as_of_date,,december 28, 2013
-CompanyX,,relation.has_facility,,FacilityB
-FacilityB,,relation.square_footage,,150000
-150000,,relation.as_of_date,,december 28, 2013
-CompanyX,,relation.total_major_facilities_square_footage,,300000
-300000,,relation.percentage_owned,,85
-85,,relation.as_of_date,,december 28, 2013
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Cadence Design Systems Inc.,,relation.had_cumulative_5_year_stockholder_return,,-21.08%
--21.08%,,relation.for_period,,5 years ended 12/29/2012
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$4.9 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Acquisition_target,,relation.has_net_tangible_assets,,Net_tangible_assets
-Net_tangible_assets,,relation.amount,,$62154
+NetRentalExpense,,relation.is_highest,,267 million
 AMD,,relation.has_business_segment,,Graphics Processing Unit
 Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
-AmortizedCostEntity,,relation.amortized_cost_in_2009,,value1
-value1,,relation.percentage_change,,23.1%
-Tesla,,relation.has_business_segment,,Automobiles
-Automobiles,,relation.had_Q4FY25_revenue,,$21.4 billion
-Long-term_retail_hnw_EMEA,,relation.is_percentage_of,,Total_long-term_retail_hnw
-Total_long-term_retail_hnw,,relation.equates_to,,19.3%
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
-CompanyX,,relation.had_long_term_debt_in_2017,,D1
-D1,,relation.related_to,,CompanyX
-CompanyX,,relation.had_long_term_debt_in_2016,,D2
-D2,,relation.ratio_is,,1
-CorpA,,relation.had_total_debt_in_2017,,D1
-D1,,relation.related_to,,CorpA
-CorpA,,relation.had_total_debt_in_2016,,D2
-D2,,relation.ratio_is,,1
+Investment_income_loss_2015,,relation.was_adjusted_by,,Gain_from_sale_of_arris_group_common_stock_2014
+Gain_from_sale_of_arris_group_common_stock_2014,,relation.adjustment_amount,,-73
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
 AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,17%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-PensionLiabilityBalance_2004,,relation.change_from_to,,PensionLiabilityBalance_2006
-PensionLiabilityBalance_2006,,relation.percentage_change,,44.7%
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon GPUs
+Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+Robert Mondavi,,relation.has_financial_ratio,,Current Ratio
+Current Ratio,,relation.equal_to,,1.7
+Intel,,relation.has_business_segment,,Client Computing Group
+Client Computing Group,,relation.had_Q4FY25_revenue,,$8.3 billion
+NonUtilityNuclear,,relation.has_financial_data,,2001
+2001,,relation.percent_change_in_earnings,,57.0%
+57.0%,,relation.to,,2002
 Microsoft,,relation.has_business_segment,,Cloud Services
 Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
-NVIDIA,,relation.had_net_sales_in_international_market,,1320.8 million
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,24%
+MFC,,relation.has_backlog,,backlog_amount
+backlog_amount,,relation.average_over_years,,[2013, 2014, 2015],
+[2013, 2014, 2015],,,relation.equivalent_to,,14367 millions
 AMD,,relation.has_business_segment,,Graphics Processing Units
 Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
 AMD,,relation.has_business_segment,,Graphics Processing Units
 Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,17%
 AMD,,relation.produces,,Radeon GPUs
 Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-Contractual Obligations,,relation.due_within_next_12_months,,5.8%_of_total_contractual_obligations
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-TotalNetUndevelopedAcresExpiring,,relation.for_three_year_period,,5808
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-CompanyX,,relation.used_cash_for_purchase,,cash_amount
-cash_amount,,relation.represented_percentage_of_total,,34%
-MergersAndAcquisitions,,relation.involved_cash_payment,,cash_amount
-cash_amount,,relation.represented_percentage_of_total_estimated_price,,34%
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
-Apple Consumer Products,,relation.achieved_profit_margin,,iPhone
-iPhone,,relation.in_Q4FY25,,27%
-Company_A,,relation.has_future_minimum_annual_rental_payments,,Future_Payments
-Future_Payments,,relation.average_over_next_five_years,,4441
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
-CompanyX,,relation.net_cash_provided_by_operating_activities,,value1
-value1,,relation.increased_by_percentage,,19%
-19%,,relation.in_year,,2014
-FinancialMetrics,,relation.relate_to,,net cash provided by operating activities
-net cash provided by operating activities,,relation.showed_increase_of,,19%
-19%,,relation.during_year,,2014
-Apple,,relation.net_income,,value2
-value2,,relation.increased_by_percentage,,15%
-15%,,relation.in_year,,2015
-TechMetrics,,relation.relate_to,,net income
-net income,,relation.showed_increase_of,,15%
-15%,,relation.during_year,,2015
-CompanyX,,relation.has_stock_based_compensation_policy,,PolicyA
-PolicyA,,relation.predicted_cost_for_2011,,$100 million
-$100 million,,relation.assuming_same_trend,,2012
-2012,,relation.would_have_total_stock_based_compensation_cost,,$105 million
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon RX 7900 XT
-Radeon RX 7900 XT,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.has_operating_leases,,LeaseA
-LeaseA,,relation.future_minimum_commitments_2015,,$150 million
-$150 million,,relation.total_future_minimum_commitments,,$1.5 billion
-$1.5 billion,,relation.calculate_percentage,,9.88%
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.purchased_shares,,47.6%
-47.6%,,relation.during_time_period,,November Q4 FY18
-AMD,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_Q4FY25_revenue,,$15.2 billion
-AMD GPU Computing segment,,relation.had_YoY_growth_in_Q4FY25,,42%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-BankOfAmerica,,relation.change_in_tier_1_capital_from_year,,2007_to_2008
-2007_to_2008,,relation.value_in_billions,,-11
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
-Space Systems,,relation.has_operating_profit_growth_rate,,1.9%
-1.9%,,relation.in_year,,2012
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$4.7 billion
-Office in Alpharetta,,relation.has_area,,28000
-28000,,relation.as_of_date,,december 31, 2013
-Office in Jersey City,,relation.has_area,,11900
-11900,,relation.as_of_date,,december 31, 2013
-28000,,relation.ratio_to,,11900
-11900,,relation.is_equal_to,,2.37
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.9 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
-Microsoft,,relation.produces,,Azure cloud platform
-Azure cloud platform,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-Standby_Letters_of_Credit,,relation.commitment_applicable_percentage_at_date,,December_31_2005
-December_31_2005,,relation.equal_to,,86%
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
-CompanyX,,relation.has_cash_dividend,,Dividend1
-Dividend1,,relation.period_ended,,March 31 2002
-Dividend1,,relation.to,,DividendAmount1
-CompanyX,,relation.has_cash_dividend,,Dividend2
-Dividend2,,relation.period_ended,,March 31 2003
-Dividend2,,relation.to,,DividendAmount2
-DividendAmount2,,relation.percent_change_from,,DividendAmount1
-DividendAmount1,,relation.is,,1.11%
-Apple,,relation.has_cash_dividend,,Dividend3
-Dividend3,,relation.period_ended,,June 30 2004
-Dividend3,,relation.to,,DividendAmount3
-Apple,,relation.has_cash_dividend,,Dividend4
-Dividend4,,relation.period_ended,,June 30 2005
-Dividend4,,relation.to,,DividendAmount4
-DividendAmount4,,relation.percent_change_from,,DividendAmount3
-DividendAmount3,,relation.is,,1.08%
-Cisco,,relation.adjusted_consolidated_cash_flow,,X
-X,,relation.is_related_to,,non-tower_cash_flow
-non-tower_cash_flow,,relation.accounting_period,,december_31_2005
-december_31_2005,,relation.portion_of_cash_flow,,-5.8%
+Intel,,relation.gross_unrecognized_tax_benefits_2014,,X billion dollars
+X billion dollars,,relation.declined_to,,X - Y billion dollars
+X - Y billion dollars,,relation.as_of_date,,december 31, 2015
+X - Y billion dollars,,relation.represented_a_percentage_decline,,-32.9%
+-32.9%,,relation.compared_to,,X billion dollars
+X billion dollars,,relation.was_gross_unrecognized_tax_benefits,,Intel
+Intel,,relation.as_of_date,,december 31, 2014
 AMD,,relation.has_business_segment,,Graphics Processing Unit
 Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
 AMD,,relation.has_business_segment,,Graphics Processing Unit
 Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,18%
 AMD,,relation.produces,,Radeon GPUs
 Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-NVIDIA,,relation.had_YoY_growth_in_Q4FY25,,93%
-Tesla,,relation.had_YoY_growth_in_Q4FY25,,8.5%
-Apple,,relation.had_YoY_growth_in_Q4FY25,,10.2%
-Amazon,,relation.had_YoY_growth_in_Q4FY2007,,18.3%
-Amazon,,relation.had_net_revenue_in_2008,,51.0 billion
-Amazon,,relation.had_net_revenue_in_2007,,44.7 billion
-Tesla,,relation.had_net_revenue_in_2008,,2.2 billion
-Tesla,,relation.had_net_revenue_in_2007,,2.0 billion
-Apple,,relation.had_net_revenue_in_2008,,57.6 billion
-Apple,,relation.had_net_revenue_in_2007,,53.0 billion
-Apple,,relation.has_business_segment,,Services
-Services,,relation.had_YoY_growth_in_Q4FY25,,10.2%
-CompanyX,,relation.reported_operating_income,,1492 million
-1492 million,,relation.in_year,,2013
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-Entergy Texas, Inc.,,relation.net_change_in_net_revenue,,39
-39,,relation.during_year,,2007
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
-S&P500,,relation.has_component,,SPX
-SPX,,relation.rate_of_return,,11.2%
-11.2%,,during_time_period,,2001-2005
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,18%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-NVIDIA,,relation.reported_profit_margin,,5.8%
-5.8%,,relation.for_year,,2015
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,17%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Accrued Interest,,relation.equivalent_to,,$1.2 million
-$1.2 million,,relation.during_year,,2013
-Recognized Interest Liability,,relation.equivalent_to,,$17.0 million
-$17.0 million,,relation.during_year,,2013
-Ratio,,relation.calculated_from,,Accrued Interest
-Accrued Interest,,relation.to,,Recognized Interest Liability
-Recognized Interest Liability,,relation.with_value,,14.2
-Apple,,relation.announced_product_launch,,iPhone 15
-iPhone 15,,relation.during_year,,2023
-Apple iPhone 15,,relation.launches_in_region,,North America
-Commercial Mortgages,,relation.at_fair_value,,value1
-value1,,relation.to,,lower_of_cost_or_market
-lower_of_cost_or_market,,value2,,relation.ratio_in_2009
-Walmart,,relation.has_business_segment,,Retail
-Retail,,relation.had_Q4FY25_revenue,,$56.7 billion
-CompanyX,,relation.has_long_term_debt义务,,DebtX
-DebtX,,relation.has_cash_payment义务,,CashPaymentX
-CashPaymentX,,relation.due_in_year义务,,2020
-2020,,relation.percent_of_total_future_cash_payments义务,,10.7%
-CompanyY,,relation.has_long_term_debt义务,,DebtY
-DebtY,,relation.has_cash_payment义务,,CashPaymentY
-CashPaymentY,,relation.due_in_year义务,,2020
-2020,,relation.percent_of_total_future_cash_payments义务,,10.7%
-Apple,,relation.has_long_term_debt义务,,DebtA
-DebtA,,relation.has_cash_payment义务,,CashPaymentA
-CashPaymentA,,relation.due_in_year义务,,2021
-2021,,relation.percent_of_total_future_cash_payments义务,,8.9%
-ValuationAllowance,,relation.change_in,,TotalChangeInValuationAllowance
-TotalChangeInValuationAllowance,,relation.caused_by,,SettlementsWithTaxingAuthorities
-SettlementsWithTaxingAuthorities,,relation.contributed_percentage_to_change,,0%
-Apple,,relation.announced_product_launch,,iPhone 15
-iPhone 15,,relation.during_time_period,,Q4 FY25
-Apple,,relation.has_corporate_partner,,Samsung
-Samsung,,relation.contributes_to_profit,,10%
-CompanyX,,relation.has_debt_maturities_outstanding_at,,Dec_31_2013
-Dec_31_2013,,relation.of_which,,unsecured_debt
-unsecured_debt,,relation.comprised_x_percent,,72.1%
-Apple,,relation.has_debt_maturities_outstanding_at,,Jun_30_2022
-Jun_30_2022,,relation.of_which,,secured_debt
-secured_debt,,relation.comprised_x_percent,,45.3%
-CompanyX,,relation.had_capital_investment_in_2006,,$100 million
-$100 million,,relation.projected_increase_in_capital_investment_in_2007,,$42.9 million
-CompanyY,,relation.had_capital_investment_in_2006,,$200 million
-$200 million,,relation.projected_increase_in_capital_investment_in_2007,,$88.6 million
-IndustryZ,,relation.average_annual_increase_in_capital_investment,,42.9%
-42.9%,,relation.base_year_for_increase,,2006
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$4.5 billion
-Investment_track,,relation.attribution_percentage,,66.3%
-66.3%,,relation.corresponds_to_year,,2006
+Walmart,,relation.growth_rate_in_number_of_stores,,2.7%
+2.7%,,relation.during_year,,2011
 AMD,,relation.has_business_segment,,Graphics Processing Unit
 Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,17%
-Robert Mondavi,,relation.acquired_for_total_assets,,Total Assets
-Total Assets,,relation.divided_into_portions,,Goodwill
-Goodwill,,relation.comprises_percentage,,34.3%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
-NVIDIA,,relation.repurchases_shares,,program_X
-program_X,,relation.as_of_date,,December 31, 2017
-December 31, 2017,,relation.with_average_price_per_share,,$12.12
-$12.12,,relation.calculate_total_cost,,2981.5 million
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.1 billion
-AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,32%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-CompanyX,,relation.reported_amortization_expense,,value1
-value1,,relation.year,,2008
-2008,,relation.to,,CompanyX
-CompanyX,,relation.reported_amortization_expense,,value2
-value2,,relation.year,,2009
-2009,,relation.percentage_change,,2.0%
+Company,,relation.has_facilities,,Facilities
+Facilities,,relation.are_located_in,,Europe
+Europe,,relation.account_for,,13.3%_of_total_owned_facilities
+Apple,,relation.has_business_segment,,Consumer Electronics
+Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
+NVIDIA,,relation.traded_at,,NASDAQ
+NASDAQ,,relation.average_price_per_share_during_time_period,,November to December
+November to December,,value,,3.61
+Tesla,,relation.traded_at,,NASDAQ
+NASDAQ,,relation.average_price_per_share_during_time_period,,November to December
+November to December,,value,,3.61
 AMD,,relation.has_business_segment,,Graphics Processing Units
 Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
 AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Entity_A,,relation.has_accumulated_other_comprehensive_losses,,Amount_2014
-Amount_2014,,relation.to,,Entity_B
-Entity_B,,relation.has_accumulated_other_comprehensive_losses,,Amount_2015
-Amount_2015,,relation.to,,Entity_C
-Entity_C,,relation.is_percentage_increase_from,,Entity_D
-Entity_D,,relation.between_years,,2014_2015
-Entity_D,,relation.value,,37.7%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.3 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
-Microsoft,,relation.produces,,Azure
-Azure,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-Derivatives,,relation.composed_of,,Interest Rate Contracts
-Interest Rate Contracts,,relation.accounted_for_percent_of_total,,73.22
-73.22,,relation.in_year,,2013
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,27%
+CompanyX,,relation.has_purchased_distressed_loan_portfolio,,portfolioX
+portfolioX,,relation.carrying_amount_at_date,,December 31, 2010
+December 31, 2010,,value_in_millions,,469
 Microsoft,,relation.has_business_segment,,Cloud Services
 Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,24%
-UncertainTaxBenefitsEndingBalance,,relation.accrued_interest_represents,,11.6%
-11.6%,,relation.as_of_date,,December31,2014
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
-CompanyX,,relation.had_rent_expenses_in,,2010
-2010,,relation.was,,100000
-CompanyX,,relation.had_rent_expenses_in,,2011
-2011,,relation.was,,95000
-AMD,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_Q4FY25_revenue,,$2.7 billion
-AMD,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_YoY_growth_in_Q4FY25,,27%
-AMD,,relation.produces,,Radeon VII GPUs
-Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Company A,,relation.maximum_company_match_on_date,,January 1, 2011
-January 1, 2011,,relation.increased_by,,1%
+Cisco,,relation.has_repurchase_program,,December 2007 Repo Agreement
+December 2007 Repo Agreement,,relation.repurchase_shares_up_to,,12.675 million shares
+12.675 million shares,,relation.replaced_by,,January 23, 2008 Repurchase Authorization
+January 23, 2008 Repurchase Authorization,,relation.authorizes_repurchase_of,,shares
+shares,,relation.up_to_total_value_of,,12.675 million shares
+AMD,,relation.has_business_segment,,Graphics Processing Unit (GPU)
+Graphics Processing Unit (GPU),,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics Processing Unit (GPU)
+Graphics Processing Unit (GPU),,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon RX 6000 series
+Radeon RX 6000 series,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+Ball Corporation,,relation.had_cumulative_total_shareholder_return,,78.93%
+78.93%,,relation.for_period,,5 years ending 12/31/10
 AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
-S&P Financials,,relation.five_year_cumulative_total_return,,X%
-X%,,relation.compared_between_years,,2015-2016
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
-EquityInvestmentBalance,,relation.contains,,UnfundedCommitments
-UnfundedCommitments,,relation.as_of_date,,December 31, 2012
-December 31, 2012,,relation.percentage_of_total,,6.3%
-Apple,,relation.has_business_segment,,Services
-Services,,relation.had_Q4FY25_revenue,,$18.7 billion
-CompanyX,,relation.reported_financials_for_year,,2017
-2017,,relation.weighted_average_common_shares_outstanding_for_diluted Computations,,1,200 million
-1,200 million,,relation.compared_to_year,,2016
-2016,,relation.weighted_average_common_shares_outstanding_for_diluted_Computations,,1,322.5 million
-Apple,,relation.reported_financials_for_year,,2018
-2018,,relation.weighted_average_common_shares_outstanding_for_diluted_Computations,,979.5 million
-979.5 million,,relation.compared_to_year,,2017
-2017,,relation.weighted_average_common_shares_outstanding_for_diluted_Computations,,942.3 million
-CompanyX,,relation.change_in_inventory_between_years,,2017_and_2018
-2017_and_2018,,relation.percentage_change,,-8%
-AMD,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_Q4FY25_revenue,,$2.1 billion
-Hologic,,relation.used_in_acquisition,,Suros
-Suros,,relation.with_price_per_share,,23.2
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
-Compensation_cost_rsus_2008,,relation.increased_by_percent,,48.9%
-48.9%,,relation.compared_to,,Compensation_cost_rsus_2009
-Compensation_cost_rsus_2008,,relation.increased_by,,48.9%
-48.9%,,relation.from_year,,2008
-2008,,relation.to_year,,2009
-Apple,,relation.increased_by_percent,,25.7%
-25.7%,,relation.compared_to,,Apple
-Google,,relation.increased_by,,18.3%
-18.3%,,relation.from_year,,2008
-2008,,relation.to_year,,2009
-DebtMaturities,,relation.as_of,,December 2007
-December 2007,,relation.has_maturity_ratio_for_2011,,2011Debt
-2011Debt,,relation.to,,DebtAfter2012
-DebtAfter2012,,relation.ratio_is,,0.15
-Goldman Sachs,,relation.has_financial_product,,MBS
-MBS,,relation.was_traded_in,,Q4 FY23
-Goldman Sachs,,relation.has_financial_product,,MBS
-MBS,,relation.had_annual_return,,0.85
-Procter & Gamble,,relation.has_division,,North American Consumer Packaging
-North American Consumer Packaging,,relation.represented_percentage_of_total_consumer_packaging_sales_in_2008,,78%
-Apple,,relation.has_business_segment,,iPhone
-iPhone,,relation.had_Q4FY25_revenue,,$90.2 billion
-company,,relation.has_tax_position,,tax_position_2018
-tax_position_2018,,relation.accrued_interest_and_penalties,,48.2_millions
-company,,relation.has_tax_position,,tax_position_2017
-tax_position_2017,,relation.accrued_interest_and_penalties,,48.2_millions
-NVIDIA,,relation.has_business_segment,,GPU Computing
-GPU Computing,,relation.had_Q4FY25_revenue,,$35.6 billion
-Citi,,relation.has_cumulative_total_return,,X%
-X%,,relation.over_period,,5 years to 31-Dec-2017
-S&P Financials,,relation.has_cumulative_total_return,,Y%
-Y%,,relation.over_period,,5 years to 31-Dec-2017
-X%,,relation.difference_from,,Y%
-Y%,,relation.is,,Z%
-Apple,,relation.has_cumulative_total_return,,W%
-W%,,relation.over_period,,5 years to 31-Dec-2017
-Apple,,relation.has_cumulative_total_return,,W%
-W%,,relation.difference_from,,Z%
-Z%,,relation.is,,A%
-Facility,,relation.rated_in_year,,2009
-2009,,relation.number_of_facilities,,50
-BBB/Baa,,relation.corresponds_to_rating,,rating
-rating,,relation.count_in_2009,,1
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
-Apple,,relation.has_business_segment,,Consumer Electronics
-Consumer Electronics,,relation.had_YoY_growth_in_Q4FY25,,18%
-Entergy Louisiana,,relation.has_bond_issued_in,,2012 Bond
-2012 Bond,,relation.issued_with_interest_rate,,X%
-X%,,relation.interest_rate_applied_to_principal,,Principal Amount
-Principal Amount,,relation.results_in_annual_interest_expense,,4.7 million
-Bank of America,,relation.has_bond_issued_in,,2018 Bond
-2018 Bond,,relation.issued_with_interest_rate,,Y%
-Y%,,relation.interest_rate_applied_to_principal,,Loan Amount
-Loan Amount,,relation.results_in_annual_interest_expense,,5.2 million
-Debt,,relation.has_interest_expense,,Interest_Expense
-Interest_Expense,,relation.for_year,,2015
-2015,,relation.in_billions,,0.86
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
-Retail_Segment,,relation.has_capital_expenditures,,amount_in_millions
-amount_in_millions,,relation.since_inception_exclusive_of_2003,,198
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_Q4FY25_revenue,,$11.7 billion
-Entergy Arkansas,,relation.has_payment_difference,,Entergy New Orleans
-Entergy New Orleans,,relation.amt_in_millions,,66
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.9 billion
+IBM,,relation.has_financial_metric,,free_cash_flow
+free_cash_flow,,relation.change_percentage_between_years,,2013_2014
 AMD,,relation.has_business_segment,,Graphics Processing Units
 Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
-CompanyX,,relation.has_financial_statement,,2004_income_statement
-2004_income_statement,,relation.contains_line_item,,Rental_Expense
-Rental_Expense,,relation.net_of_sublease_income,,true
-true,,relation.value_in_millions,,240
-CompanyX,,relation.has_financial_statement,,2005_income_statement
-2005_income_statement,,relation.contains_line_item,,Rental_Expense
-Rental_Expense,,relation.net_of_sublease_income,,true
-true,,relation.value_in_millions,,220
-CompanyX,,relation.has_financial_statement,,2006_income_statement
-2006_income_statement,,relation.contains_line_item,,Rental_Expense
-Rental_Expense,,relation.net_of_sublease_income,,true
-true,,relation.value_in_millions,,244
+DefinedContributionPlansExpenses_2015,,relation.change_between_years,,DefinedContributionPlansExpenses_2016
+DefinedContributionPlansExpenses_2016,,relation.change_value,,2.3 million
+USMarket_Segment,,relation.has_expense_category,,DefinedContributionPlansExpenses
+DefinedContributionPlansExpenses,,relation.change_between_years,,2.3 million
+Apple,,relation.has_expense_category,,SmartphoneManufacturing
+SmartphoneManufacturing,,relation.change_between_years,,1.8 million
+Apple SmartphoneManufacturing,,relation.contributes_to_profit_margin,,iOS Software Development
+JPMorgan Chase,,relation.has_goodwill_breakdown,,retail bank reporting unit
+retail bank reporting unit,,relation.accounting_for_percentage_of_total_goodwill,,2% as of December 31, 2011
+Microsoft,,relation.has_business_segment,,Cloud
+Cloud,,relation.had_Q4FY25_revenue,,$17.2 billion
+Total_Commitments,,relation.have_expiry_period,,1-3_years
+1-3_years,,relation.account_for,,17%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
+CompanyX,,relation.has_future_minimum_operating_lease_payments,,TotalFuturePayments
+TotalFuturePayments,,relation.split_into,,12MonthPortion
+12MonthPortion,,relation.accounts_for,,33.5%
+Apple,,relation.has_business_segment,,Consumer Electronics
+Consumer Electronics,,relation.had_Q4FY25_revenue,,$90.2 billion
+Payment_Amount_Per_Share_2016,,relation.increased_by_percent,,28.45%
+28.45%,,relation.during_years,,2016-2017
+Payment_Amount_Per_Share,,relation.showed_growth,,28.45%
+28.45%,,relation.for_years,,2016-2017
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_YoY_growth_in_Q4FY25,,32%
+EntityA,,relation.has_purchase_commitment_due_in,,2013
+2013,,relation.represent_percentage_of_total,,3%
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD GPU Computing segment,,relation.had_YoY_growth_in_Q4FY25,,28%
+28%,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+NVIDIA,,relation.revisions_of_previous_estimates_due_to,,increase_in_drilling_programs_in_U.S._resource_plays
+increase_in_drilling_programs_in_U.S._resource_plays,,relation.resulted_in_impact,,172_mmboe
+NVIDIA,,relation.revisions_of_previous_estimates_due_to,,increase_in_discontinued_operations
+increase_in_discontinued_operations,,relation.resulted_in_impact,,172_mmboe
+AMD,,relation.revisions_of_previous_estimates_due_to,,supply_chain_issues
+supply_chain_issues,,relation.resulted_in_impact,,100_mmboe
+Finished Products,,relation.comprises_part_of,,Total Inventory
+Total Inventory,,relation.comprises_percentage,,24.03%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$1.8 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,27%
+CompanyX,,relation.reported_financial_results_for_year,,2011
+2011,,relation.increased_other_income_due_to,,favorable foreign exchange and reimbursements
+favorable foreign exchange and reimbursements,,relation.by_percent,,11.46%
+Microsoft,,relation.released_software_product,,Windows 11
+Windows 11,,relation.increased_revenue_by,,8.72%
+8.72%,,relation.during_period,,2011
+CompanyX,,relation.had_asset_allocation_in_2017,,actual_asset_allocation
+actual_asset_allocation,,relation.had_debt_to_equity_ratio,,2.33
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+InstitutionalSecurities,,relation.attributes_to,,AverageCommonEquityAttribution
+AverageCommonEquityAttribution,,relation.for_year,,2016
+2016,,relation.represents_percentage,,63%
+JPMorgan,,relation.owns_portfolio,,InvestmentFunds
+InvestmentFunds,,relation.as_of_date,,2017
+2017,,relation.represents_value,,58%
+CompanyX,,relation.return_on_total_assets,,5.4%
+5.4%,,relation.for_year,,2014
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+CompanyX,,relation.reports_financials,,2014 Annual Report
+2014 Annual Report,,relation.shows_net_change_in_shares_outstanding,,10 million
+10 million,,relation.net_change_from,,2013 Annual Report
+2013 Annual Report,,relation.shows_shares_outstanding,,4 million
+CompanyY,,relation.reports_financials,,2014 Annual Report
+2014 Annual Report,,relation.shows_net_change_in_shares_outstanding,,16 million
+16 million,,relation.net_change_from,,2013 Annual Report
+2013 Annual Report,,relation.shows_shares_outstanding,,10 million
+Tesla,,relation.reports_financials,,2015 Annual Report
+2015 Annual Report,,relation.shows_net_change_in_shares_outstanding,,15 million
+15 million,,relation.net_change_from,,2014 Annual Report
+2014 Annual Report,,relation.shows_shares_outstanding,,5 million
+NVIDIA,,relation.market_capitalization_on_date,,February 13, 2009
+February 13, 2009,,relation.equivalent_to,,11456267981.5
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,18%
+AMD,,relation.produces,,Radeon VII
+Radeon VII,,relation.achieved_sales_in_Q4Y25,,hundreds_of_millions_of_dollars
+AECO_Natural_Gas_Sales_Index,,relation.has_high,,High_Price
+High_Price,,relation.minus,,Low_Price
+Low_Price,,relation.equals,,Difference_of_$5.92
+JPMorgan,,relation.has_business_segment,,Retail Banking
+Retail Banking,,relation.had_Q4FY23_revenue,,$10.2 billion
+JPMorgan,,relation.has_business_segment,,Retail Banking
+Retail Banking,,relation.had_YoY_growth_in_Q4FY23,,7%
+Suros,,relation.acquisition_price_paid_in_cash,,56.0%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$4.1 billion
+Commercial Lending,,relation.as_of_date,,December 31, 2016
+December 31, 2016,,relation.comprises_percent_of_total,,Total Commitments to Extend Credit and Other Commitments
+Total Commitments to Extend Credit and Other Commitments,,relation.value,,66.05%
+Walmart,,relation.has_business_segment,,Retail
+Retail,,relation.had_Q4FY25_revenue,,$56.8 billion
+Walmart,,relation.has_business_segment,,Retail
+Retail,,relation.had_YoY_growth_in_Q4FY25,,7%
+EnvironmentalCapitalExpenditures,,relation.average_proportional_recoverable,,159.3
+159.3,,relation.for_years,,december 31, 2015, 2014 and 2013
+december 31, 2015, 2014 and 2013,,relation.in_units,,millions
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+SP500,,relation.return_on_investment,,1877
+1877,,relation.for_initial_investment,,$100000
+SP500,,relation.return_on_investment_period,,January 1st, 2015 to End of 2016
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$3.9 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,27%
+BankOfAmerica,,relation.has_total_commitments_to_extend_credit,,total_committed_amount1
+total_committed_amount1,,relation.increased_by_percentage,,5.3%
+5.3%,,relation.compared_to_period,,Q4 FY24
+JPMorganChase,,relation.has_total_commitments_to_extend_credit,,total_committed_amount2
+total_committed_amount2,,relation.increased_by_percentage,,5.3%
+5.3%,,relation.compared_to_period,,Q4 FY24
+Citigroup,,relation.has_total_commitments_to_extend_credit,,total_committed_amount3
+total_committed_amount3,,relation.increased_by_percentage,,5.3%
+5.3%,,relation.compared_to_period,,Q4 FY24
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,20%
+Microsoft,,relation.produces,,Azure
+Azure,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+CompanyX,,relation.purchased_shares,,89.9%
+89.9%,,relation.during_month,,August
+CompanyY,,relation.purchased_shares,,89.9%
+89.9%,,relation.during_month,,August
+InvestorZ,,relation.purchased_shares,,89.9%
+89.9%,,relation.during_month,,August
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_YoY_growth_in_Q4FY25,,18%
 AMD,,relation.produces,,Radeon VII GPUs
 Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Cadence Design Systems Inc.,,relation.cumu_total_stock_return_5Y,,145.29%
-145.29%,,relation.compared_to,,NASDAQ Composite
-NASDAQ Composite,,relation.for_period_ending,,12/29/2018
+Company,,relation.has_net_tangible_assets,,Net Tangible Assets
+Net Tangible Assets,,relation.comprises_percentage_of_purchasing_price,,79.2%
+Net Tangible Assets,,relation.are_composed_of,,Assets
+Assets,,relation.minus_liabilities,,Resulting_Net_Tangible_Assets
+Resulting_Net_Tangible_Assets,,relation.compose_percentage_of,,Purchasing_Price
+Purchasing_Price,,relation.value,,79.2%
+Bank,,relation.has_loans,,Mortgage Loans
+Mortgage Loans,,relation.comprise_percentage_of_total_loans,,82.5%
+Mortgage Loans,,relation.are_backed_by,,Real Estate
+Real Estate,,relation.minus_debt Obligations,,Net_Mortgage_Assets
+Net_Mortgage_Assets,,relation.compose_percentage_of,,Total_Assets
+Total_Assets,,relation.value,,82.5%
+CommercialBanking,,relation.contributes_to,,2005_operating_income
+2005_operating_income,,relation.amount,,10000
+2005_operating_income,,relation.without_CommercialBanking,,reduced_operating_income
+reduced_operating_income,,relation.amount,,9514
+Alibaba,,relation.has_business_segment,,Retail
+Retail,,relation.had_Q4FY25_revenue,,$40.8 billion
+Alibaba,,relation.has_business_segment,,Retail
+Retail,,relation.had_YoY_growth_in_Q4FY25,,10%
+e*trade financial corporation,,relation.total_return_percentage,,X%
+X%,,relation.time_period,,five years ended 12/14
+S&P 500 index,,relation.total_return_percentage,,Y%
+Y%,,relation.time_period,,five years ended 12/14
+X%,,relation.difference_from,,Y%
+Y%,,relation.value,,-67.33
+Apple Inc.,,relation.has_business_segment,,Consumer Electronics
+Consumer Electronics,,relation.had_Q4FY25_revenue,,$90.2 billion
+Apple Inc. Consumer Electronics segment,,relation.achieved_profit_margin,,24%
+24%,,relation.for_year,,2024
+FinancialEntity_1,,relation.is_impacted_by,,interest_rate_change
+interest_rate_change,,relation.impact_on_earnings_in_2009,,1226
+1226,,relation.change_from_2008,,1226
+FinancialEntity_2,,relation.is_impacted_by,,interest_rate_change
+interest_rate_change,,relation.impact_on_earnings_in_2008,,0
+0,,relation.change_from_2009,,-1226
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,16%
+CompanyX,,relation.has_options,,OptionY
+OptionY,,relation.expected_life,,5.2 years
+CorpZ,,relation.exercises_options,,OptionA
+OptionA,,relation.average_life_duration,,5.2 years
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$16.8 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,47%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+Long-Term_Retail_HNW_Americas,,relation.is_percentage_of,,Total_Long-Term_Retail_HNW
+Total_Long-Term_Retail_HNW,,relation.equal_to,,73.9%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+CompanyX,,relation.spent_on_advertising,,amount_in_2012
+amount_in_2012,,relation.is_less_than,,amount_spent_on_research_and_development_in_2012
 AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$3.2 billion
-HighSalePriceQ12016,,relation.increased_by_percent,,12.52
-12.52,,relation.during_quarters,,Q1 Q2
-Q1 Q2,,relation.in_year,,2016
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
+Entergy Louisiana,,relation.incurs_interest_expense_from,,Series First Mortgage Bonds due September 2018
+Series First Mortgage Bonds due September 2018,,relation.equates_to,,19.5 million
+Microsoft,,relation.has_business_segment,,Cloud
+Cloud,,relation.had_Q4FY25_revenue,,$17.2 billion
+ConsolidatedBalanceSheet_2008,,relation.carries_amount_in_excess_of_fair_value_of,,TradingAssets
+TradingAssets,,relation.amount_reported,,2.5
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_Q4FY25_revenue,,$90.1 billion
+subsidiaries_assets,,relation.generated_sales_proceeds,,total_sales_proceeds
+total_sales_proceeds,,relation.during_time_period,,March 2003
+Apple,,relation.has_business_segment,,Consumer Electronics
+Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
+Mondavi,,relation.was_acquired_by,,WarnerMedia
+WarnerMedia,,relation.included_goodwill,,34.3%
+Mondavi acquisition,,relation.had_goodwill_percentage,,34.3%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,23%
+JPMorgan Chase & Co.,,relation.has_stock_return,,67.48%
+67.48%,,relation.over_period,,five_year_period
+Intel,,relation.has_business_segment,,Client Computing Group
+Client Computing Group,,relation.had_Q4FY25_revenue,,$8.0 billion
+Intel Client Computing Group,,relation.had_YoY_growth_in_Q4FY25,,12%
+12%,,relation.produces,,Apollo GPU
+Apollo GPU,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+CompanyX,,relation.has_long_term_debt_due_after,,2022
+2022,,relation.as_percentage_of_total_long_term_debt,,89%
+CompanyY,,relation.has_long_term_debt_due_after,,2023
+2023,,relation.as_percentage_of_total_long_term_debt,,89%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,16%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+S&P_500_index,,relation.growth_from,,2010
+2010,,relation.to,,2015
+2015,,relation.was,,80.75%
+MSFT,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$20.1 billion
+Suros,,relation.acquisition_price_composed_of,,Goodwill
+Goodwill,,relation.amount_is,,75.6% of total acquisition price
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.2 billion
+LKQ Corporation,,relation.had_cumulative_return_for_period,,five years ended 12/31/2016
+five years ended 12/31/2016,,relation.return_percentage,,104%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$3.7 billion
+Vertex Purchase Plan,,relation.is_related_to,,Total Common Stock Plans
+Total Common Stock Plans,,relation.comprises_percent,,1.1%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.9 billion
+OutstandingBalancesDec31_2011,,relation.comprises,,PrincipalAndInterestProduct
+PrincipalAndInterestProduct,,relation.represents_percent_of_combined_products,,23%
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
+Miscellaneous Receivables and Other Assets,,relation.represented_by_percentage,,3.464
+3.464,,relation.of_assets_classified_as_held_for_sale,,as_of_December_2012
+Apple,,relation.has_business_segment,,Services
+Services,,relation.had_Q4FY25_revenue,,$19.6 billion
+IBM,,relation.holds_AFS_investment_securities,,securities_A
+securities_A,,relation.during_years,,2016-2017
+securities_A,,relation.average_value,,221866
+IBM,,relation.holds_AFS_investment_securities,,securities_B
+securities_B,,relation.during_years,,2018
+securities_B,,relation.average_value,,221866
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
 AMD,,relation.produces,,Radeon VII GPUs
 Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-companyX,,relation.net_revenue_in_2016,,value1
-value1,,relation.net_change_from_2015_to_2016,,-124
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
-Office Facility Closing,,relation.involves_non_recurring_charge,,Charge
-Charge,,relation.represented_percent_of,,Lease Expense
-Lease Expense,,relation.for_year,,2006
-2006,,relation.value,,4.6%
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_Q4FY25_revenue,,$8.1 billion
-IBM,,relation.has_business_segment,,Cloud and Cognitive Software
-Cloud and Cognitive Software,,relation.had_YoY_growth_in_Q4FY25,,7%
-Equity,,relation.comprises_percentage_of,,Financing Structure
-Financing Structure,,relation.value_in_2019,,44.4%
-AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
-NVIDIA,,relation.operating_revenues_from,,Mexico
-Mexico,,relation.composed_percent_of_total_operating_revenues,,9.6%
-9.6%,,during_year,,2013
+Loan_Sold_Participant_Programs,,relation.change_in_unpaid_principal_balance_outstanding,,0.2
+0.2,,relation.between_dates,,december 31, 2011 and december 31, 2010
+Wells_Fargo,,relation.has_business_segment,,Consumer_Lending
+Consumer_Lending,,relation.change_in_unpaid_principal_balance_outstanding,,0.5
+0.5,,relation.between_dates,,december 31, 2010 and december 31, 2009
+NVIDIA,,relation.had_pro_forma_revenue_change_between_years,,2006 and 2007
+2006 and 2007,,relation.percentage_change,,96%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,17%
+AMD,,relation.produces,,Radeon GPUs
+Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+NetEarnings,,relation.has_grown_by,,-13.3%
+-13.3%,,relation.for_period,,Q4 FY25
+BasicAndDilutedEPS,,relation.has Experienced_Growth_Rate,,-13.3%
+-13.3%,,relation.over_period,,Q4 FY25
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,17%
+FairValuePerShare_2014,,relation.difference_from_,,FairValuePerShare_2015
+FairValuePerShare_2015,,relation.percentage_difference,,54%
+Apple,,relation.has_business_segment,,Consumer Electronics
+Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
+CompanyX,,relation.released_financial_report,,Q3 FY16
+Q3 FY16,,relation.include_stock_price,,30
+CompanyX,,relation.released_common_stock_info,,Q3 FY16
+Q3 FY16,,relation.average_price_per_share,,30
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
 AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,18%
-Net_effect_of_one_percentage_point_change,,relation.on_total_service_cost,,increase_by_10 basis points
-increase_by_10 basis points,,relation.on_total_interest_cost,,decrease_by_5 basis points
-JPMorgan,,relation.on_total_service_cost,,increase_by_8 basis points
-increase_by_8 basis points,,relation.on_total_interest_cost,,decrease_by_3 basis points
-Henry Hub Natural Gas,,relation.has_price_high,,X dollars per mcf
-X dollars per mcf,,relation.during_year,,2009
-Henry Hub Natural Gas,,relation.has_price_low,,Y dollars per mcf
-Y dollars per mcf,,relation.during_year,,2009
-X dollars per mcf,,relation.spread_from,,Y dollars per mcf
-Y dollars per mcf,,relation.equal_to,,45.38
-Apple,,relation.has_price_high,,Z dollars per share
-Z dollars per share,,relation.during_year,,2009
-Apple,,relation.has_price_low,,W dollars per share
-W dollars per share,,relation.during_year,,2009
-Z dollars per share,,relation.spread_from,,W dollars per share
-W dollars per share,,relation.equal_to,,15.22
-Consumer Packaging,,relation.includes,,Foodservice Net Sales
-Foodservice Net Sales,,relation.represented_percentage_in_2005,,19%
-Apple,,relation.has_business_segment,,Retail
-Retail,,relation.had_Q4FY25_revenue,,$14.5 billion
-Commitment_with_exp_of_less_than_1_year,,relation.was_subject_to_renewal,,93.3%
-93.3%,,relation.out_of_total,,100%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,23%
-Microsoft,,relation.develops,,Azure AI solutions
-Azure AI solutions,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-CompanyX,,relation.reported_capital_expenditures_on_gaap_basis,,2029
-2029,,relation.for_year,,2014
-CompanyX,,relation.reported_capital_expenditures_on_non_gaap_basis,,2026.9
-2026.9,,relation.for_year,,2014
-variation,,relation.between,,2029 - 2026.9
-2029 - 2026.9,,relation.is,,202.9
-Apple,,relation.has_business_segment,,Services
-Services,,relation.had_Q4FY25_revenue,,$19.6 billion
-BankOfAmerica,,relation.generated_interest_income,,X
-X,,relation.in_year,,2014
-2014,,relation.change_from_previous_year,,-16.8%
--16.8%,,relation.compared_to_year,,2015
-Walmart,,relation.has_business_segment,,Retail
-Retail,,relation.had_Q4FY25_revenue,,$50.7 billion
-Walmart,,relation.has_business_segment,,Retail
-Retail,,relation.had_YoY_growth_in_Q4FY25,,7%
-AAPL,,relation.high_stock_price_during_period,,second_quarter_2002
-second_quarter_2002,,relation.average,,6.36
-MSFT,,relation.low_stock_price_during_period,,second_quarter_2002
-second_quarter_2002,,relation.average,,6.36
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+PMI Common Stock,,relation.return_percentage_for_period,,five years ended 2018
+five years ended 2018,,relation.equal_to,,-3.5%
 AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$16.7 billion
-AMD,,relation.has_business_segment,,Graphics Processing Unit
-Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,42%
-AMD,,relation.produces,,Radeon RX 7900 XT
-Radeon RX 7900 XT,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-Adjusted_Average_Assets_2008,,relation.has_rate_of_return,,5%
-5%,,relation.calculates_to,,Earnings_Millions
-Earnings_Millions,,value,,98345
-Apple,,relation.has_business_segment,,Consumer Products
-Consumer Products,,relation.had_Q4FY25_revenue,,$90.1 billion
-CompanyX,,relation.granted_rsus_to,,EmployeeY
-EmployeeY,,relation.with_value_of,,14759301.12
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
+CompanyX,,relation.has_contractual_obligations,,DebtAndLeaseCommitments
+DebtAndLeaseCommitments,,relation.change_in_total_debt_to_be_repaid,,-262
+-262,,relation.between_years,,2008-2007
 AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_Q4FY25_revenue,,$2.5 billion
+Graphics,,relation.had_Q4FY25_revenue,,$4.1 billion
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_YoY_growth_in_Q4FY25,,23%
 AMD,,relation.produces,,Radeon VII GPUs
 Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-Delphi Automotive PLC,,relation.had_total_return,,250.82%
-250.82%,,relation.over_period,,five years to December 31, 2014
+United Parcel Service, Inc.,,relation.performance_of_class_b_common_stock,,class B common stock
+class B common stock,,relation.performed_differently_than,,Dow Jones Transportation Average
+Dow Jones Transportation Average,,relation.performance_difference,,-33.84%
+Tesla,,relation.performance_of_class_b_common_stock,,class B common stock
+class B common stock,,relation.performed_differently_than,,S&P 500
+S&P 500,,relation.performance_difference,,-27.52%
+CompanyX,,relation.revenue_in_2013,,$10 billion
+$10 billion,,relation.operating_expenses_in_2013,,$9.38 billion
+$9.38 billion,,relation.calculate_percentage_of_revenue,,93.8%
 AMD,,relation.has_business_segment,,Graphics Processing Units
-Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.9 billion
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
 AMD,,relation.has_business_segment,,Graphics Processing Units
 Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
-CompanyX,,relation.reported_pro_forma_net_income_loss_2007,,value1
-value1,,relation.change_from_2006_to_2007,,145%
-CompanyY,,relation.reported_pro_forma_net_income_loss_2006,,value2
-value2,,relation.reported_pro_forma_net_income_loss_2007,,value1
-value1,,relation.calculate_percentage_change,,145%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+Entergy Louisiana, Inc.,,relation.net_revenue_for_year,,2003
+2003,,relation.net_change_from_previous_year,,50.8
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+Chicago headquarters,,relation.has_lease_option,,Option_A
+Option_A,,relation.extends_until,,2027
+Chicago headquarters,,relation.has_lease_option,,Option_B
+Option_B,,relation.extends_until,,2028
+Option_A,,relation.is_exercised_with,,Option_B
+Option_B,,relation.extends_until,,2029
+Apple,,relation.has_lease_option,,Option_X
+Option_X,,relation.extends_until,,2026
+Apple headquarters,,relation.has_lease_option,,Option_Y
+Option_Y,,relation.extends_until,,2027
+Option_X,,relation.is_exercised_with,,Option_Y
+Option_Y,,relation.extends_until,,2028
+Square Footage Office Alpharetta Georgia,,relation.not_leased_percentage_as_of,,December 31, 2013
+December 31, 2013,,relation.equal_to,,65%
+Amazon,,relation.has_business_segment,,AWS
+AWS,,relation.had_Q4FY25_revenue,,$148.87 billion
+CompanyX,,relation.spent_on_property_plant_and_equipment,,amount1
+amount1,,relation.in_year,,2009
+2009,,relation.decreased_by_percentage,,percentage_change
+percentage_change,,relation.compared_to,,CompanyX
+CompanyX,,relation.spent_on_property_plant_and_equipment,,amount2
+amount2,,relation.in_year,,2010
+Microsoft,,relation.invested_in_research_and_development,,amount1
+amount1,,relation.in_year,,2008
+2008,,relation.increased_by_percentage,,percentage_change
+percentage_change,,relation.compared_to,,Microsoft
+Microsoft,,relation.invested_in_research_and_development,,amount2
+amount2,,relation.in_year,,2009
+Tractor Supply Company,,relation.stock_price_performance_from,,2012_to_2013
+2012_to_2013,,relation.percentage_growth,,74.14%
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$4.9 billion
+Citi,,relation.total_loss_due_to_instrument_specific_credit_risk,,2008
+2008,,relation.divided_by,,Citi
+Citi,,relation.total_loss_due_to_instrument_specific_credit_risk,,2007
+2007,,relation.equal_to,,0.2
+JPMorgan,,relation.total_loss_due_to_instrument_specific_credit_risk,,2009
+2009,,relation.divided_by,,JPMorgan
+JPMorgan,,relation.total_loss_due_to_instrument_specific_credit_risk,,2008
+2008,,relation.equal_to,,0.15
+BankOfAmerica,,relation.showed_balance_increase,,11.49%
+11.49%,,relation.between_years,,2005 and 2004
+WellsFargo,,relation.balance_end_of_year,,relation.increased_by
+relation.increased_by,,11.49%,,relation.comparing_years
+JPMorganChase,,relation.showed_balance_increase,,10.25%
+10.25%,,relation.between_years,,2006 and 2005
+Citigroup,,relation.balance_end_of_year,,relation.increased_by
+relation.increased_by,,10.25%,,relation.comparing_years
+Capital_Markets_goodwill,,relation.as_of_date,,December_31
+December_31,,relation.represented_percent_of,,Total_capital_markets_assets
+Total_capital_markets_assets,,relation.equal_to,,7.4%
+JPMorgan,,relation.has_financial_investment,,WeBank
+WeBank,,relation.investment_amount,,$1 billion
+DebtMaturities,,relation.maturity_year_2009,,7.1%
+7.1%,,relation.as_of_date,,december_31_2007
+Apple,,relation.has_business_segment,,Consumer Electronics
+Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
+CompanyX,,relation.has_financial_metric,,long-term debt maturities (excluding lease obligations)
+long-term debt maturities (excluding lease obligations),,relation.changed_by_percent_from_2005_to_2004,,71.2%
+CompanyY,,relation.has_financial_metric,,annual cash sinking fund requirements for debt outstanding
+annual cash sinking fund requirements for debt outstanding,,relation.changed_by_percent_from_2005_to_2004,,71.2%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.changed_by_percent_from_2005_to_2004,,58.7%
+CompanyX,,relation.maximum_exposure_to_loss_from_vie,,AmountX
+AmountX,,relation.changed_by_percentage,,-42%
+-42%,,relation.from_year,,2016
+2016,,relation.to_year,,2017
+AMD,,relation.maximum_exposure_to_loss_from_vie,,AmountY
+AmountY,,relation.changed_by_percentage,,-28%
+-28%,,relation.from_year,,2017
+2017,,relation.to_year,,2018
+CompanyX,,relation.has_receivable_balances_in,,Puerto Rico
+Puerto Rico,,relation.as_of_date,,December 31, 2017
+December 31, 2017,,relation.current_receivable_percentage,,38%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
+Microsoft,,relation.develops,,Azure AI solutions
+Azure AI solutions,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+Newport News segment,,relation.contributes_to,,total_backlog
+total_backlog,,relation.account_for,,50.6%
+Intel,,relation.has_business_segment,,Client Computing
+Client Computing,,relation.had_Q4FY25_revenue,,$16.1 billion
+CompanyX,,relation.held_treasury_stock_as_of,,december 31, 2007
+december 31, 2007,,relation.value_of_treasury_stock,,643822.11
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+CompanyX,,relation.reported_financials_on_date,,December 31, 2013
+December 31, 2013,,relation.net_profit_margin,,6.2%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
+Minnesota,,relation.has_electricity_customer_base,,total_customers
+total_customers,,relation.divide_by,,commercial_industrial_customers
+commercial_industrial_customers,,relation.calculate_percentage,,8.36%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,23%
+Microsoft,,relation.produces,,Azure cloud platform
+Azure cloud platform,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+CompanyX,,relation.long_term_debt_2014,,12345
+12345,,relation.long_term_debt_2015,,21464
+CompanyY,,relation.long_term_debt_2014,,10000
+10000,,relation.long_term_debt_2015,,19119
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,23%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions
+NVIDIA,,relation.has_stock_symbol,,NVDA
+NVDA,,relation.reports_shareholder_record,,137.5 million
+137.5 million,,on_date,,December 29, 2017
 AMD,,relation.has_business_segment,,Graphics
 Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
 AMD,,relation.has_business_segment,,Graphics
-Graphics,,relation.had_YoY_growth_in_Q4FY25,,18%
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,17%
 AMD,,relation.produces,,Radeon VII GPUs
 Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
-BankOfAmerica,,relation.balance_at_beginning_of,,2010
-2010,,relation.increased_to,,relation.balance_at_end_of
-relation.balance_at_end_of,,2012,,relation.by_percent
-WellsFargo,,relation.balance_at_beginning_of,,2010
-2010,,relation.increased_to,,relation.balance_at_end_of
-relation.balance_at_end_of,,2012,,relation.by_percent
-Tesla,,relation.announced_partnership,,BMW
-BMW,,relation.during_time_period,,Q4 FY25
-Tesla BMW partnership,,relation.affects_revenue,,Europe
-CompanyA,,relation.net_purchase_price,,TotalPurchasePrice
-TotalPurchasePrice,,relation.net_of_cash_acquired,,CashAcquired
-CashAcquired,,relation.ipr_d_percentage,,29%
-CompanyB,,relation.total_purchase_price_net_of_cash_acquired,,TotalPurchasePriceNetOfCash
-TotalPurchasePriceNetOfCash,,relation.ipr_d_percentage,,29%
-CompanyC,,relation.net_purchase_price,,TotalCost
-TotalCost,,relation.net_of_assets_acquired,,AssetsAcquired
-AssetsAcquired,,relation.ipr_d_percentage,,29%
-CompanyD,,relation.total_purchase_price_net_of_assets_acquired,,TotalCostNetOfAssets
-TotalCostNetOfAssets,,relation.ipr_d_percentage,,29%
-BankOfAmerica,,relation.has_tier_2_capital_ratio,,26.3%
-26.3%,,relation.for_year,,2008
-Tesla,,relation.has_tier_1_capital_ratio,,24.7%
-24.7%,,relation.for_year,,2009
-FairMarketValuePlanAssets_2018,,relation.has_return_estimate,,8327.41
-8327.41,,relation.over_period,,10_years
+CompanyX,,relation.reported_net_trading_assets_from_derivatives,,120 million
+120 million,,relation.for_year,,2012
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
+JPMorgan Chase,,relation.divided_into_segments,,Commercial Banking
+Commercial Banking,,relation.operating_income_without_asset_wealth_management_2015,,9305
+Citigroup,,relation.operating_income_without_asset_wealth_management_2015,,9305
+Bank of America,,relation.operating_income_without_asset_wealth_management_2015,,9305
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.operating_income_without_asset_wealth_management_2015,,9200
+CompanyX,,relation.has_goodwill,,921M
+921M,,relation.as_a_percentage_of,,current_assets
+current_assets,,relation.equal_to,,921%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+CompanyX,,relation.reported_operating_profit,,profit1
+profit1,,relation.for_year,,2001
+2001,,relation.in_region,,Europe
+CompanyX,,relation.reported_net_sales,,sales1
+sales1,,relation.for_year,,2001
+2001,,relation.in_region,,Europe
+CompanyX,,relation.reported_operating_profit,,profit2
+profit2,,relation.for_year,,2003
+2003,,relation.in_region,,Europe
+CompanyX,,relation.reported_net_sales,,sales2
+sales2,,relation.for_year,,2003
+2003,,relation.in_region,,Europe
+profit1,,relation.as_percentage_of,,sales1
+sales1,,relation.difference_from,,profit2
+profit2,,relation.as_percentage_of,,sales2
+sales2,,relation.is,,6.8%
+Apple,,relation.reported_operating_profit,,profit3
+profit3,,relation.for_year,,2002
+2002,,relation.in_region,,North America
+Apple,,relation.reported_net_sales,,sales3
+sales3,,relation.for_year,,2002
+2002,,relation.in_region,,North America
+profit3,,relation.as_percentage_of,,sales3
+sales3,,relation.difference_from,,profit2
+profit2,,relation.as_percentage_of,,sales2
+sales2,,relation.is,,4.5%
+CompanyX,,relation.current_assets,,100
+100,,relation.current_liabilities,,-175
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.1 billion
+CompanyX,,relation.reported_discontinued_operations_tax_expense,,25
+25,,relation.for_year,,2012
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.1 billion
+CompanyX,,relation.spent_on_stock_repurchases,,14739445000
+14739445000,,relation.during_year,,2011
+CorpA,,relation.performed_stock_repurchase_program,,Yes
+Yes,,relation.amount_spent,,14739445000
+14739445000,,relation.in_year,,2011
+Microsoft,,relation.achieved_profit,,24739445000
+24739445000,,relation.in_year,,2012
+Google,,relation.reduced_operating_expenses,,Yes
+Yes,,relation.by_amount,,1000000000
+1000000000,,relation.in_year,,2012
+PMI,,relation.investment_returned,,2.1%
+2.1%,,relation.during_time_period,,2013 to 2014
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$4.8 billion
+Entergy Louisiana,,relation.has_lease_obligations,,lease_amount
+lease_amount,,relation.as_a_percentage_of,,long_term_debt_maturities_2014
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.8 billion
+BankOfAmerica,,relation.interest_incurred,,148.4
+148.4,,relation.during_time_period,,2015
+WellsFargo,,relation.interest_incurred,,148.4
+148.4,,relation.during_time_period,,2016
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon GPUs
+Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+Advance Auto Parts,,relation.investment_returned,,-2.7%
+-2.7%,,relation.during_time_period,,2006 to January 3, 2009
+Tesla,,relation.has_business_segment,,Autonomous Vehicles
+Autonomous Vehicles,,relation.had_Q4FY25_revenue,,$15.2 billion
+BankOfAmerica,,relation.had_Tier_2_Capital_at,,12.3 billion
+12.3 billion,,relation.compared_to,,2007
+2007,,relation.had_Tier_2_Capital_at,,13.1 billion
+JPMorganChase,,relation.had_Tier_2_Capital_at,,11.5 billion
+11.5 billion,,relation.compared_to,,2007
+2007,,relation.had_Tier_2_Capital_at,,12.2 billion
+Citigroup,,relation.had_Tier_2_Capital_at,,10.8 billion
+10.8 billion,,relation.compared_to,,2007
+2007,,relation.had_Tier_2_Capital_at,,11.5 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
+Microsoft,,relation.develops,,Azure AI solutions
+Azure AI solutions,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+CentralBank,,relation.sets_interest_rates,,InterestRate10Increase
+InterestRate10Increase,,relation.results_in,,EconomicOutcome10Increase
+EconomicOutcome10Increase,,relation.has_difference_from,,EconomicOutcome10Decrease
+EconomicOutcome10Decrease,,relation.results_in,,DifferenceInMillions
+DifferenceInMillions,,relation.equal_to,,78.4
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_Q4FY25_revenue,,$90.6 billion
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_YoY_growth_in_Q4FY25,,10%
+CompanyX,,relation.reported_COGS_in_2009,,$ 108 million
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+NVIDIA,,relation.has_industry_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.operating_profit_in_2003,,100 million
+100 million,,relation.operating_profit_in_2004,,406 million
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.5 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,17%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+CompanyX,,relation.had_cash_flow_in_2014,,100 million
+100 million,,relation.increased_to,,102.04 million
+CorpY,,relation.had_total_cash_flow_in_2014,,150 million
+150 million,,relation.grew_to,,153.04 million
+153.04 million,,relation.over_the_period_of,,2014-2015
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon RX 7900 XT
+Radeon RX 7900 XT,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+CompanyX,,relation.reported_amortized_cost_as_percent_of_fair_value_in_2009,,103%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+Tobacco_and_Health_Judgments,,relation.are_related_to,,higher_charges
+higher_charges,,relation.as_a_percentage_of,,Operating_Companies_Income
+Operating_Companies_Income,,relation.increase_to,,73.1%
+Berkshire_Hathaway,,relation.has_investment_in,,Geico
+Geico,,relation.generated_profit_for,,Parent_Company
+Parent_Company,,relation.increase_by,,8.5%
+ProvenReserves,,relation.would_be,,489
+489,,relation.without_increase_for,,extensions discoveries and other additions
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+PurchaseTransaction,,relation.involved_party,,BuyerEntity
+BuyerEntity,,relation.had_debt_amount,,Amount1
+Amount1,,relation.to,,Amount2
+Amount2,,relation.compared_to_assets,,AssetsAmount
+AssetsAmount,,relation.resulted_in_debt_to_assets_ratio,,17.8%
 Microsoft,,relation.has_business_segment,,Cloud Services
 Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
-NetMWInOperation,,relation.to,,3955
-3955,,relation.as_of_date,,december_31_2002
-GenerationInGWH,,relation.for_year,,29953
-29953,,relation.year,,2002
-3955,,relation.ratio_to,,2
-2,,relation.divided_by,,29953
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,24%
+Microsoft,,relation.produces,,Azure cloud platform
+Azure cloud platform,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+CompanyX,,relation.had_long_term_financing_classified_as_current,,4%
+4%,,relation.at_end_of_year,,2005
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+Class_A_Common_Stock,,relation.has_authorized_stock,,Authorized_Stock
+Authorized_Stock,,relation.percent_issued_and_outstanding_in_2017,,33.9%
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.8 billion
+Total_commitments,,relation.expire_in,,less_than_1_year
+less_than_1_year,,relation.percent_of_total,,82%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+Acquisition,,relation.net_of_cash_acquired,,Total_Purchase_Price
+Total_Purchase_Price,,relation.goodwill_percentage,,78%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+NASDAQ Composite,,relation.has_performance_metric,,return on investment
+return on investment,,relation.within_time_period,,2008-2012
+2008-2012,,relation.equivalent_to,,10.8%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon VII
+Radeon VII,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+BankOfAmerica,,relation.has_credit_facility_outstanding,,FacilityX
+FacilityX,,relation.at_date,,December 2011
+December 2011,,relation.receivables_ratio,,2368.3
+WellsFargo,,relation.has_credit_facility_outstanding,,FacilityY
+FacilityY,,relation.at_date,,December 2011
+December 2011,,relation.receivables_ratio,,2368.3
+JPMorganChase,,relation.has_credit_facility_outstanding,,FacilityZ
+FacilityZ,,relation.at_date,,December 2011
+December 2011,,relation.receivables_ratio,,2368.3
+CompanyX,,relation.has_financial_liabilities,,NotesDue2019
+NotesDue2019,,relation.equivalent_value,,2672 million $
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+Debt_2004_2005,,relation.has_cash_sinking_fund_requirements,,Cash_Sinking_Fund_2004_2005
+Cash_Sinking_Fund_2004_2005,,relation.for_year,,2002
+2002,,relation.ratio_to_debt_outstanding_due_in_2004_2005,,1.7
+Apple,,relation.has_business_segment,,Consumer Electronics
+Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
+Ingalls segment,,relation.contributes_to,,total_backlog
+total_backlog,,relation.accounts_for,,49.4%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+CompanyX,,relation.paid_cash_dividends,,dividends_2006
+dividends_2006,,relation.based_on,,shares_outstanding_2006_millions
+Intel,,relation.has_business_segment,,Mobile
+Mobile,,relation.had_Q4FY25_revenue,,$8.3 billion
+Bank_of_America,,relation.has_common_equity_attribution,,institutional_securities
+institutional_securities,,relation.accounted_for_percentage_of,,58%_in_2017
+JPMorgan_Chase,,relation.has_common_equity_attribution,,institutional_securities
+institutional_securities,,relation.accounted_for_percentage_of,,58%_in_2017
+Tesla,,relation.has_business_segment,,Automobiles
+Automobiles,,relation.had_Q4FY25_revenue,,$31.3 billion
+Tesla,,relation.has_business_segment,,Automobiles
+Automobiles,,relation.had_YoY_growth_in_Q4FY25,,31%
+FairValueEntity_2010,,relation.change_from_year_to_year,,FairValueEntity_2011
+FairValueEntity_2011,,relation.percentage_change,,21.9%
+FairValueEntity_2010,,relation.to_year,,2010
+2010,,relation.change_from_year_to_year,,FairValueEntity_2011
+FairValueEntity_2011,,relation.to_year,,2011
+2011,,relation.percentage_change,,21.9%
+MSFT,,relation.has_business_segment,,Cloud
+Cloud,,relation.had_Q4FY25_revenue,,$18.1 billion
+MSFT,,relation.has_business_segment,,Cloud
+Cloud,,relation.had_YoY_growth_in_Q4FY25,,23%
+S&P_index,,relation.compared_to,,E*Trade_financial_corporation_cumulative_total_return
+E*Trade_financial_corporation_cumulative_total_return,,relation.as_of,,2014
+S&P_index,,relation.compared_to,,E*Trade_financial_corporation_cumulative_total_return
+E*Trade_financial_corporation_cumulative_total_return,,relation.ratio,,1.5
+Apple,,relation.compared_to,,Amazon
+Amazon,,relation.as_of,,2015
+Apple,,relation.compared_to,,Amazon
+Amazon,,relation.ratio,,1.2
+CompanyX,,relation.has_share_registration_data,,share_registration_details
+share_registration_details,,relation.as_of_date,,February 11, 2011
+February 11, 2011,,relation.contains_average_shares_per_holder,,858775
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.6 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
+IRS_controversy,,relation.involves_duration,,9_years
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.1 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+e*trade financial corporation,,relation.return_on_common_stock,,37.81%
+37.81%,,relation.from_date,,2009
+2009,,relation.to_date,,2014
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$4.2 billion
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,27%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+Tesla,,relation.spent_on_stock_repurchases,,384491910
+384491910,,relation.during_time_period,,Q4 2011
+Tesla,,relation.announced_stock_repurchase_program,,program_details
+program_details,,relation.included_spending_of,,384491910
+384491910,,relation.during_time_period,,Q4 2011
+AMD,,relation.announced_stock_repurchase_program,,program_details
+program_details,,relation.included_spending_of,,2500000000
+2500000000,,relation.during_time_period,,Q4 2012
+NVIDIA,,relation.had_net_revenue_in_2011,,amount
+amount,,relation.increased_by_percentage,,3.5%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,12%
+AMD,,relation.produces,,Radeon VII
+Radeon VII,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+S&P_500,,relation.has_cumulative_total_return,,1.16
+1.16,,relation.as_of,,2017
+Citi,,relation.has_cumulative_total_return,,x
+x,,relation.as_of,,2017
+2017,,relation.ratio_to_S&P_500,,0.86
+Tesla,,relation.has_business_segment,,Autonomous Vehicles
+Autonomous Vehicles,,relation.had_Q4FY25_revenue,,$15.2 billion
+Tesla,,relation.has_business_segment,,Autonomous Vehicles
+Autonomous Vehicles,,relation.had_YoY_growth_in_Q4FY25,,21%
+jpmorgan chase,,relation.invested_in,,kbw bank index
+kbw bank index,,relation.performance_ratio_to,,s&p financial index
+s&p financial index,,relation.in_year,,2010
+2010,,relation.ratio_value,,1.1
+Citigroup,,relation.invested_in,,KBW Life Index
+KBW Life Index,,relation.performance_ratio_to,,Dow Jones Financial Index
+Dow Jones Financial Index,,relation.in_year,,2011
+2011,,relation.ratio_value,,1.2
+Property&Casualty_operations,,relation.contributes_to,,total_statutory_capital
+total_statutory_capital,,relation.weight,,43.64%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+NVIDIA,,relation.operating_margin_for_year,,2012
+2012,,relation.is,,10.61%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+JPMorgan Chase & Co.,,relation.hadTier2CapitalRatio,,3.91%
+3.91%,,relation.inYear,,2008
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+Contract-Based_Intangible_Assets,,relation.has_amortization_expense,,Amortization_Expense
+Amortization_Expense,,relation.average_yearly,,103.1_thousand
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.8 billion
+UnrecognizedTaxBenefits_2016,,relation.has_value,,X billion dollars
+X billion dollars,,relation.change_from_year,,2017
+2017,,relation.is,,-3.1%
+-3.1%,,relation.compared_to,,UnrecognizedTaxBenefits_2017
+Apple,,relation.has_value,,Y billion dollars
+Y billion dollars,,relation.change_from_year,,2018
+2018,,relation.is,,-2.5%
+-2.5%,,relation.compared_to,,AppleRevenue_2018
+Securitization,,relation.holds_loans,,ASF_Framework_Loans
+ASF_Framework_Loans,,relation.were_issued_by_third_parties,,98%
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$15.8 billion
+IBM,,relation.has_segment,,Consulting
+Consulting,,relation.revenue_in_2008,,$15.2 billion
+$15.2 billion,,relation.revenue_in_2009,,$14.2 billion
+$14.2 billion,,relation.percent_change,,-6.6%
+Accenture,,relation.has_segment,,Consulting
+Consulting,,relation.revenue_in_2008,,$10.7 billion
+$10.7 billion,,relation.revenue_in_2009,,$9.9 billion
+$9.9 billion,,relation.percent_change,,-6.6%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.9 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions
+CompanyX,,relation.had_net_revenue_in_2008,,$20 billion
+$20 billion,,relation.net_change_in_net_revenue_from_2007_to_2008,,$21.7 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$4.5 billion
+CompanyX,,relation.operating_activities_cash_provided,,CashProvided2018
+CashProvided2018,,relation.year,,2018
+CashProvided2018,,relation.average_of,,2758.55
+CompanyX,,relation.operating_activities_cash_provided,,CashProvided2019
+CashProvided2019,,relation.year,,2019
+CashProvided2019,,relation.average_of,,2758.55
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
+TPD,,relation.total_matching_buy_volumes,,172
+172,,relation.for_year,,2006
+TPD,,relation.total_matching_sell_volumes,,172
+172,,relation.for_year,,2006
+TPD,,relation.total_matching_buy_volumes,,172
+172,,relation.for_year,,2005
+TPD,,relation.total_matching_sell_volumes,,172
+172,,relation.for_year,,2005
+TPD,,relation.total_matching_buy_volumes,,172
+172,,relation.for_year,,2004
+TPD,,relation.total_matching_sell_volumes,,172
+172,,relation.for_year,,2004
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+BankOfAmerica,,relation.generated_revenue_from,,investment banking fees
+investment banking fees,,relation.increased_by_percentage_from_year_to_year,,20%
+20%,,relation.for_year,,2007
+GoldmanSachs,,relation.generated_revenue_from,,investment banking fees
+investment banking fees,,relation.increased_by_percentage_from_year_to_year,,20%
+20%,,relation.for_year,,2007
+Tesla,,relation.has_business_segment,,Automobiles
+Automobiles,,relation.had_Q4FY25_revenue,,$31.8 billion
+Tesla,,relation.has_business_segment,,Automobiles
+Automobiles,,relation.had_YoY_growth_in_Q4FY25,,8%
+NetTradingAssets2013,,relation.equivalent_to,,DerivativeReceivables2013
+DerivativeReceivables2013,,relation.divided_by,,DerivativePayable2013
+DerivativePayable2013,,relation.equal_to,,8076
+Apple,,relation.owns,,iPhone
+iPhone,,relation.in_Q4FY25,,202.5 billion
+NVIDIA,,relation.had_operating_revenue_in_2001,,$1.5 billion
+$1.5 billion,,relation.percent_change_to,,relation.had_operating_revenue_in_2002
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
+AMD,,relation.produces,,Radeon GPUs
+Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+FairValuePerShare_2015,,relation.difference_from_,,FairValuePerShare_2016
+FairValuePerShare_2016,,relation.percentage_difference,,71%
+Apple,,relation.announced_product_launch,,iPhone 14
+iPhone 14,,relation.in_period,,Q4 FY23
+Apple,,relation.has_headquarters,,Cupertino
+Cupertino,,relation.located_in_state,,California
+Company2019,,relation.has_allowance_for_loan_losses,,NetAllowance
+NetAllowance,,relation.at_date,,December31,2010
+December31,2010,,relation.as_percent_of,,CarryingAmountOfPurchasedDistressedLoanPortfolio
+CarryingAmountOfPurchasedDistressedLoanPortfolio,,relation.value,,19.6%
+Apple,,relation.has_business_segment,,iPhone
+iPhone,,relation.had_Q4FY25_revenue,,$90.2 billion
+State,,relation.has_tax_settlement,,TaxSettlement
+TaxSettlement,,relation.average_payment_per_year,,56 million
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
+Andes SBU,,relation.contributes_to,,total_revenue
+total_revenue,,relation.in_year,,2017
+2017,,relation.as_a_percentage_of,,26%
+IBM,,relation.has_business_segment,,Cloud and Cognitive Software
+Cloud and Cognitive Software,,relation.had_Q4FY25_revenue,,$8.2 billion
+IBM,,relation.has_business_segment,,Cloud and Cognitive Software
+Cloud and Cognitive Software,,relation.had_YoY_growth_in_Q4FY25,,6%
+Equity Compensation Plan,,relation.approved_by_security_holders,,Security Holders
+Security Holders,,relation.number_of_plans,,4536446
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+Entergy Corporation,,relation.long_term_debt_due_within_24_months_as_of,,December 31, 2013
+December 31, 2013,,value,,1495.9 million
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+AcmeCorp,,relation.spent_on_goodwill,,18.5%
+18.5%,,relation.as_portion_of_purchasing_price,,AcmeCorp_Merger
+TechGiant,,relation.spent_on_goodwill,,18.5%
+18.5%,,relation.as_portion_of_purchasing_price,,TechGiant_Acquisition
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+Acquisition_Obligations_2009,,relation.decreased_by_percentage,,1.56%
+1.56%,,relation.from_year,,2009
+2009,,relation.to_year,,2013
+Cash_Payable_Obligations_2009,,relation.decreased_by_percentage,,1.56%
+1.56%,,relation.from_year,,2009
+2009,,relation.to_year,,2013
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+CompanyX,,relation.paid_cash_dividends_during,,2006
+2006,,relation.based_on_shares_outstanding,,102.5_millions
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+gen-probe,,relation.purchase_price_paid_in_cash,,99.9%
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_Q4FY25_revenue,,$18.7 billion
+CompanyX,,relation.issued_shares,,149 million
+149 million,,relation.in_year,,2015
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+Entergy,,relation.has_division,,Entergy Mississippi
+Entergy Mississippi,,relation.employs_percentage_of_total_employees,,5.6%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$15.8 billion
+AXIS_COSATI,,relation.has_segment,,Risk and Insurance Brokerage Services
+Risk and Insurance Brokerage Services,,relation.revenue_in_2008,,X1
+AXIS_COSATI,,relation.has_segment,,Risk and Insurance Brokerage Services
+Risk and Insurance Brokerage Services,,relation.revenue_in_2009,,X2
+X1,,relation.percent_change_from,,X2
+MSFT,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.revenue_in_2008,,Y1
+MSFT,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.revenue_in_2009,,Y2
+Y1,,relation.percent_change_from,,Y2
+Warranty_reserve_2017,,relation.change_from,,Warranty_reserve_2018
+Warranty_reserve_2018,,relation.is,,111
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.5 billion
+Federal Reserve,,relation.issued_notes,,U.S. dollar notes
+U.S. dollar notes,,relation.in_year,,2014
+2014,,relation.amount_in_millions,,2000
+JP Morgan,,relation.has_business_segment,,Retail Banking
+Retail Banking,,relation.had_Q4FY25_revenue,,$15.2 billion
+JP Morgan,,relation.has_business_segment,,Retail Banking
+Retail Banking,,relation.had_YoY_growth_in_Q4FY25,,7%
+PMI,,relation.reported_net_earnings,,relation.previous_year
+relation.previous_year,,relation.in_billions,,7.0
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
+Acquisition Obligation,,relation.comprises,,Estimated Future Contingent Acquisition Obligation
+Estimated Future Contingent Acquisition Obligation,,relation.has_due_date,,Within 12 Months
+Within 12 Months,,relation.comprises_percentage,,19.3%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,20%
+CompanyX,,relation.has_operating_leases,,Lease1
+Lease1,,relation.future_minimum_commitments_2014,,$150 million
+$150 million,,relation.total_future_minimum_commitments,,$1.45 billion
+$1.45 billion,,relation.calculate_percentage,,10.5%
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_YoY_growth_in_Q4FY25,,18%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+Walmart,,relation.growth_rate_in_number_of_stores,,3.4%
+3.4%,,relation.during_year,,2012
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+Cadence Design Systems Inc,,relation.investment_return_from,,2001-2004
+2001-2004,,relation.equal_to,,-18.5%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+FairValueShare_2014,,relation.change_from,,FairValueShare_2016
+FairValueShare_2016,,relation.percent_change,,163%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,23%
+AMD,,relation.produces,,Radeon GPUs
+Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+Program_2018,,relation.as_of_date,,December_2018
+December_2018,,relation.percent_still_outstanding,,88%
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_Q4FY25_revenue,,$15.2 billion
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_YoY_growth_in_Q4FY25,,27%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+CapitalExpenditures_nonGAAP,,relation.is_bigger_than,,CapitalExpenditures_GAAP
+CapitalExpenditures_GAAP,,relation.by_percentage,,8.53%
+8.53%,,relation.for_year,,2012
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+BankOfAmerica,,relation.has_multi_currency_line_of_credit,,CreditLineA
+CreditLineA,,relation.available_potential_increase,,40%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.6 billion
+Commitment,,relation.is_due_after,,2022
+2022,,relation.comprises_percent,,71.62%
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_Q4FY25_revenue,,$2.8 billion
+SquareFootageInUS,,relation.owned_facility_percentage,,92.8%
+92.8%,,relation.of_total_us_square_footage,,totalUsSquareFootage
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
+Entergy Louisiana,,relation.paid_credit_facility,,150 million
+150 million,,relation.by_date,,december 31, 2011
+Apple,,relation.has_business_segment,,Consumer Electronics
+Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
+CompanyX,,relation.paid_dividend_in_Q1_2019,,AmountA
+AmountA,,relation.contributes_to_total_dividend,,24.01%
+CorpY,,relation.issued_stock_in_Q1_2019,,AmountB
+AmountB,,relation.contributes_to_total_dividend,,24.01%
+IBM,,relation.issued_stock_in_Q1_2019,,AmountC
+AmountC,,relation.contributes_to_total_dividend,,15.02%
+Microsoft,,relation.paid_dividend_in_Q1_2019,,AmountD
+AmountD,,relation.contributes_to_total_dividend,,15.02%
+Residential_Mortgages,,relation.change_in_2013,,-864 million
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
+Manufacturing_and_processing_facilities,,relation.as_of_date,,December_31_2016
+December_31_2016,,relation.are_leased_percentage,,X%
+Intel,,relation.has_business_segment,,Client Computing Group
+Client Computing Group,,relation.had_Q4FY25_revenue,,$8.7 billion
+CompanyX,,relation.reported_cash_outflow_for_shares_repurchased,,20.7 million
+20.7 million,,relation.during_time_period,,November 2007
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.1 billion
+Bermuda_subsidiaries,,relation.have_statutory_capital_and_surplus,,amount_A
+amount_A,,relation.net_change_in_2010,,2634
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+CompanyX,,relation.reported_COGS,,$108 million
+$108 million,,relation.in_year,,2009
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+CompanyX,,relation.has_stock_option_plan,,2001 Plan
+2001 Plan,,relation.issued_options_as_of_date,,December 31, 2009
+December 31, 2009,,relation.number_of_options_issued,,20633770
+Microsoft,,relation.has_stock_option_plan,,2008 Plan
+2008 Plan,,relation.issued_options_as_of_date,,December 31, 2010
+December 31, 2010,,relation.number_of_options_issued,,15422000
+CorporateDebt,,relation.has_principal_payment_due,,2011
+2011,,relation.as_percentage_of_total,,13%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+NVIDIA,,relation.had_related_party_revenue,,related_party_A
+related_party_A,,relation.changed_by_percentage_from_2016_to_2017,,18%
+AMD,,relation.had_related_party_revenue,,related_party_B
+related_party_B,,relation.changed_by_percentage_from_2016_to_2017,,18%
+Tesla,,relation.has_business_segment,,Autonomous Vehicles
+Autonomous Vehicles,,relation.had_Q4FY25_revenue,,$8.1 billion
+Tesla,,relation.has_business_segment,,Autonomous Vehicles
+Autonomous Vehicles,,relation.had_YoY_growth_in_Q4FY25,,68%
+Tesla,,relation.produces,,Tesla Semi trucks
+Tesla Semi trucks,,relation.achieved_sales_in_Q4Y25,,thousands of units
+payments_to_participants_in_unfunded_german_plans,,relation.expected_total_amount_for_years,,2008_2012
+2008_2012,,relation.is_approximately,,104_millions
+Apple,,relation.has_business_segment,,Consumer Electronics
+Consumer Electronics,,relation.had_Q4FY25_revenue,,$89.6 billion
+CompanyX,,relation.has_financial_statement,,2006_Balance_Sheet
+2006_Balance_Sheet,,relation.total_liabilities,,value1
+value1,,relation.has_financial_statement,,2007_Balance_Sheet
+2007_Balance_Sheet,,relation.total_liabilities,,value2
+value2,,relation.percentage_change,,-15.2%
+Apple,,relation.has_financial_statement,,2008_Balance_Sheet
+2008_Balance_Sheet,,relation.total_liabilities,,value3
+value3,,relation.percentage_change,,-10.5%
+Service_and_interest_cost_components,,relation.effect_on,,Total
+Total,,relation.is_1pp_increase_of,,Other_postretirement_benefit_obligation
+Other_postretirement_benefit_obligation,,relation.has_value,,10.2%
+JPMorgan,,relation.impact_on_quarterly_results,,Net_income
+Net_income,,relation.shares_of,,Common_stockholders
+Common_stockholders,,relation.amount_in_dollars,,2.1 billion
+CompanyX,,relation.has_stock,,StockX
+StockX,,relation.has_weighted_average_exercise_price_per_share_in_2005,,$5.00
+$5.00,,relation.has_weighted_average_exercise_price_per_share_in_2007,,$12.00
+CompanyY,,relation.has_stock,,StockY
+StockY,,relation.has_weighted_average_exercise_price_per_share_in_2005,,$3.00
+$3.00,,relation.has_weighted_average_exercise_price_per_share_in_2007,,$7.50
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+CompanyX,,relation.has_facility,,FacilityY
+FacilityY,,relation.status_as_of,,december 28, 2013
+december 28, 2013,,relation.is_leased,,15%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon GPUs
+Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+CompanyX,,relation.operating_profit_margin_as_adjusted_2016,,.2%
+.2%,,relation.difference_from_operating_profit_margin_as_adjusted_2017,,.8%
+CompanyY,,relation.operating_profit_margin_as_adjusted_2016,,.4%
+.4%,,relation.difference_from_operating_profit_margin_as_adjusted_2017,,.0%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.produces,,Radeon GPUs
+Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+CompanyX,,relation.spent_on_advertising,,value1
+value1,,relation.in_year,,2013
+2013,,relation.is_less_than,,value2
+value2,,relation.spent_on_research_and_development,,relation.in_year
+IBM,,relation.spent_on_advertising,,value3
+value3,,relation.in_year,,2014
+2014,,relation.is_less_than,,value4
+value4,,relation.spent_on_research_and_development,,relation.in_year
+Entergy,,relation.issued_notes_to,,NYPA
+NYPA,,relation.with_installment_payments,,seven annual installments
+seven annual installments,,relation.plus,,eight annual installments
+eight annual installments,,relation.total_value,,916
+Entergy,,relation.issued_notes_to,,NYPA
+NYPA,,relation.with_installment_payments,,eight annual installments
+eight annual installments,,relation.total_value,,916
+Microsoft,,relation.issued_notes_to,,AT&T
+AT&T,,relation.with_installment_payments,,five annual installments
+five annual installments,,relation.total_value,,800
+S&P_500_index,,relation.had_total_five_year_change,,9
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+CompanyX,,relation.average_price_per_share,,average_price
+average_price,,relation.repurchase_shares_during_year,,2007
+2007,,relation.total_cost_of_repurchases,,643822.41
+Apple,,relation.has_business_segment,,Consumer Electronics
+Consumer Electronics,,relation.had_Q4FY25_revenue,,$90.2 billion
+United Parcel Service Inc.,,relation.had_cumulative_return_on_investment,,X%
+X%,,relation.compared_to,,S&P 500 index
+S&P 500 index,,relation.had_cumulative_return_on_investment,,X-13.9%
+United Parcel Service Inc.,,relation.traded_in,,stock_market
+stock_market,,relation.index_performance_difference,,S&P 500 index
+S&P 500 index,,relation.performance_difference_of,,13.9%
+Tesla,,relation.has_business_segment,,Automotive
+Automotive,,relation.had_Q4FY25_revenue,,$31.3 billion
+Tesla,,relation.has_business_segment,,Automotive
+Automotive,,relation.had_YoY_growth_in_Q4FY25,,7%
+EquityCompensationPlan,,relation.approved_by_security_holders,,SecurityHolders
+SecurityHolders,,relation.has_remaining_available,,90.1%
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
+vertex_401(k)_plan,,relation.is_part_of,,total_common_stock_plans
+total_common_stock_plans,,relation.comprises_percentage,,0.6%
+AMD,,relation.has_business_segment,,GPU
+GPU,,relation.had_Q4FY25_revenue,,$2.8 billion
+Equity Securities,,relation.belong_to_segment,,Investing & Lending
+Investing & Lending,,relation.contributed_to_net_revenue_percentage_in_2015,,70%
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.9 billion
+subsidiary_asset_sales_proceeds,,relation.for_period,,Q4 FY2003
+Q4 FY2003,,relation.total_sales_proceeds_in_millions,,396
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+NetGoodwillAtDec312011,,relation.comprised_of,,AcquisitionGoodwill
+AcquisitionGoodwill,,relation.representing_percentage,,10%
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
+AON,,relation.has_revenue_segment,,Risk Solutions
+Risk Solutions,,relation.revenue_in_2011,,60.3% of total revenues
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+Backlog_as_of_Dec_31_2014,,relation.has_amount,,$21 billion
+$21 billion,,relation.projected_sales_in_2015,,5.88 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+CompanyX,,relation.had_net_income_loss_in_2007,,X1
+X1,,relation.declined_by_percent_to_common_shareholders,,-76.2%
+CompanyY,,relation.had_net_income_loss_in_2007,,Y1
+Y1,,relation.declined_by_percent_to_common_shareholders,,-76.2%
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+CruiseIndustryGlobal,,relation.has_guests_from_region,,Europe
+Europe,,relation.percentage_of_total_guests_in_2010,,29.5%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+CompanyX,,relation.had_operating_expenses_in_year,,2013
+2013,,relation.expense_value,,38152
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,27%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+Lockheed Martin,,relation.has_division,,Space Systems
+Space Systems,,relation.net_sales_in_2013,,$9,198 million
+Lockheed Martin,,relation.has_division,,Space Systems
+Space Systems,,relation.net_sales_in_2014,,$9,198 million
+Lockheed Martin,,relation.has_division,,Space Systems
+Space Systems,,relation.net_sales_in_2015,,$9,198 million
+NVIDIA,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_Q4FY25_revenue,,$35.6 billion
+Entity_A,,relation.has_accumulated_other_comprehensive_losses,,Entity_B
+Entity_B,,relation.for_year,,2013
+2013,,relation.add,,Entity_C
+Entity_C,,relation.for_year,,2014
+2014,,relation.add,,Entity_D
+Entity_D,,relation.for_year,,2015
+2015,,relation.divide,,3
+Entity_E,,relation.has_accumulated_other_comprehensive_losses,,Entity_F
+Entity_F,,relation.for_year,,2013
+2013,,relation.add,,Entity_G
+Entity_G,,relation.for_year,,2014
+2014,,relation.add,,Entity_H
+Entity_H,,relation.for_year,,2015
+2015,,relation.divide,,3
+3,,relation.equal,,-6806
+Apple,,relation.has_accumulated_other_comprehensive_losses,,TechCorp
+TechCorp,,relation.for_year,,2012
+2012,,relation.add,,InnovateCo
+InnovateCo,,relation.for_year,,2013
+2013,,relation.divide,,2
+SpaceX,,relation.operating_profit_for_year,,2010
+2010,,relation.average_with,,2011
+2011,,relation.average_with,,2012
+2012,,relation.calculate_average,,1059
+SpaceX,,relation.operating_profit_for_year,,2011
+2011,,relation.average_with,,2012
+2012,,relation.average_with,,2010
+2010,,relation.calculate_average,,1059
+Tesla,,relation.has_business_segment,,Automobiles
+Automobiles,,relation.had_Q4FY25_revenue,,$31.3 billion
+Tesla,,relation.has_business_segment,,Automobiles
+Automobiles,,relation.had_YoY_growth_in_Q4FY25,,8%
+CompanyX,,relation.reported_effective_tax_rate_for_period,,26.7
+26.7,,relation.covering_period,,three_years
+CorpY,,relation.reported_average_effective_tax_rate_over,,26.7
+26.7,,relation.over_period,,3_years
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,21%
+Euro,,relation.has_face_value,,euro notes with maturity date in March 2021
+euro notes with maturity date in March 2021,,relation.is_valued_at,,0.73 USD
+USD,,relation.is_equivalent_to,,0.73 Euro
+0.73 Euro,,relation.used_for_conversion,,euro notes with maturity date in March 2021
+Bitcoin,,relation.has_price_in_terms_of,,USD
+USD,,relation.fluctuated_during,,2022-12
+USD,,relation.is_used_for,,Bitcoin transactions
+Bitcoin transactions,,relation.fluctuated_during,,2022-12
+Entergy Corporation,,relation.long_term_debt_as_of,,december 31, 2013
+december 31, 2013,,relation.due_within,,36 months
+36 months,,relation.amount_in_millions,,1766.8
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+R2,,relation.has_financing_term,,3.1% cash payment
+R2,,relation.estimated_purchase_price_contains,,cash_payment
+cash_payment,,relation.accounting_for,,3.1%
+MSFT,,relation.has_business_segment,,Cloud
+Cloud,,relation.had_Q4FY25_revenue,,$17.2 billion
+MSFT,,relation.has_financing_term,,5.2% equity stake
+5.2% equity stake,,relation.accounting_for,,4.1%
+Long-term_obligations,,relation.composed_of,,Long-term_debt
+Long-term_debt,,relation.account_for_percentage,,73.01%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.6 billion
+Postretirement_Benefit_Plan,,relation.has_range,,mathematical_range
+mathematical_range,,relation.equal_to,,19.3
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+Prudential Insurance Company of America,,relation.balance_in_year,,2016
+2016,,relation.change_from_previous_year,,2017
+2017,,relation.percentage_change,,-1.3%
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,25%
+Microsoft,,relation.developed,,Azure AI solutions
+Azure AI solutions,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+HTM_investment_securities_2017,,relation.compared_to,,HTM_investment_securities_2013_end
+HTM_investment_securities_2013_end,,relation.ratio,,0.19
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
+Clean-Up Efforts Programs,,relation.included_receivables_for,,Recoverable Costs
+Recoverable Costs,,relation.changed_between_years,,2008 and 2009
+2008 and 2009,,value,,-1 million
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+Microsoft,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,23%
+Microsoft,,relation.produces,,Azure AI supercomputers
+Azure AI supercomputers,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+Locomotives,,relation.was_bought_by,,CompanyX
+CompanyX,,relation.at_cost_per_unit,,454545
+454545,,relation.during_year,,2012
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_Q4FY25_revenue,,$15.8 billion
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_YoY_growth_in_Q4FY25,,27%
+EmployeeStockPurchasePlan,,relation.has_stats_for,,2016
+2016,,relation.showed_change_in_issuance,,-12.4%
+-12.4%,,relation.compared_to,,2017
+EmployeeStockPurchasePlan,,relation.has_stats_for,,2017
+2017,,relation.showed_change_in_issuance,,12.4%
+12.4%,,relation.compared_to,,2016
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_Q4FY25_revenue,,$89.6 billion
+Apple,,relation.has_business_segment,,Consumer Products
+Consumer Products,,relation.had_YoY_growth_in_Q4FY25,,10%
+ConsolidatedBalanceSheet,,relation.reported_carrying_amount,,TradingAssets
+TradingAssets,,relation.for_period,,2007
+ConsolidatedBalanceSheet,,relation.reported_carrying_amount,,TradingAssets
+TradingAssets,,relation.for_period,,2008
+TradingAssets,,relation.experienced_change,,PercentageChange
+PercentageChange,,relation.between_years,,-38%
+Apple,,relation.announced_product_launch,,iPhone 13
+iPhone 13,,relation.on_date,,2021-09-14
+Apple,,relation.generated_revenue_from,,iPhone 13
+iPhone 13,,relation.in_Q4FY21,,$45.5 billion
+CompanyX,,relation.had_common_stock_high_sale_price_in_Q3_2002,,HighPrice
+HighPrice,,relation.difference_from_low_sale_price,,3.05
+3.05,,relation.had_common_stock_low_sale_price_in_Q3_2002,,LowPrice
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics Processing Units
+Graphics Processing Units,,relation.had_YoY_growth_in_Q4FY25,,17%
+AMD,,relation.produces,,Radeon GPUs
+Radeon GPUs,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+United Parcel Service, Inc.,,relation.held_class_b_common_stock_performance,,performance_data_2002
+performance_data_2002,,relation.performance_difference,,S&P 500 index
+United Parcel Service, Inc.,,relation.held_class_b_common_stock_performance,,performance_data_2003
+performance_data_2003,,relation.performance_difference,,S&P 500 index
+United Parcel Service, Inc.,,relation.held_class_b_common_stock_performance,,performance_data_2004
+performance_data_2004,,relation.performance_difference,,S&P 500 index
+United Parcel Service, Inc.,,relation.held_class_b_common_stock_performance,,performance_data_2005
+performance_data_2005,,relation.performance_difference,,S&P 500 index
+United Parcel Service, Inc.,,relation.held_class_b_common_stock_performance,,performance_data_2006
+performance_data_2006,,relation.performance_difference,,S&P 500 index
+Microsoft Corporation,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_Q4FY25_revenue,,$17.2 billion
+Microsoft Corporation,,relation.has_business_segment,,Cloud Services
+Cloud Services,,relation.had_YoY_growth_in_Q4FY25,,24%
+Microsoft Corporation,,relation.develops,,Azure
+Azure,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+NetInterestReduction,,relation.reduced_by,,13 million
+13 million,,relation.compared_to,,2015
+NetInterestAmount2016,,relation.equals,,69.5 million
+Walmart,,relation.has_business_segment,,Retail
+Retail,,relation.had_Q4FY25_revenue,,$56.8 billion
+Walmart,,relation.has_business_segment,,Retail
+Retail,,relation.had_YoY_growth_in_Q4FY25,,7%
+KBW Bank Index,,relation.return_over_period,,5 years
+5 years,,relation.total_return,,89.69%
 MSFT,,relation.has_business_segment,,Cloud
 Cloud,,relation.had_Q4FY25_revenue,,$17.2 billion
 MSFT,,relation.has_business_segment,,Cloud
+Cloud,,relation.had_YoY_growth_in_Q4FY25,,20%
+CompanyX,,relation.had_interest_expense_in_year,,2014
+2014,,relation.value,,110.5
+CompanyX,,relation.had_interest_expense_in_year,,2015
+2015,,relation.value,,130.0
+CompanyX,,relation.had_interest_expense_in_year,,2016
+2016,,relation.value,,125.1
+CompanyY,,relation.had_interest_expense_in_year,,2014
+2014,,relation.value,,100.0
+CompanyY,,relation.had_interest_expense_in_year,,2015
+2015,,relation.value,,110.0
+CompanyY,,relation.had_interest_expense_in_year,,2016
+2016,,relation.value,,125.1
+Apple,,relation.had_interest_expense_in_year,,2014
+2014,,relation.value,,80.0
+Apple,,relation.had_interest_expense_in_year,,2015
+2015,,relation.value,,90.0
+Apple,,relation.had_interest_expense_in_year,,2016
+2016,,relation.value,,85.0
+ParentCompany2007,,relation.has_guarantees,,Amount2007
+Amount2007,,relation.change_from_2007_to_2008,,Amount2008
+Amount2008,,relation.percentage_change,,-21.8%
+ParentCompany2008,,relation.has_guarantees,,Amount2008
+Amount2008,,relation.compared_to_2007,,Amount2007
+Amount2007,,relation.percentage_decrease,,-21.8%
+Microsoft,,relation.has_business_segment,,Cloud
+Cloud,,relation.had_Q4FY25_revenue,,$18.1 billion
+Microsoft,,relation.has_business_segment,,Cloud
 Cloud,,relation.had_YoY_growth_in_Q4FY25,,23%
-MSFT,,relation.produces,,Azure
-Azure,,relation.achieved_sales_in_Q4Y25,,billions of dollars
-InterestOnlyProduct,,relation.has_combined_value,,871
-871,,relation.for_year,,2013
-PrincipalAndInterestProduct,,relation.has_combined_value,,671
-671,,relation.for_year,,2013
-CombinedValue,,relation.is_sum_of,,InterestOnlyProduct PrincipalAndInterestProduct
-InterestOnlyProduct PrincipalAndInterestProduct,,relation.total_value,,1542
-Apple,,relation.has_combined_value,,987
-987,,relation.for_year,,2014
-Apple,,relation.is_sum_of,,NewDevice Product NewService
-NewDevice Product NewService,,relation.total_value,,1974
-Company X,,relation.distributed_to_shareholders,,X amount in 2011
-X amount in 2011,,relation.greater_than,,Y amount distributed_to_debtholders_in_2011
-Corp A,,relation.annual_dividend_payment,,Z amount in 2011
-Z amount in 2011,,relation.exceeds,,W amount of annual_debt_repayment_in_2011
-Apple,,relation.annual_dividend_payment,,K amount in 2011
-K amount in 2011,,relation.exceeds,,L amount of annual_debt_repayment_in_2011
-state_income_tax_credit_carryforwards,,relation.has_deferred_tax_assets,,deferred_tax_assets_state_income_tax_credit_carryforwards
-deferred_tax_assets_state_income_tax_credit_carryforwards,,relation.to,,net_operating_loss_carryforward
-net_operating_loss_carryforward,,relation.has_deferred_tax_assets,,deferred_tax_assets_net_operating_loss_carryforward
-deferred_tax_assets_net_operating_loss_carryforward,,relation.ratio_is,,5.3
-Apple,,relation.has_deferred_tax_assets,,tax_assets.deferred_state_income_tax
-tax_assets.deferred_state_income_tax,,relation.to,,R&D_expense_carryforwards
-R&D_expense_carryforwards,,relation.has_deferred_tax_liabilities,,deferred_tax_liabilities_R&D_expense_carryforwards
-deferred_tax_liabilities_R&D_expense_carryforwards,,relation.ratio_is,,3.7
-Acquisition,,relation.acquired_assets,,Assets
-Assets,,relation.comprise_of,,Non-tangible_Assets
-Non-tangible_Assets,,relation.account_for,,96%
-Microsoft,,relation.has_business_segment,,Cloud Services
-Cloud Services,,relation.had_Q4FY25_revenue,,$18.1 billion
+CompanyX,,relation.reported_amortization_expense,,value1
+value1,,relation.year,,2007
+2007,,relation.change_to,,value2
+value2,,relation.year,,2008
+2008,,relation.percentage_change,,4.2%
+IBM,,relation.has_business_segment,,Cloud and Cognitive Software
+Cloud and Cognitive Software,,relation.had_Q4FY25_revenue,,$8.5 billion
+IBM,,relation.has_business_segment,,Cloud and Cognitive Software
+Cloud and Cognitive Software,,relation.had_YoY_growth_in_Q4FY25,,7%
+IBM,,relation.produces,,IBM Z mainframes
+IBM Z mainframes,,relation.achieved_sales_in_Q4Y25,,billions of dollars
+DP&L Preferred Stock,,relation.has_premium_rate,,3%
+3%,,relation.valid_until_date,,December 31, 2015
+IBM,,relation.has_business_segment,,Cloud and Cognitive Software
+Cloud and Cognitive Software,,relation.had_Q4FY25_revenue,,$8.5 billion
+company.X,,relation.has_long_term_debt_maturities_due_in_five_years,,value1
+value1,,relation.sum_of,,4192989
+company.Y,,relation.has_long_term_debt_maturities_due_in_five_years,,value2
+value2,,relation.sum_of,,4192989
+AMD,,relation.has_business_segment,,GPU Computing
+GPU Computing,,relation.had_Q4FY25_revenue,,$20.7 billion
+CompanyX,,relation.spent_on_october_shares,,$1229 million
+$1229 million,,relation.relates_to,,shares
+CompanyY,,relation.spent_on_november_shares,,$100 million
+$100 million,,relation.relates_to,,shares
+StockMarket,,relation.shares_traded_in_october,,CompanyX
+CompanyX,,relation.relatively_to,,shares_traded_in_november CompanyY
+Tesla,,relation.announced_product_launch,,Cybertruck
+Cybertruck,,relation.relates_to,,production_start_Q1_2024
+CompanyX,,relation.estimated_sensitivity_to_credit_spreads,,value1
+value1,,relation.change_between_years,,december_2017_december_2016
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.8 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
+AMD,,relation.produces,,Radeon VII GPUs
+Radeon VII GPUs,,relation.achieved_sales_in_Q4Y25,,hundreds of millions of dollars
+FairValueEntity_2010,,relation.has_fair_value,,value_2010
+value_2010,,relation.change_percentage_from_year,,15.8%
+15.8%,,relation.to_year,,2011
+FairValueEntity_2010,,relation.change_percentage_from_year,,15.8%
+15.8%,,relation.to_year,,2011
+FairValueEntity_2010,,relation.has_fair_value,,value_2010
+value_2010,,relation.change_percentage_to_year,,20.5%
+20.5%,,relation.from_year,,2012
+Dividend_Policy,,relation.increased_by,,1.66%
+1.66%,,relation.during_years,,2018-2019
+Total_Value,,relation.had_dividend_increase,,1.66%
+1.66%,,relation.during_years,,2018-2019
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_Q4FY25_revenue,,$2.7 billion
+AMD,,relation.has_business_segment,,Graphics
+Graphics,,relation.had_YoY_growth_in_Q4FY25,,21%
+MFC,,relation.had_net_sales,,net_sales_2013
+net_sales_2013,,relation.in_millions,,6886
+MFC,,relation.had_net_sales,,net_sales_2014
+net_sales_2014,,relation.in_millions,,6886
+MFC,,relation.had_net_sales,,net_sales_2015
+net_sales_2015,,relation.in_millions,,6886
+AMD,,relation.has_business_segment,,Graphics Processing Unit
+Graphics Processing Unit,,relation.had_Q4FY25_revenue,,$2.7 billion
+WTI Crude Oil,,relation.changed_between_dates,,July 3, 2008
+July 3, 2008,,relation.and,,December 19, 2008
+December 19, 2008,,relation.by_amount,,111.42 dollars per barrel
+Gold,,relation.changed_between_dates,,June 1, 2010
+June 1, 2010,,relation.and,,January 15, 2011
+January 15, 2011,,relation.by_amount,,25.75 dollars per ounce
+Net_Trading_Assets_2013,,relation.equivalent_to,,262743_millions
+262743_millions,,relation.compose_of,,Debt_Instruments_2013
+Debt_Instruments_2013,,relation.and,,Equity_Instruments_2013
+Apple,,relation.equivalent_to,,271534_millions
+271534_millions,,relation.compose_of,,Cash_and_Cash_equivalents_2013
+Cash_and_Cash_equivalents_2013,,relation.and,,Short_term_investments_2013
