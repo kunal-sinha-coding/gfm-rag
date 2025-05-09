@@ -195,6 +195,15 @@ def update_subgraph(question_dict,
             dataset_corpus[ent] = reasoning_paths[i]
         f.write(json.dumps(dataset_corpus))
 
+def get_local_query_entities(question_dict):
+    all_entities = question_dict["subgraph"]["entities"]
+    query_entities = question_dict["entities"]
+    local_ids = []
+    for i, ent_id in enumerate(all_entities):
+        if ent_id in query_entities:
+            local_ids.append(i)
+    return local_ids
+        
 @hydra.main(
     config_path="config", config_name="stage3_qa_ircot_inference", version_base=None
 )
@@ -208,7 +217,8 @@ def main(cfg: DictConfig, data_split="dev", top_k=5) -> None:
             import pdb; pdb.set_trace()
             retriever = GFMRetriever.from_config(cfg) # Currently have to reinit each time for updated graph files
             import pdb; pdb.set_trace()
-            docs = retriever.retrieve(question_dict["question"], question_dict["entities"], top_k=5)
+            query_entities = get_local_query_entities(question_dict)
+            docs = retriever.retrieve(question_dict["question"], query_entities, top_k=5)
             import pdb; pdb.set_trace()
             messages = qa_prompt_builder.build_input_prompt(question_dict["question"], docs)
             import pdb; pdb.set_trace()
