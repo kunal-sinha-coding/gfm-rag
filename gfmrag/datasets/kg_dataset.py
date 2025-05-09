@@ -83,7 +83,6 @@ class KGDataset(InMemoryDataset):
 
         with open(triplet_file, encoding="utf-8") as fin:
             for line in fin:
-                import pdb; pdb.set_trace()
                 try:
                     u, r, v = (
                         line.split()

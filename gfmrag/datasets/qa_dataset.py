@@ -77,7 +77,7 @@ class QADataset(InMemoryDataset):
         self.kg = KGDataset(root, data_name, text_emb_model_cfgs, force_rebuild)[0]
         self.rel_emb_dim = self.kg.rel_emb.shape[-1]
         super().__init__(root, None, None)
-        self.data = torch.load(self.processed_paths[0], weights_only=False)
+        #self.data = torch.load(self.processed_paths[0], weights_only=False)
         self.load_property()
 
     def __repr__(self) -> str:
@@ -232,94 +232,95 @@ class QADataset(InMemoryDataset):
         ent2doc = doc2ent.T.to_sparse()  # (n_nodes, n_docs)
         torch.save(ent2doc, os.path.join(self.processed_dir, "ent2doc.pt"))
 
-        sample_id = []
-        questions = []
-        question_entities_masks = []  # Convert question entities to mask with number of nodes
-        supporting_entities_masks = []
-        supporting_docs_masks = []
-        num_samples = []
+        #sample_id = []
+        #questions = []
+        #question_entities_masks = []  # Convert question entities to mask with number of nodes
+        #supporting_entities_masks = []
+        #supporting_docs_masks = []
+        #num_samples = []
 
-        for path in self.raw_paths:
-            if not os.path.exists(path):
-                num_samples.append(0)
-                continue  # Skip if the file does not exist
-            num_sample = 0
-            with open(path) as fin:
-                data = json.load(fin)
-                for index, item in enumerate(data):
-                    question_entities = [
-                        self.ent2id[x]
-                        for x in item["question_entities"]
-                        if x in self.ent2id
-                    ]
+        #for path in self.raw_paths:
+        #    if not os.path.exists(path):
+        #        num_samples.append(0)
+        #        continue  # Skip if the file does not exist
+        #    num_sample = 0
+        #    with open(path) as fin:
+        #        data = json.load(fin)
+        #        for index, item in enumerate(data):
+        #            question_entities = [
+        #                self.ent2id[x]
+        #                for x in item["question_entities"]
+        #                if x in self.ent2id
+        #            ]
+        #            import pdb; pdb.set_trace()
 
-                    supporting_entities = [
-                        self.ent2id[x]
-                        for x in item["supporting_entities"]
-                        if x in self.ent2id
-                    ]
+         #           supporting_entities = [
+         #               self.ent2id[x]
+         #               for x in item["supporting_entities"]
+         #               if x in self.ent2id
+         #           ]
 
-                    supporting_docs = [
-                        doc2id[doc] for doc in item["supporting_facts"] if doc in doc2id
-                    ]
+          #          supporting_docs = [
+          #              doc2id[doc] for doc in item["supporting_facts"] if doc in doc2id
+          #          ]
 
                     # Skip samples if any of the entities or documens are empty
-                    if any(
-                        len(x) == 0
-                        for x in [
-                            question_entities,
-                            supporting_entities,
-                            supporting_docs,
-                        ]
-                    ):
-                        continue
-                    num_sample += 1
-                    sample_id.append(index)
-                    question = item["question"]
-                    questions.append(question)
+           #         if any(
+           #             len(x) == 0
+           #             for x in [
+           #                 question_entities,
+           #                 supporting_entities,
+           #                 supporting_docs,
+           #             ]
+           #         ):
+           #             continue
+           #         num_sample += 1
+           #         sample_id.append(index)
+           #         question = item["question"]
+           #         questions.append(question)
 
-                    question_entities_masks.append(
-                        entities_to_mask(question_entities, num_nodes)
-                    )
+            #        question_entities_masks.append(
+            #            entities_to_mask(question_entities, num_nodes)
+            #        )
 
-                    supporting_entities_masks.append(
-                        entities_to_mask(supporting_entities, num_nodes)
-                    )
+             #       supporting_entities_masks.append(
+             #           entities_to_mask(supporting_entities, num_nodes)
+             #       )
 
-                    supporting_docs_masks.append(
-                        entities_to_mask(supporting_docs, n_docs)
-                    )
-                num_samples.append(num_sample)
+              #      supporting_docs_masks.append(
+              #          entities_to_mask(supporting_docs, n_docs)
+              #      )
+              #  num_samples.append(num_sample)
 
         # Generate question embeddings
-        logger.info("Generating question embeddings")
-        text_emb_model: BaseTextEmbModel = instantiate(self.text_emb_model_cfgs)
-        question_embeddings = text_emb_model.encode(
-            questions,
-            is_query=True,
-        ).cpu()
-        question_entities_masks = torch.stack(question_entities_masks)
-        supporting_entities_masks = torch.stack(supporting_entities_masks)
-        supporting_docs_masks = torch.stack(supporting_docs_masks)
-        sample_id = torch.tensor(sample_id, dtype=torch.long)
+        #logger.info("Generating question embeddings")
+        #text_emb_model: BaseTextEmbModel = instantiate(self.text_emb_model_cfgs)
+        #question_embeddings = text_emb_model.encode(
+        #    questions,
+        #    is_query=True,
+        #).cpu()
+        #question_entities_masks = torch.stack(question_entities_masks)
+        #supporting_entities_masks = torch.stack(supporting_entities_masks)
+        #supporting_docs_masks = torch.stack(supporting_docs_masks)
+        #sample_id = torch.tensor(sample_id, dtype=torch.long)
 
-        dataset = datasets.Dataset.from_dict(
-            {
-                "question_embeddings": question_embeddings,
-                "question_entities_masks": question_entities_masks,
-                "supporting_entities_masks": supporting_entities_masks,
-                "supporting_docs_masks": supporting_docs_masks,
-                "sample_id": sample_id,
-            }
-        ).with_format("torch")
-        offset = 0
-        splits = []
-        for num_sample in num_samples:
-            split = torch_data.Subset(dataset, range(offset, offset + num_sample))
-            splits.append(split)
-            offset += num_sample
-        torch.save(splits, self.processed_paths[0])
+        #dataset = datasets.Dataset.from_dict(
+        #    {
+        #        "question_embeddings": question_embeddings,
+        #        "question_entities_masks": question_entities_masks,
+        #        "supporting_entities_masks": supporting_entities_masks,
+        #        "supporting_docs_masks": supporting_docs_masks,
+        #        "sample_id": sample_id,
+        #    }
+        #).with_format("torch")
+        #offset = 0
+        #splits = []
+        #for num_sample in num_samples:
+        #    split = torch_data.Subset(dataset, range(offset, offset + num_sample))
+        #    splits.append(split)
+        #    offset += num_sample
+        #torch.save(splits, self.processed_paths[0])
 
         # Save text embeddings model configuration
-        with open(self.processed_dir + "/text_emb_model_cfgs.json", "w") as f:
-            json.dump(OmegaConf.to_container(self.text_emb_model_cfgs), f, indent=4)
+        #with open(self.processed_dir + "/text_emb_model_cfgs.json", "w") as f:
+        #    json.dump(OmegaConf.to_container(self.text_emb_model_cfgs), f, indent=4)

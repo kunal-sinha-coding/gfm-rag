@@ -20,6 +20,7 @@ from gfmrag.llms import BaseLanguageModel
 from gfmrag.prompt_builder import QAPromptBuilder
 
 from gfmrag import GFMRetriever
+from gfmrag.kg_construction.utils import KG_DELIMITER
 
 logger = logging.getLogger(__name__)
 
@@ -33,8 +34,9 @@ llm_model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.float16
 ).to(device)
 DST_FOLDER = os.path.join("data", "hotpotqa_test")
-SRC_FOLDER = os.path.join("..", "GNN-RAG", "data", "finqa-debug")
-KG_DELIMITER = ","
+PROCESSED_FOLDER = os.path.join(DST_FOLDER, "processed")
+RAW_FOLDER = os.path.join(DST_FOLDER, "raw")
+SRC_FOLDER = os.path.join("..", "GNN-RAG", "gnn", "data", "finqa-debug")
 
 max_new_tokens = {
     "Qwen/Qwen2.5-7B-Instruct": 2048,
@@ -105,22 +107,14 @@ def path_to_string(path: list) -> str: #Taken from utils.py
             result += f" -> {r} -> {t}"
     return result.strip()
 
-def get_shortest_path(q_entity: list, graph: nx.Graph, t: str, include_all_paths: bool) -> list: #Taken from graph_utils.py
-    paths = []
-    for h in q_entity:
-        if include_all_paths:
-            try:
-                for p in nx.all_shortest_paths(graph, h, t):
-                    paths.append(p)
-            except:
-                continue
-        else:
-            try:
-                path = nx.shortest_path(graph, h, t)
-                return [path]
-            except:
-                continue
-    return paths
+def get_shortest_path(q_entity: list, t: str, graph: nx.Graph, include_all_paths: bool) -> list: #Taken from graph_utils.py
+    h = q_entity[0]
+    path = []
+    try:
+        path = nx.shortest_path(graph, h, t)
+    except:
+        path = [h, t] #Dummy path
+    return [path]
 
 def get_truth_paths(q_entity: list, a_entity: list, graph: nx.Graph, include_all_paths: bool = False) -> list: #Taken from graph utils
     '''
@@ -154,8 +148,8 @@ def process_id_dict(entities_file, ent2id_file):
     ent2id = {}
     with open(entities_file, "r") as f:
         for i, line in enumerate(f.readlines()):
-            ent2id[line] = i
-    with open(ent2id_file, "w"):
+            ent2id[line.strip()] = i
+    with open(ent2id_file, "w") as f:
         f.write(f"{json.dumps(ent2id)}\n")
     id2ent = {v: k for k, v in ent2id.items()}
     return ent2id, id2ent
@@ -163,19 +157,29 @@ def process_id_dict(entities_file, ent2id_file):
 def update_subgraph(question_dict,
                entities_file=os.path.join(SRC_FOLDER, "entities.txt"),
                relations_file=os.path.join(SRC_FOLDER, "relations.txt"),
-               ent2id_file=os.path.join(DST_FOLDER, "processed", "stage2", "ent2id.json"),
-               rel2id_file=os.path.join(DST_FOLDER, "processed", "stage2", "rel2id.json"),
-               kg_file=os.path.join(DST_FOLDER, "processed", "stage1", "kg.txt"),
-               doc2ent_file=os.path.join(DST_FOLDER, "processed", "stage1", "document2entities.json"),
-               corpus_file=os.path.join(DST_FOLDER, "raw", "dataset_corpus.json")):
+               ent2id_file=os.path.join(PROCESSED_FOLDER, "stage2", "ent2id.json"),
+               rel2id_file=os.path.join(PROCESSED_FOLDER, "stage2", "rel2id.json"),
+               kg_file=os.path.join(PROCESSED_FOLDER, "stage1", "kg.txt"),
+               doc2ent_file=os.path.join(PROCESSED_FOLDER, "stage1", "document2entities.json"),
+               corpus_file=os.path.join(RAW_FOLDER, "dataset_corpus.json")):
     subgraph = question_dict["subgraph"]
+    for start_folder in [PROCESSED_FOLDER, RAW_FOLDER]:
+        for stage in ["stage1", "stage2"]:
+            stage_dir = os.path.join(start_folder, stage)
+            if not os.path.isdir(stage_dir):
+                os.makedirs(stage_dir)
     ent2id, id2ent = process_id_dict(entities_file, ent2id_file)
     rel2id, id2rel = process_id_dict(relations_file, rel2id_file)
-    all_entities = list(ent2id.keys())
+    all_entities = [id2ent[my_id] for my_id in subgraph["entities"]]
+    query_entities = [id2ent[my_id] for my_id in question_dict["entities"]]
+    triples = [
+        [id2ent[h], id2rel[r], id2ent[t]]
+        for h, r, t in subgraph["tuples"]
+    ]
     with open(kg_file, "w") as f: # Get kg.txt tuples from subgraph tuples
-        for h, r, t in subgraph["tuples"]:
-            triple = KG_DELIMITER.join([id2ent[h], id2rel[r], id2ent[t]])
-            f.write(f"{triple.strip()}\n")
+        for trip in triples:
+            trip = KG_DELIMITER.join(trip).strip()
+            f.write(f"{trip}\n")
     # We could get away with commenting out this stuff if we don't need it in our case
     with open(doc2ent_file, "w") as f: # Save document2entities file. Since we dont have docs, let the doc title just be the entity
         document2entities = { ent: [ent] for ent in all_entities }
@@ -183,26 +187,31 @@ def update_subgraph(question_dict,
     with open(corpus_file, "w") as f: # Each document for an entity is just the shortest path associated with it
         dataset_corpus = {}
         reasoning_paths = get_reasoning_paths(
-           q_entity=question_dict["entities"], 
+           q_entity=query_entities, 
            a_entity=all_entities,
-           tuples=subgraph["tuples"]
+           tuples=triples
         )
         for i, ent in enumerate(all_entities):
             dataset_corpus[ent] = reasoning_paths[i]
+        f.write(json.dumps(dataset_corpus))
 
 @hydra.main(
     config_path="config", config_name="stage3_qa_ircot_inference", version_base=None
 )
 def main(cfg: DictConfig, data_split="dev", top_k=5) -> None:
-    retriever = GFMRetriever.from_config(cfg)
     qa_prompt_builder = QAPromptBuilder(cfg.qa_prompt)
     scores = []
     with open(os.path.join(SRC_FOLDER, f"{data_split}.json"), "r") as f:
         for line in f.readlines():
             question_dict = json.loads(line)
             update_subgraph(question_dict) #Update to make sure we are focusing on relevant subgraph and query entities
+            import pdb; pdb.set_trace()
+            retriever = GFMRetriever.from_config(cfg) # Currently have to reinit each time for updated graph files
+            import pdb; pdb.set_trace()
             docs = retriever.retrieve(question_dict["question"], question_dict["entities"], top_k=5)
+            import pdb; pdb.set_trace()
             messages = qa_prompt_builder.build_input_prompt(question_dict["question"], docs)
+            import pdb; pdb.set_trace()
             score = evaluate_llm(messages, question_dict["answer"])
             scores.append(score)
             print(score)

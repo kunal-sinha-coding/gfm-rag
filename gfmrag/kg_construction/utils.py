@@ -2,7 +2,7 @@ import json
 import os
 import re
 
-KG_DELIMITER = ","
+KG_DELIMITER = ",,"
 
 
 def processing_phrases(phrase: str) -> str:
