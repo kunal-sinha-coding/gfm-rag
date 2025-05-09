@@ -143,7 +143,7 @@ class LLMNERModel(BaseNERModel):
                 assert "named_entities" in response_content
                 response_content = str(response_content)
             except Exception as e:
-                print("Query NER exception", e)
+                # print("Query NER exception", e)
                 response_content = {"named_entities": []}
 
         try:

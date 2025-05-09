@@ -227,7 +227,7 @@ def load_extension(name, sources, extra_cflags=None, extra_cuda_cflags=None, **k
     return cpp_extension.load(name, sources, extra_cflags, extra_cuda_cflags, **kwargs)
 
 
-print("Load rspmm extension. This may take a while...")
+# print("Load rspmm extension. This may take a while...")
 path = os.path.join(os.path.dirname(__file__), "source")
 rspmm = load_extension(
     "rspmm", [os.path.join(path, "rspmm.cpp"), os.path.join(path, "rspmm.cu")]

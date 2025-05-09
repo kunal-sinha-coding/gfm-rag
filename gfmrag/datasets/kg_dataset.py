@@ -141,8 +141,8 @@ class KGDataset(InMemoryDataset):
                 )
 
             if self.force_rebuild or not files_exist(self.processed_paths):
-                if self.log and "pytest" not in sys.modules:
-                    print("Processing...", file=sys.stderr)
+                # if self.log and "pytest" not in sys.modules:
+                #     print("Processing...", file=sys.stderr)
 
                 makedirs(self.processed_dir)
                 self.process()
@@ -152,8 +152,8 @@ class KGDataset(InMemoryDataset):
                 path = osp.join(self.processed_dir, "pre_filter.pt")
                 torch.save(_repr(self.pre_filter), path)
 
-                if self.log and "pytest" not in sys.modules:
-                    print("Done!", file=sys.stderr)
+                # if self.log and "pytest" not in sys.modules:
+                #     print("Done!", file=sys.stderr)
         else:
             logger.info(
                 f"Rank [{get_rank()}]: Waiting for main process to finish processing KG dataset {self.name}"
