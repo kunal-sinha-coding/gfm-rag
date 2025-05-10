@@ -148,8 +148,8 @@ def get_reasoning_paths(q_entity: list, a_entity: list, tuples: list):
     return reasoning_paths
 
 def convert_global_to_local(question_dict):
-    global2local = {global_id: local_id for local_id, global_id enumerate(question_dict["subgraph"]["entities"])}
-    local2global = {v, k for k, v in global2local.items()}
+    global2local = {global_id: local_id for local_id, global_id in enumerate(question_dict["subgraph"]["entities"])}
+    local2global = {v: k for k, v in global2local.items()}
     return global2local, local2global
 
 def update_subgraph(question_dict,
@@ -175,21 +175,25 @@ def update_subgraph(question_dict,
     #Save ent2id
     with open(ent2id_file, "w") as f:
         f.write(f"{json.dumps(ent2id)}\n")
-    id2ent = {v, k for k, v in ent2id.items()}
+    id2ent = {v: k for k, v in ent2id.items()}
     # Get rel2id
     import pdb; pdb.set_trace()
+    rel2id = {}
     with open(relations_file, "w") as f:
-        for global_id, line in enumerate(f.readlines()): # No need to convert global ID to local ID here
-	    ent2id[line.strip()] = global_id
+        for global_id, line in enumerate(f.readlines()):
+            rel2id[line.strip()] = global_id
     #Save rel2id
     with open(rel2id_file, "w") as f:
         f.write(f"{json.dumps(rel2id)}\n")
-    id2rel = {v, k for k, v in rel2id.items()}
+    id2rel = {v: k for k, v in rel2id.items()}
     # Save kg.txt
     import pdb; pdb.set_trace()
+    triples = [
+        (id2ent[global2local[h]], id2rel[r], id2ent[global2local[t]])
+        for h, r, t in question_dict["subgraph"]["tuples"]
+    ]
     with open(kg_file, "w") as f:
-        for h, r, t in question_dict["subgraph"]["tuples"]:
-            trip = [id2ent[global2local[h]], id2rel[r], id2ent[global2local[t]]]
+        for trip in triples:
             f.write(f"{KG_DELIMITER.join(trip).strip()}\n")
     # The content below can be deleted!
     # Save document2entities. The document title is just the entity itself
@@ -204,13 +208,14 @@ def update_subgraph(question_dict,
         all_entities = [id2ent[global2local[global_id]] for global_id in question_dict["subgraph"]["entities"]]
         dataset_corpus = {}
         reasoning_paths = get_reasoning_paths(
-           q_entity=query_ids, 
-           a_entity=all_ids,
+           q_entity=query_entities, 
+           a_entity=all_entities,
            tuples=triples
         )
         for i, ent in enumerate(all_entities):
             dataset_corpus[ent] = reasoning_paths[i]
         f.write(json.dumps(dataset_corpus))
+    return global2local, local2global
 
 @hydra.main(
     config_path="config", config_name="stage3_qa_ircot_inference", version_base=None
@@ -223,7 +228,7 @@ def main(cfg: DictConfig, data_split="dev", top_k=10) -> None:
         for i, line in enumerate(tqdm(f.readlines())):
             start_time = time.time()
             question_dict = json.loads(line)
-            update_subgraph(question_dict) #Update to make sure we are focusing on relevant subgraph and query entities
+            global2local, _ = update_subgraph(question_dict) #Update to make sure we are focusing on relevant subgraph and query entities
             subgraph_time = time.time()
             # print(f"Update subgraph time: {subgraph_time - start_time}")
             retriever = GFMRetriever.from_config(cfg) # Currently have to reinit each time for updated graph files
@@ -237,10 +242,10 @@ def main(cfg: DictConfig, data_split="dev", top_k=10) -> None:
             #score = evaluate_llm(messages, question_dict["answer"])
             #eval_time = time.time()
             # print(f"Eval time: {eval_time - retrieval_time}")
-            if score > 0:
-                scores.append(score)
-            else:
-                num_failures += 1
+            # if score > 0:
+            #     scores.append(score)
+            # else:
+            #     num_failures += 1
             print(f"Mean of scores so far: {np.mean(scores)}")
     print(f"Final mean of scores: {np.mean(scores)}")
     print(f"Final num failures: {num_failures}")
