@@ -29,11 +29,11 @@ model_name = "meta-llama/Llama-2-7b-chat-hf"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 cache_dir = "../cache_dir"
-llm_model = AutoModelForCausalLM.from_pretrained(
-    model_name,
-    cache_dir=cache_dir,
-    torch_dtype=torch.float16
-).to(device)
+#llm_model = AutoModelForCausalLM.from_pretrained(
+#    model_name,
+#    cache_dir=cache_dir,
+#    torch_dtype=torch.float16
+#).to(device)
 DST_FOLDER = os.path.join("data", "hotpotqa_test")
 PROCESSED_FOLDER = os.path.join(DST_FOLDER, "processed")
 RAW_FOLDER = os.path.join(DST_FOLDER, "raw")
@@ -64,7 +64,6 @@ def evaluate_llm(messages, groundtruth, throttle_time=1): # Comes from models/Re
     try:
         prediction = generate(messages).strip()
     except:
-        import pdb; pdb.set_trace()
         print("Failed on generate sentence")
         print(f"Curr input: {messages}")
     unit_test = LMUNIT_TEST.format(groundtruth=groundtruth)
@@ -87,7 +86,10 @@ def evaluate_llm(messages, groundtruth, throttle_time=1): # Comes from models/Re
     if response.ok:
         score = response.json().get("score")
     else:
-        print(f"Response not ok: {response.json()}")         
+        print(f"Response not ok: {response.json()}")
+    print(payload)
+    print(score)
+    import pdb; pdb.set_trace()
     return score
 
 def build_graph(graph: list) -> nx.Graph:
@@ -145,15 +147,10 @@ def get_reasoning_paths(q_entity: list, a_entity: list, tuples: list):
     reasoning_paths = [path_to_string(path) for path in result_paths]
     return reasoning_paths
 
-def process_id_dict(entities_file, ent2id_file):
-    ent2id = {}
-    with open(entities_file, "r") as f:
-        for i, line in enumerate(f.readlines()):
-            ent2id[line.strip()] = i
-    with open(ent2id_file, "w") as f:
-        f.write(f"{json.dumps(ent2id)}\n")
-    id2ent = {v: k for k, v in ent2id.items()}
-    return ent2id, id2ent
+def convert_global_to_local(question_dict):
+    global2local = {global_id: local_id for local_id, global_id enumerate(question_dict["subgraph"]["entities"])}
+    local2global = {v, k for k, v in global2local.items()}
+    return global2local, local2global
 
 def update_subgraph(question_dict,
                entities_file=os.path.join(SRC_FOLDER, "entities.txt"),
@@ -163,54 +160,65 @@ def update_subgraph(question_dict,
                kg_file=os.path.join(PROCESSED_FOLDER, "stage1", "kg.txt"),
                doc2ent_file=os.path.join(PROCESSED_FOLDER, "stage1", "document2entities.json"),
                corpus_file=os.path.join(RAW_FOLDER, "dataset_corpus.json")):
-    subgraph = question_dict["subgraph"]
     for start_folder in [PROCESSED_FOLDER, RAW_FOLDER]:
         for stage in ["stage1", "stage2"]:
             stage_dir = os.path.join(start_folder, stage)
             if not os.path.isdir(stage_dir):
                 os.makedirs(stage_dir)
-    ent2id, id2ent = process_id_dict(entities_file, ent2id_file)
-    rel2id, id2rel = process_id_dict(relations_file, rel2id_file)
-    all_entities = [id2ent[my_id] for my_id in subgraph["entities"]]
-    query_entities = [id2ent[my_id] for my_id in question_dict["entities"]]
-    triples = [
-        [id2ent[h], id2rel[r], id2ent[t]]
-        for h, r, t in subgraph["tuples"]
-    ]
-    with open(kg_file, "w") as f: # Get kg.txt tuples from subgraph tuples
-        for trip in triples:
-            trip = KG_DELIMITER.join(trip).strip()
-            f.write(f"{trip}\n")
-    # We could get away with commenting out this stuff if we don't need it in our case
-    with open(doc2ent_file, "w") as f: # Save document2entities file. Since we dont have docs, let the doc title just be the entity
-        document2entities = { ent: [ent] for ent in all_entities }
+    global2local, local2global = convert_global_to_local(question_dict)
+    ent2id = {}
+    # Get ent2id
+    with open(entities_file, "w") as f:
+        for global_id, line in enumerate(f.readlines()):
+            if global_id in global2local.keys(): # Convert global ID to local_id
+                ent2id[line.strip()] = global2local[global_id]
+    #Save ent2id
+    with open(ent2id_file, "w") as f:
+        f.write(f"{json.dumps(ent2id)}\n")
+    id2ent = {v, k for k, v in ent2id.items()}
+    # Get rel2id
+    import pdb; pdb.set_trace()
+    with open(relations_file, "w") as f:
+        for global_id, line in enumerate(f.readlines()): # No need to convert global ID to local ID here
+	    ent2id[line.strip()] = global_id
+    #Save rel2id
+    with open(rel2id_file, "w") as f:
+        f.write(f"{json.dumps(rel2id)}\n")
+    id2rel = {v, k for k, v in rel2id.items()}
+    # Save kg.txt
+    import pdb; pdb.set_trace()
+    with open(kg_file, "w") as f:
+        for h, r, t in question_dict["subgraph"]["tuples"]:
+            trip = [id2ent[global2local[h]], id2rel[r], id2ent[global2local[t]]]
+            f.write(f"{KG_DELIMITER.join(trip).strip()}\n")
+    # The content below can be deleted!
+    # Save document2entities. The document title is just the entity itself
+    import pdb; pdb.set_trace()
+    with open(doc2ent_file, "w") as f:
+        document2entities = { ent: [ent] for ent in ent2id.keys() }
         f.write(json.dumps(document2entities))
-    with open(corpus_file, "w") as f: # Each document for an entity is just the shortest path associated with it
+    # Save dataset corpus: each document for an entity is just the shortest path associated with it
+    import pdb; pdb.set_trace()
+    with open(corpus_file, "w") as f:
+        query_entities = [id2ent[global2local[global_id]] for global_id in question_dict["entities"]]
+        all_entities = [id2ent[global2local[global_id]] for global_id in question_dict["subgraph"]["entities"]]
         dataset_corpus = {}
         reasoning_paths = get_reasoning_paths(
-           q_entity=query_entities, 
-           a_entity=all_entities,
+           q_entity=query_ids, 
+           a_entity=all_ids,
            tuples=triples
         )
         for i, ent in enumerate(all_entities):
             dataset_corpus[ent] = reasoning_paths[i]
         f.write(json.dumps(dataset_corpus))
 
-def get_local_query_entities(question_dict):
-    all_entities = question_dict["subgraph"]["entities"]
-    query_entities = question_dict["entities"]
-    local_ids = []
-    for i, ent_id in enumerate(all_entities):
-        if ent_id in query_entities:
-            local_ids.append(i)
-    return local_ids
-        
 @hydra.main(
     config_path="config", config_name="stage3_qa_ircot_inference", version_base=None
 )
-def main(cfg: DictConfig, data_split="dev", top_k=5, eval_every=50) -> None:
+def main(cfg: DictConfig, data_split="dev", top_k=10) -> None:
     qa_prompt_builder = QAPromptBuilder(cfg.qa_prompt)
     scores = []
+    num_failures = 0
     with open(os.path.join(SRC_FOLDER, f"{data_split}.json"), "r") as f:
         for i, line in enumerate(tqdm(f.readlines())):
             start_time = time.time()
@@ -221,18 +229,20 @@ def main(cfg: DictConfig, data_split="dev", top_k=5, eval_every=50) -> None:
             retriever = GFMRetriever.from_config(cfg) # Currently have to reinit each time for updated graph files
             init_time = time.time()
             # print(f"Init time: {init_time - subgraph_time}")
-            query_entities = get_local_query_entities(question_dict)
-            docs = retriever.retrieve(question_dict["question"], query_entities, top_k=5)
+            query_ids = [global2local[global_id] for global_id in question_dict["entities"]]
+            docs = retriever.retrieve(question_dict["question"], query_ids, top_k=10, question_dict=question_dict)
             retrieval_time = time.time()
             # print(f"Retrieval time: {retrieval_time - init_time}")
             messages = qa_prompt_builder.build_input_prompt(question_dict["question"], docs)
-            score = evaluate_llm(messages, question_dict["answer"])
-            eval_time = time.time()
+            #score = evaluate_llm(messages, question_dict["answer"])
+            #eval_time = time.time()
             # print(f"Eval time: {eval_time - retrieval_time}")
-            scores.append(score)
-            # print(f"Score: {score}")
-            if i % eval_every == 0:
-                print(f"Mean of scores so far: {np.mean(scores)}")
+            if score > 0:
+                scores.append(score)
+            else:
+                num_failures += 1
+            print(f"Mean of scores so far: {np.mean(scores)}")
     print(f"Final mean of scores: {np.mean(scores)}")
+    print(f"Final num failures: {num_failures}")
 
 main()
