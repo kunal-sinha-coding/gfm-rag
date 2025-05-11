@@ -165,44 +165,59 @@ def get_top_k(query_ids, ent_pred, id2ent, triples, top_k):
     return docs
 
 def convert_global_to_local(question_dict):
-    global2local = {global_id: local_id for local_id, global_id in enumerate(question_dict["subgraph"]["entities"])}
-    local2global = {v: k for k, v in global2local.items()}
-    return global2local, local2global
+    g2l = {global_id: local_id for local_id, global_id in enumerate(question_dict["subgraph"]["entities"])}
+    l2g = {v: k for k, v in g2l.items()}
+    return g2l, l2g
 
-def update_subgraph(question_dict):
-    for stage in ["stage1", "stage2"]:
-        stage_dir = os.path.join(PROCESSED_FOLDER, stage)
-        if not os.path.isdir(stage_dir):
-            os.makedirs(stage_dir)
-    global2local, local2global = convert_global_to_local(question_dict)
+def get_id_dicts():
     ent2id = {}
-    # Get ent2id
+    with open(ENT2ID_FILE, "r") as f:
+        ent2id = json.load(f)
+    id2ent = {v: k for k, v in ent2id.items()}
+    rel2id = {}
+    with open(REL2ID_FILE, "r") as f:
+        rel2id = json.load(f)
+    id2rel = {v: k for k, v in rel2id.items()}
+    return ent2id, id2ent, rel2id, id2rel
+
+
+def update_subgraph(question_dict): #KG dataset already generates the ID files so no need to do it here
+    # for stage in ["stage1", "stage2"]:
+    #     stage_dir = os.path.join(PROCESSED_FOLDER, stage)
+    #     if not os.path.isdir(stage_dir):
+    #         os.makedirs(stage_dir)
+    # global2local, local2global = convert_global_to_local(question_dict)
+    id2ent = {}
     with open(ENTITIES_FILE, "r") as f:
         for global_id, line in enumerate(f.readlines()):
-            if global_id in global2local.keys(): # Convert global ID to local_id
-                ent2id[line.strip()] = global2local[global_id]
+            id2ent[global_id] = line.strip()
+    # Get ent2id
+    # with open(ENTITIES_FILE, "r") as f:
+    #     for global_id, line in enumerate(f.readlines()):
+    #         if global_id in global2local.keys(): # Convert global ID to local_id
+    #             ent2id[line.strip()] = global2local[global_id]
     #Save ent2id
-    with open(ENT2ID_FILE, "w") as f:
-        f.write(f"{json.dumps(ent2id)}\n")
-    id2ent = {v: k for k, v in ent2id.items()}
+    # with open(ENT2ID_FILE, "w") as f:
+    #     f.write(f"{json.dumps(ent2id)}\n")
+    # id2ent = {v: k for k, v in ent2id.items()}
     # Get rel2id
-    rel2id = {}
+    id2rel = {}
     with open(RELATIONS_FILE, "r") as f:
         for global_id, line in enumerate(f.readlines()):
-            rel2id[line.strip()] = global_id
+            id2rel[global_id] = line.strip()
     #Save rel2id
-    with open(REL2ID_FILE, "w") as f:
-        f.write(f"{json.dumps(rel2id)}\n")
-    id2rel = {v: k for k, v in rel2id.items()}
+    # with open(REL2ID_FILE, "w") as f:
+    #     f.write(f"{json.dumps(rel2id)}\n")
+    # id2rel = {v: k for k, v in rel2id.items()}
     # Save kg.txt
     triples = [
-        (id2ent[global2local[h]], id2rel[r], id2ent[global2local[t]])
+        (id2ent[h], id2rel[r], id2ent[t])
         for h, r, t in question_dict["subgraph"]["tuples"]
     ]
     with open(KG_FILE, "w") as f:
         for trip in triples:
             f.write(f"{KG_DELIMITER.join(trip).strip()}\n")
-    return global2local, local2global, ent2id, id2ent, rel2id, triples
+    return triples
 
 @hydra.main(
     config_path="config", config_name="stage3_qa_ircot_inference", version_base=None
@@ -214,9 +229,11 @@ def main(cfg: DictConfig, data_split="dev", top_k=5) -> None:
     with open(os.path.join(SRC_FOLDER, f"{data_split}.json"), "r") as f:
         for i, line in enumerate(tqdm(f.readlines())):
             question_dict = json.loads(line)
-            global2local, local2global, ent2id, id2ent, rel2id, triples = update_subgraph(question_dict) #Update to make sure we are focusing on relevant subgraph and query entities
+            triples = update_subgraph(question_dict) #Update to make sure we are focusing on relevant subgraph and query entities
             retriever = GFMRetriever.from_config(cfg) # Currently have to reinit each time for updated graph files
-            query_ids = [global2local[question_dict["entities"][0]]] # Just get the first query entity
+            ent2id, id2ent, rel2id, id2rel = get_id_dicts()
+            g2l, l2g = convert_global_to_local()
+            query_ids = [g2l[question_dict["entities"][0]]] # Just get the local ID of the first query entity
             ent_pred = retriever.retrieve(question_dict["question"], query_ids)
             docs = get_top_k(query_ids, ent_pred, id2ent, triples, top_k)
             messages = qa_prompt_builder.build_input_prompt(question_dict["question"], docs)
