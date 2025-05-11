@@ -74,6 +74,7 @@ class QADataset(InMemoryDataset):
                 OmegaConf.to_container(text_emb_model_cfgs, resolve=True)
             ).encode()
         ).hexdigest()
+        import pdb; pdb.set_trace()
         self.kg = KGDataset(root, data_name, text_emb_model_cfgs, force_rebuild)[0]
         self.rel_emb_dim = self.kg.rel_emb.shape[-1]
         super().__init__(root, None, None)

@@ -188,6 +188,7 @@ class GFMRetriever:
             cfg.graph_retriever.model_path
         )
         graph_retriever.eval()
+        import pdb; pdb.set_trace()
         qa_data = QADataset(
             **cfg.dataset,
             text_emb_model_cfgs=OmegaConf.create(model_config["text_emb_model_config"]),
