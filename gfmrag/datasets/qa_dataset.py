@@ -63,17 +63,17 @@ class QADataset(InMemoryDataset):
         root: str,
         data_name: str,
         text_emb_model_cfgs: DictConfig,
-        force_rebuild: bool = False,
+        force_rebuild: bool = True,
     ):
         self.name = data_name
         self.force_rebuild = force_rebuild
         self.text_emb_model_cfgs = text_emb_model_cfgs
         # Get fingerprint of the model configuration
-        self.fingerprint = hashlib.md5(
-            json.dumps(
-                OmegaConf.to_container(text_emb_model_cfgs, resolve=True)
-            ).encode()
-        ).hexdigest()
+        # self.fingerprint = hashlib.md5(
+        #     json.dumps(
+        #         OmegaConf.to_container(text_emb_model_cfgs, resolve=True)
+        #     ).encode()
+        # ).hexdigest()
         import pdb; pdb.set_trace()
         self.kg = KGDataset(root, data_name, text_emb_model_cfgs, force_rebuild)[0]
         self.rel_emb_dim = self.kg.rel_emb.shape[-1]

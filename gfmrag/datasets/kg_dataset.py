@@ -60,11 +60,11 @@ class KGDataset(InMemoryDataset):
         self.name = data_name
         self.force_rebuild = force_rebuild
         # Get fingerprint of the model configuration
-        self.fingerprint = hashlib.md5(
-            json.dumps(
-                OmegaConf.to_container(text_emb_model_cfgs, resolve=True)
-            ).encode()
-        ).hexdigest()
+        # self.fingerprint = hashlib.md5(
+        #     json.dumps(
+        #         OmegaConf.to_container(text_emb_model_cfgs, resolve=True)
+        #     ).encode()
+        # ).hexdigest()
         self.text_emb_model_cfgs = text_emb_model_cfgs
         super().__init__(root, None, None)
         self.data, self.slices = torch.load(self.processed_paths[0], weights_only=False)
@@ -266,7 +266,7 @@ class KGDataset(InMemoryDataset):
             str(self.name),
             "processed",
             "stage2",
-            self.fingerprint,
+            # self.fingerprint,
         )
 
     @property
