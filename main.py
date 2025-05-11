@@ -168,7 +168,7 @@ def update_subgraph(question_dict,
     global2local, local2global = convert_global_to_local(question_dict)
     ent2id = {}
     # Get ent2id
-    with open(entities_file, "w") as f:
+    with open(entities_file, "r") as f:
         for global_id, line in enumerate(f.readlines()):
             if global_id in global2local.keys(): # Convert global ID to local_id
                 ent2id[line.strip()] = global2local[global_id]
@@ -177,9 +177,8 @@ def update_subgraph(question_dict,
         f.write(f"{json.dumps(ent2id)}\n")
     id2ent = {v: k for k, v in ent2id.items()}
     # Get rel2id
-    import pdb; pdb.set_trace()
     rel2id = {}
-    with open(relations_file, "w") as f:
+    with open(relations_file, "r") as f:
         for global_id, line in enumerate(f.readlines()):
             rel2id[line.strip()] = global_id
     #Save rel2id
@@ -187,7 +186,6 @@ def update_subgraph(question_dict,
         f.write(f"{json.dumps(rel2id)}\n")
     id2rel = {v: k for k, v in rel2id.items()}
     # Save kg.txt
-    import pdb; pdb.set_trace()
     triples = [
         (id2ent[global2local[h]], id2rel[r], id2ent[global2local[t]])
         for h, r, t in question_dict["subgraph"]["tuples"]
@@ -197,12 +195,10 @@ def update_subgraph(question_dict,
             f.write(f"{KG_DELIMITER.join(trip).strip()}\n")
     # The content below can be deleted!
     # Save document2entities. The document title is just the entity itself
-    import pdb; pdb.set_trace()
     with open(doc2ent_file, "w") as f:
         document2entities = { ent: [ent] for ent in ent2id.keys() }
         f.write(json.dumps(document2entities))
     # Save dataset corpus: each document for an entity is just the shortest path associated with it
-    import pdb; pdb.set_trace()
     with open(corpus_file, "w") as f:
         query_entities = [id2ent[global2local[global_id]] for global_id in question_dict["entities"]]
         all_entities = [id2ent[global2local[global_id]] for global_id in question_dict["subgraph"]["entities"]]

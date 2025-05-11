@@ -98,7 +98,7 @@ class QADataset(InMemoryDataset):
             str(self.name),
             "processed",
             "stage2",
-            self.fingerprint,
+            #self.fingerprint,
         )
 
     @property
@@ -111,8 +111,10 @@ class QADataset(InMemoryDataset):
         """
         with open(os.path.join(self.processed_dir, "ent2id.json")) as fin:
             self.ent2id = json.load(fin)
+            self.id2ent = {v: k for k, v in self.ent2id.items()}
         with open(os.path.join(self.processed_dir, "rel2id.json")) as fin:
             self.rel2id = json.load(fin)
+            self.id2rel = {v: k for k, v in self.rel2id.items()}
         with open(
             os.path.join(str(self.root), str(self.name), "raw", "dataset_corpus.json")
         ) as fin:

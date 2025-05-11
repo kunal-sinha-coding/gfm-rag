@@ -67,7 +67,7 @@ class GFMRetriever:
         self.entities_weight = entities_weight
 
     @torch.no_grad()
-    def retrieve(self, query: str, entity_ids: list, top_k: int) -> list[dict]:
+    def retrieve(self, query: str, entity_ids: list, top_k: int, debug=True, question_dict=None) -> list[dict]:
         """
         Retrieve documents from the corpus based on the given query.
 
@@ -99,6 +99,14 @@ class GFMRetriever:
 
         # Retrieve the supporting documents
         retrieved_docs = self.doc_retriever(doc_pred.cpu(), top_k=top_k)
+        if debug:
+            pred_ids = ent_pred.sort().indices[0, -top_k:].cpu().numpy()
+            entities = [self.qa_data.id2ent[l_id] for l_id in pred_ids]
+            print(query, question_dict["answer"])
+            print(entities)
+            for doc in retrieved_docs:
+                print(doc["content"])
+        import pdb; pdb.set_trace()
 
         return retrieved_docs
 
