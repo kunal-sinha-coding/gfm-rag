@@ -112,6 +112,7 @@ class QADataset(InMemoryDataset):
         with open(os.path.join(self.processed_dir, "ent2id.json")) as fin:
             self.ent2id = json.load(fin)
             self.id2ent = {v: k for k, v in self.ent2id.items()}
+            print("LEN ", len(self.ent2id))
         with open(os.path.join(self.processed_dir, "rel2id.json")) as fin:
             self.rel2id = json.load(fin)
             self.id2rel = {v: k for k, v in self.rel2id.items()}

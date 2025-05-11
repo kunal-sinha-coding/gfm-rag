@@ -29,20 +29,18 @@ model_name = "meta-llama/Llama-2-7b-chat-hf"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 cache_dir = "../cache_dir"
-#llm_model = AutoModelForCausalLM.from_pretrained(
-#    model_name,
-#    cache_dir=cache_dir,
-#    torch_dtype=torch.float16
-#).to(device)
-DST_FOLDER = os.path.join("data", "hotpotqa_test")
-PROCESSED_FOLDER = os.path.join(DST_FOLDER, "processed")
+llm_model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    cache_dir=cache_dir,
+    torch_dtype=torch.float16
+).to(device)
+PROCESSED_FOLDER = os.path.join("data", "hotpotqa_test", "processed")
 SRC_FOLDER = os.path.join("..", "GNN-RAG", "gnn", "data", "finqa-debug")
-
-ENTITIES_FILE=os.path.join(SRC_FOLDER, "entities.txt"),
-RELATIONS_FILE=os.path.join(SRC_FOLDER, "relations.txt"),
-ENT2ID_FILE=os.path.join(PROCESSED_FOLDER, "stage2", "ent2id.json"),
-REL2ID_FILE=os.path.join(PROCESSED_FOLDER, "stage2", "rel2id.json"),
-KG_FILE=os.path.join(PROCESSED_FOLDER, "stage1", "kg.txt"),
+ENTITIES_FILE = os.path.join(SRC_FOLDER, "entities.txt")
+RELATIONS_FILE = os.path.join(SRC_FOLDER, "relations.txt")
+ENT2ID_FILE = os.path.join(PROCESSED_FOLDER, "stage2", "ent2id.json")
+REL2ID_FILE = os.path.join(PROCESSED_FOLDER, "stage2", "rel2id.json")
+KG_FILE = os.path.join(PROCESSED_FOLDER, "stage1", "kg.txt")
 
 max_new_tokens = {
     "Qwen/Qwen2.5-7B-Instruct": 2048,
@@ -92,9 +90,6 @@ def evaluate_llm(messages, groundtruth, throttle_time=1): # Comes from models/Re
         score = response.json().get("score")
     else:
         print(f"Response not ok: {response.json()}")
-    print(payload)
-    print(score)
-    import pdb; pdb.set_trace()
     return score
 
 def build_graph(graph: list) -> nx.Graph:
@@ -161,10 +156,13 @@ def get_top_k(query_ids, ent_pred, id2ent, triples, top_k):
         a_entity=pred_entities,
         tuples=triples
     )
-    return [
+    docs = [
         {"title": ent, "content": path}
         for ent, path in zip(pred_entities, reasoning_paths)
     ]
+    for path in reasoning_paths[::-1]:
+        print(path)
+    return docs
 
 def convert_global_to_local(question_dict):
     global2local = {global_id: local_id for local_id, global_id in enumerate(question_dict["subgraph"]["entities"])}
@@ -209,7 +207,7 @@ def update_subgraph(question_dict):
 @hydra.main(
     config_path="config", config_name="stage3_qa_ircot_inference", version_base=None
 )
-def main(cfg: DictConfig, data_split="dev", top_k=10) -> None:
+def main(cfg: DictConfig, data_split="dev", top_k=5) -> None:
     qa_prompt_builder = QAPromptBuilder(cfg.qa_prompt)
     scores = []
     num_failures = 0
@@ -220,16 +218,13 @@ def main(cfg: DictConfig, data_split="dev", top_k=10) -> None:
             retriever = GFMRetriever.from_config(cfg) # Currently have to reinit each time for updated graph files
             query_ids = [global2local[question_dict["entities"][0]]] # Just get the first query entity
             ent_pred = retriever.retrieve(question_dict["question"], query_ids)
-            docs = get_top_k(query_ids, ent_pred, id2ent, triples, top_k=10)
-            import pdb; pdb.set_trace()
-            # messages = qa_prompt_builder.build_input_prompt(question_dict["question"], docs)
-            #score = evaluate_llm(messages, question_dict["answer"])
-            #eval_time = time.time()
-            # print(f"Eval time: {eval_time - retrieval_time}")
-            # if score > 0:
-            #     scores.append(score)
-            # else:
-            #     num_failures += 1
+            docs = get_top_k(query_ids, ent_pred, id2ent, triples, top_k)
+            messages = qa_prompt_builder.build_input_prompt(question_dict["question"], docs)
+            score = evaluate_llm(messages, question_dict["answer"])
+            if score > 0:
+                scores.append(score)
+            else:
+                num_failures += 1
             print(f"Mean of scores so far: {np.mean(scores)}")
     print(f"Final mean of scores: {np.mean(scores)}")
     print(f"Final num failures: {num_failures}")
