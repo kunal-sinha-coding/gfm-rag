@@ -67,7 +67,7 @@ class GFMRetriever:
         self.entities_weight = entities_weight
 
     @torch.no_grad()
-    def retrieve(self, query: str, entity_ids: list, top_k: int, debug=True, question_dict=None) -> list[dict]:
+    def retrieve(self, query: str, entity_ids: list) -> list[dict]:
         """
         Retrieve documents from the corpus based on the given query.
 
@@ -95,20 +95,13 @@ class GFMRetriever:
         ent_pred = self.graph_retriever(
             self.graph, graph_retriever_input, entities_weight=self.entities_weight
         )
-        doc_pred = self.doc_ranker(ent_pred)[0]  # Ent2docs mapping, batch size is 1
+        return ent_pred
+        # doc_pred = self.doc_ranker(ent_pred)[0]  # Ent2docs mapping, batch size is 1
 
-        # Retrieve the supporting documents
-        retrieved_docs = self.doc_retriever(doc_pred.cpu(), top_k=top_k)
-        if debug:
-            pred_ids = ent_pred.sort().indices[0, -top_k:].cpu().numpy()
-            entities = [self.qa_data.id2ent[l_id] for l_id in pred_ids]
-            print(query, question_dict["answer"])
-            print(entities)
-            for doc in retrieved_docs:
-                print(doc["content"])
-        import pdb; pdb.set_trace()
+        # # Retrieve the supporting documents
+        # retrieved_docs = self.doc_retriever(doc_pred.cpu(), top_k=top_k)
 
-        return retrieved_docs
+        # return retrieved_docs
 
     def prepare_input_for_graph_retriever(self, query: str, entity_ids: list) -> dict:
         """
