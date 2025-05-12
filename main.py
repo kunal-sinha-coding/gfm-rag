@@ -147,7 +147,7 @@ def get_reasoning_paths(q_entity: list, a_entity: list, tuples: list):
     reasoning_paths = [path_to_string(path) for path in result_paths]
     return reasoning_paths
 
-def get_top_k(query_ids, ent_pred, id2ent, triples, top_k):
+def get_top_k(query_ids, ent_pred, id2ent, l2g, triples, top_k):
     pred_ids = ent_pred.sort().indices[0, -top_k:].cpu().numpy()
     pred_entities = [id2ent[local_id] for local_id in pred_ids]
     query_entities = [id2ent[local_id] for local_id in query_ids]
@@ -164,8 +164,8 @@ def get_top_k(query_ids, ent_pred, id2ent, triples, top_k):
         print(path)
     return docs
 
-def convert_global_to_local(question_dict):
-    g2l = {global_id: local_id for local_id, global_id in enumerate(question_dict["subgraph"]["entities"])}
+def convert_global_to_local(entities):
+    g2l = {global_id: local_id for local_id, global_id in enumerate(entities)}
     l2g = {v: k for k, v in g2l.items()}
     return g2l, l2g
 
@@ -181,16 +181,16 @@ def get_id_dicts():
     return ent2id, id2ent, rel2id, id2rel
 
 
-def update_subgraph(question_dict): #KG dataset already generates the ID files so no need to do it here
+def update_subgraph(tuples): #KG dataset already generates the ID files so no need to do it here
     # for stage in ["stage1", "stage2"]:
     #     stage_dir = os.path.join(PROCESSED_FOLDER, stage)
     #     if not os.path.isdir(stage_dir):
     #         os.makedirs(stage_dir)
     # global2local, local2global = convert_global_to_local(question_dict)
-    id2ent = {}
+    global_id2ent = {}
     with open(ENTITIES_FILE, "r") as f:
         for global_id, line in enumerate(f.readlines()):
-            id2ent[global_id] = line.strip()
+            global_id2ent[global_id] = line.strip()
     # Get ent2id
     # with open(ENTITIES_FILE, "r") as f:
     #     for global_id, line in enumerate(f.readlines()):
@@ -201,18 +201,18 @@ def update_subgraph(question_dict): #KG dataset already generates the ID files s
     #     f.write(f"{json.dumps(ent2id)}\n")
     # id2ent = {v: k for k, v in ent2id.items()}
     # Get rel2id
-    id2rel = {}
+    global_id2rel = {}
     with open(RELATIONS_FILE, "r") as f:
         for global_id, line in enumerate(f.readlines()):
-            id2rel[global_id] = line.strip()
+            global_id2rel[global_id] = line.strip()
     #Save rel2id
     # with open(REL2ID_FILE, "w") as f:
     #     f.write(f"{json.dumps(rel2id)}\n")
     # id2rel = {v: k for k, v in rel2id.items()}
     # Save kg.txt
     triples = [
-        (id2ent[h], id2rel[r], id2ent[t])
-        for h, r, t in question_dict["subgraph"]["tuples"]
+        (global_id2ent[h], global_id2rel[r], global_id2ent[t])
+        for h, r, t in tuples
     ]
     with open(KG_FILE, "w") as f:
         for trip in triples:
@@ -229,13 +229,13 @@ def main(cfg: DictConfig, data_split="dev", top_k=5) -> None:
     with open(os.path.join(SRC_FOLDER, f"{data_split}.json"), "r") as f:
         for i, line in enumerate(tqdm(f.readlines())):
             question_dict = json.loads(line)
-            triples = update_subgraph(question_dict) #Update to make sure we are focusing on relevant subgraph and query entities
+            triples = update_subgraph(question_dict["subgraph"]["tuples"]) #Update to make sure we are focusing on relevant subgraph and query entities
             retriever = GFMRetriever.from_config(cfg) # Currently have to reinit each time for updated graph files
             ent2id, id2ent, rel2id, id2rel = get_id_dicts()
-            g2l, l2g = convert_global_to_local()
+            g2l, l2g = convert_global_to_local(question_dict["subgraph"]["entities"])
             query_ids = [g2l[question_dict["entities"][0]]] # Just get the local ID of the first query entity
             ent_pred = retriever.retrieve(question_dict["question"], query_ids)
-            docs = get_top_k(query_ids, ent_pred, id2ent, triples, top_k)
+            docs = get_top_k(query_ids, ent_pred, id2ent, l2g, triples, top_k)
             messages = qa_prompt_builder.build_input_prompt(question_dict["question"], docs)
             score = evaluate_llm(messages, question_dict["answer"])
             if score > 0:

@@ -211,7 +211,6 @@ class KGDataset(InMemoryDataset):
             [train_target_etypes, train_target_etypes + num_relations]
         )
         
-        import pdb; pdb.set_trace()
         with open(self.processed_dir + "/ent2id.json", "w") as f:
             json.dump(kg_result["inv_entity_vocab"], f)
         rel2id = kg_result["inv_rel_vocab"]
