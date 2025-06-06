@@ -102,7 +102,6 @@ class KGDataset(InMemoryDataset):
                     inv_rel_vocab[r] = rel_cnt
                     rel_cnt += 1
                 u, r, v = inv_entity_vocab[u], inv_rel_vocab[r], inv_entity_vocab[v]
-
                 triplets.append((u, v, r))
 
         return {
@@ -188,7 +187,6 @@ class KGDataset(InMemoryDataset):
         - Processed graph data file at self.processed_paths[0]
         """
         kg_file = self.raw_paths[0]
-
         kg_result = self.load_file(kg_file, inv_entity_vocab={}, inv_rel_vocab={})
 
         # in some datasets, there are several new nodes in the test set, eg 123,143 YAGO train and 123,182 in YAGO test
