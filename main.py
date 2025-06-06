@@ -7,6 +7,7 @@ import torch
 import numpy as np
 import networkx as nx
 from tqdm import tqdm
+import re
 
 import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -61,97 +62,97 @@ def generate(messages, context=""): # Comes from GNN-RAG generate_dataset_from_h
     response = tokenizer.decode(outputs[0][inputs_len:], skip_special_tokens=True)
     return response
 
-    def get_groundtruth(self, question_dict):
-        groundtruth = []
-        for i in range(len(question_dict["question"])):
-            gt = [""]
-            answer_key = "answer" if "answer" in question_dict else "answers"                                                  
-            try:                                                                                                               
-                gt = question_dict[answer_key][i]
-                #if len(gt) > 0 and isinstance(gt[0], dict):
-                #    answers = []
-                #    for current in gt:
-                #        answers.append(current["text"] if current["text"] else current["kb_id"])
-                #    gt = answers
-                gt = [current.strip() for current in gt]
-            except:                                                                                                            
-                print("Failed on: ", question_dict[answer_key])                                                                
-            groundtruth.append(gt)
-        return groundtruth
+def get_groundtruth(self, question_dict):
+    groundtruth = []
+    for i in range(len(question_dict["question"])):
+        gt = [""]
+        answer_key = "answer" if "answer" in question_dict else "answers"                                                  
+        try:                                                                                                               
+            gt = question_dict[answer_key][i]
+            #if len(gt) > 0 and isinstance(gt[0], dict):
+            #    answers = []
+            #    for current in gt:
+            #        answers.append(current["text"] if current["text"] else current["kb_id"])
+            #    gt = answers
+            gt = [current.strip() for current in gt]
+        except:                                                                                                            
+            print("Failed on: ", question_dict[answer_key])                                                                
+        groundtruth.append(gt)
+    return groundtruth
 
-    def format_prediction(self, prediction):
-        if "1." in prediction:
-            prediction = prediction[prediction.index("1."):]
-        pred_formatted = re.sub(r'\d+\.', '', prediction).strip().lower().split("\n")
-        return [pred.strip() for pred in pred_formatted if pred not in ["", "?"]]
-        
-    def evaluate_llm(self, question_dict, long_answer=False, 
-            throttle_time=1, table_name=None, max_num_paths=2000, include_reasoning_paths=True):
-        # To run long context, set max_num_paths=2000 and include_reasoning_paths=True
-        # To run llm-only, set inlcude_reasoning_paths=False
-        all_input, _ = self.input_builder.process_input_batch(
-            question_dict, max_num_paths=max_num_paths,
-            include_reasoning_paths=include_reasoning_paths
-        )
-        correct = [0 for inp in all_input]
-        scores = [0 for inp in all_input]
+def format_prediction(self, prediction):
+    if "1." in prediction:
+        prediction = prediction[prediction.index("1."):]
+    pred_formatted = re.sub(r'\d+\.', '', prediction).strip().lower().split("\n")
+    return [pred.strip() for pred in pred_formatted if pred not in ["", "?"]]
+    
+def evaluate_llm(self, question_dict, long_answer=False, 
+        throttle_time=1, table_name=None, max_num_paths=2000, include_reasoning_paths=True):
+    # To run long context, set max_num_paths=2000 and include_reasoning_paths=True
+    # To run llm-only, set inlcude_reasoning_paths=False
+    all_input, _ = self.input_builder.process_input_batch(
+        question_dict, max_num_paths=max_num_paths,
+        include_reasoning_paths=include_reasoning_paths
+    )
+    correct = [0 for inp in all_input]
+    scores = [0 for inp in all_input]
+    groundtruth = self.get_groundtruth(question_dict)
+    for i, curr_input in enumerate(all_input):
+        start_time = time.time()
+        try:
+            prediction = self.llm_model.generate_sentence(curr_input).strip()
+        except:
+            print("Failed on generate sentence")
+            print(f"Curr input: {curr_input}")
+            continue
+        answer_key = "answer" if "answer" in question_dict else "answers"
         groundtruth = self.get_groundtruth(question_dict)
-        for i, curr_input in enumerate(all_input):
-            start_time = time.time()
-            try:
-                prediction = self.llm_model.generate_sentence(curr_input).strip()
-            except:
-                print("Failed on generate sentence")
-                print(f"Curr input: {curr_input}")
-                continue
-            answer_key = "answer" if "answer" in question_dict else "answers"
-            groundtruth = self.get_groundtruth(question_dict)
-            if long_answer:
-                unit_test = f"Is the response correct? Groundtruth: {groundtruth[i]}"
-                url = "https://api.contextual.ai/v1/lmunit"
-                lm_unit_api_key = os.getenv("LM_UNIT_API_KEY")
-                headers = {
-                    "accept": "application/json",
-                    "Authorization": f"Bearer {lm_unit_api_key}",
-                    "Content-Type": "application/json"
-                }
-                payload = {
-                    "query": question_dict["question"][i],
-                    "response": prediction,
-                    "unit_test": unit_test
-                }
-                time_elapsed = time.time() - start_time
-                if time_elapsed < throttle_time:
-                    time.sleep(throttle_time - time_elapsed)
-                response = requests.post(url, json=payload, headers=headers)
-                if response.ok:
-                    score = response.json().get("score")
-                    if score:
-                        scores[i] = score
-                        correct[i] = score
-                    else:
-                        print(f"Response not ok: {response.json()}")
-                #table_data = self.llm_output_table.data
-                #iteration = table_data[-1][0] + 1 if len(table_data) > 0 else 0
-                #self.llm_output_table.add_data(
-                #    iteration, curr_input, prediction, unit_test, correct[i]
-                #)
-                #self.llm_output_table = wandb.Table(
-                #    columns=self.llm_output_table_cols, data=self.llm_output_table.data
-                #)
-                #if table_name:
-                    #wandb.log({table_name: self.llm_output_table})
-            else:
-                # Treat "scores" as h1
-                pred_formatted = self.format_prediction(prediction)
-                for j, pred in enumerate(pred_formatted):
-                    for gt in groundtruth[i]:
-                        gt_formatted = gt.strip().lower()
-                        if gt_formatted == pred:#pred in gt_formatted or gt_formatted in pred:
-                            correct[i] = 1
-                            if j == 0:
-                                scores[i] = 1
-        return correct, scores
+        if long_answer:
+            unit_test = f"Is the response correct? Groundtruth: {groundtruth[i]}"
+            url = "https://api.contextual.ai/v1/lmunit"
+            lm_unit_api_key = os.getenv("LM_UNIT_API_KEY")
+            headers = {
+                "accept": "application/json",
+                "Authorization": f"Bearer {lm_unit_api_key}",
+                "Content-Type": "application/json"
+            }
+            payload = {
+                "query": question_dict["question"][i],
+                "response": prediction,
+                "unit_test": unit_test
+            }
+            time_elapsed = time.time() - start_time
+            if time_elapsed < throttle_time:
+                time.sleep(throttle_time - time_elapsed)
+            response = requests.post(url, json=payload, headers=headers)
+            if response.ok:
+                score = response.json().get("score")
+                if score:
+                    scores[i] = score
+                    correct[i] = score
+                else:
+                    print(f"Response not ok: {response.json()}")
+            #table_data = self.llm_output_table.data
+            #iteration = table_data[-1][0] + 1 if len(table_data) > 0 else 0
+            #self.llm_output_table.add_data(
+            #    iteration, curr_input, prediction, unit_test, correct[i]
+            #)
+            #self.llm_output_table = wandb.Table(
+            #    columns=self.llm_output_table_cols, data=self.llm_output_table.data
+            #)
+            #if table_name:
+                #wandb.log({table_name: self.llm_output_table})
+        else:
+            # Treat "scores" as h1
+            pred_formatted = self.format_prediction(prediction)
+            for j, pred in enumerate(pred_formatted):
+                for gt in groundtruth[i]:
+                    gt_formatted = gt.strip().lower()
+                    if gt_formatted == pred:#pred in gt_formatted or gt_formatted in pred:
+                        correct[i] = 1
+                        if j == 0:
+                            scores[i] = 1
+    return correct, scores
 
 def build_graph(graph: list) -> nx.Graph:
     G = nx.Graph()
