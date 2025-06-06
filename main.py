@@ -9,8 +9,10 @@ import networkx as nx
 from tqdm import tqdm
 import re
 
+import yaml
+
 import transformers
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
 
 import hydra
 from hydra.core.hydra_config import HydraConfig
@@ -26,133 +28,117 @@ from gfmrag.kg_construction.utils import KG_DELIMITER
 
 logger = logging.getLogger(__name__)
 
-model_name = "meta-llama/Llama-2-7b-chat-hf"
+model_name = "rmanluo/RoG"
 device = "cuda" if torch.cuda.is_available() else "cpu"
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-cache_dir = "../cache_dir"
-llm_model = AutoModelForCausalLM.from_pretrained(
-    model_name,
-    cache_dir=cache_dir,
-    torch_dtype=torch.float16
-).to(device)
-PROCESSED_FOLDER = os.path.join("data", "hotpotqa_test", "processed")
-SRC_FOLDER = os.path.join("..", "GNN-RAG", "gnn", "data", "CWQ")
+DATA_NAME = "webqsp"
+PROCESSED_FOLDER = os.path.join("data", DATA_NAME, "processed")
+if not os.path.isdir(PROCESSED_FOLDER):
+    for stage in ["stage1", "stage2"]:
+        os.makedirs(os.path.join(PROCESSED_FOLDER, stage), exist_ok=True)
+SRC_FOLDER = os.path.join("..", "GNN-RAG", "gnn", "data", DATA_NAME)
+ENT_NAMES_FILE = os.path.join("..", "GNN-RAG", "gnn", "entities_names.json")
 ENTITIES_FILE = os.path.join(SRC_FOLDER, "entities.txt")
 RELATIONS_FILE = os.path.join(SRC_FOLDER, "relations.txt")
 ENT2ID_FILE = os.path.join(PROCESSED_FOLDER, "stage2", "ent2id.json")
 REL2ID_FILE = os.path.join(PROCESSED_FOLDER, "stage2", "rel2id.json")
 KG_FILE = os.path.join(PROCESSED_FOLDER, "stage1", "kg.txt")
 
-max_new_tokens = {
-    "Qwen/Qwen2.5-7B-Instruct": 2048,
-    "meta-llama/Llama-2-7b-chat-hf": 2048
-}
+CACHE_DIR = "../cache_dir"
+MAX_NEW_TOKENS = 2048
+LLAMA_TOKEN = os.getenv("LLAMA_TOKEN")
+LLAMA_PROMPT = (
+    '''
+    [INST] <<SYS>>
+    <</SYS>>
+    {prompt}
+    {context}
+    [/INST]
+    '''
+)
 
 LMUNIT_TEST = "Is the response correct? Groundtruth: {groundtruth}"
 
-def generate(messages, context=""): # Comes from GNN-RAG generate_dataset_from_hf.py file
-    llm_prompt = [tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True
-    )]
+def generate(prompt, llm_model, tokenizer, context=""): # Comes from GNN-RAG generate_dataset_from_hf.py file
+    #llm_prompt = [tokenizer.apply_chat_template(
+    #    messages,
+    #    tokenize=False,
+    #    add_generation_prompt=True
+    #)]
+    llm_prompt = LLAMA_PROMPT.format(prompt=prompt, context=context)
+    print(llm_prompt)
     inputs = tokenizer(llm_prompt, return_tensors="pt").to(device)
     inputs_len = inputs.input_ids.size(-1)
-    outputs = llm_model.generate(**inputs, max_new_tokens=max_new_tokens[model_name])
+    outputs = llm_model.generate(**inputs, max_new_tokens=MAX_NEW_TOKENS)
     response = tokenizer.decode(outputs[0][inputs_len:], skip_special_tokens=True)
     return response
 
-def get_groundtruth(self, question_dict):
+def get_groundtruth(question_dict):
+    answer_key = "answer" if "answer" in question_dict else "answers"                                                  
     groundtruth = []
-    for i in range(len(question_dict["question"])):
-        gt = [""]
-        answer_key = "answer" if "answer" in question_dict else "answers"                                                  
-        try:                                                                                                               
-            gt = question_dict[answer_key][i]
-            #if len(gt) > 0 and isinstance(gt[0], dict):
-            #    answers = []
-            #    for current in gt:
-            #        answers.append(current["text"] if current["text"] else current["kb_id"])
-            #    gt = answers
-            gt = [current.strip() for current in gt]
-        except:                                                                                                            
-            print("Failed on: ", question_dict[answer_key])                                                                
-        groundtruth.append(gt)
+    try:
+        groundtruth = question_dict[answer_key]
+        if len(groundtruth) > 0 and isinstance(groundtruth[0], dict):
+            answers = []
+            for current in groundtruth:
+                answers.append(current["text"] if current["text"] else current["kb_id"])
+            groundtruth = answers
+        groundtruth = [current.strip() for current in groundtruth]
+    except:                                                                                                            
+        print("Failed on: ", question_dict[answer_key])                                                                
     return groundtruth
 
-def format_prediction(self, prediction):
+def format_prediction(prediction):
     if "1." in prediction:
         prediction = prediction[prediction.index("1."):]
     pred_formatted = re.sub(r'\d+\.', '', prediction).strip().lower().split("\n")
     return [pred.strip() for pred in pred_formatted if pred not in ["", "?"]]
     
-def evaluate_llm(self, question_dict, long_answer=False, 
-        throttle_time=1, table_name=None, max_num_paths=2000, include_reasoning_paths=True):
+def evaluate_llm(prompt, question_dict, long_answer, llm_model, tokenizer,
+        throttle_time=1, table_name=None, include_reasoning_paths=True):
     # To run long context, set max_num_paths=2000 and include_reasoning_paths=True
     # To run llm-only, set inlcude_reasoning_paths=False
-    all_input, _ = self.input_builder.process_input_batch(
-        question_dict, max_num_paths=max_num_paths,
-        include_reasoning_paths=include_reasoning_paths
-    )
-    correct = [0 for inp in all_input]
-    scores = [0 for inp in all_input]
-    groundtruth = self.get_groundtruth(question_dict)
-    for i, curr_input in enumerate(all_input):
-        start_time = time.time()
-        try:
-            prediction = self.llm_model.generate_sentence(curr_input).strip()
-        except:
-            print("Failed on generate sentence")
-            print(f"Curr input: {curr_input}")
-            continue
-        answer_key = "answer" if "answer" in question_dict else "answers"
-        groundtruth = self.get_groundtruth(question_dict)
-        if long_answer:
-            unit_test = f"Is the response correct? Groundtruth: {groundtruth[i]}"
-            url = "https://api.contextual.ai/v1/lmunit"
-            lm_unit_api_key = os.getenv("LM_UNIT_API_KEY")
-            headers = {
-                "accept": "application/json",
-                "Authorization": f"Bearer {lm_unit_api_key}",
-                "Content-Type": "application/json"
-            }
-            payload = {
-                "query": question_dict["question"][i],
-                "response": prediction,
-                "unit_test": unit_test
-            }
-            time_elapsed = time.time() - start_time
-            if time_elapsed < throttle_time:
-                time.sleep(throttle_time - time_elapsed)
-            response = requests.post(url, json=payload, headers=headers)
-            if response.ok:
-                score = response.json().get("score")
-                if score:
-                    scores[i] = score
-                    correct[i] = score
-                else:
-                    print(f"Response not ok: {response.json()}")
-            #table_data = self.llm_output_table.data
-            #iteration = table_data[-1][0] + 1 if len(table_data) > 0 else 0
-            #self.llm_output_table.add_data(
-            #    iteration, curr_input, prediction, unit_test, correct[i]
-            #)
-            #self.llm_output_table = wandb.Table(
-            #    columns=self.llm_output_table_cols, data=self.llm_output_table.data
-            #)
-            #if table_name:
-                #wandb.log({table_name: self.llm_output_table})
-        else:
-            # Treat "scores" as h1
-            pred_formatted = self.format_prediction(prediction)
-            for j, pred in enumerate(pred_formatted):
-                for gt in groundtruth[i]:
-                    gt_formatted = gt.strip().lower()
-                    if gt_formatted == pred:#pred in gt_formatted or gt_formatted in pred:
-                        correct[i] = 1
-                        if j == 0:
-                            scores[i] = 1
-    return correct, scores
+    correct, score = 0, 0
+    groundtruth = get_groundtruth(question_dict)
+    start_time = time.time()
+    try:
+        prediction = generate(prompt, llm_model, tokenizer).strip()
+    except:
+        print("Failed on generate sentence")
+        print(f"Curr input: {prompt}")
+        return 0, 0
+    if long_answer:
+        unit_test = f"Is the response correct? Groundtruth: {groundtruth[i]}"
+        url = "https://api.contextual.ai/v1/lmunit"
+        lm_unit_api_key = os.getenv("LM_UNIT_API_KEY")
+        headers = {
+            "accept": "application/json",
+            "Authorization": f"Bearer {lm_unit_api_key}",
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "query": question_dict["question"][i],
+            "response": prediction,
+            "unit_test": unit_test
+        }
+        time_elapsed = time.time() - start_time
+        if time_elapsed < throttle_time:
+            time.sleep(throttle_time - time_elapsed)
+        response = requests.post(url, json=payload, headers=headers)
+        if response.ok:
+            score = response.json().get("score")
+    else:
+        # Treat "scores" as h1
+        pred_formatted = format_prediction(prediction)
+        print(f"PREDICTION: {prediction}")
+        print(f"PRED_FORMATTED: {pred_formatted}")
+        for j, pred in enumerate(pred_formatted):
+            for gt in groundtruth:
+                gt_formatted = gt.strip().lower()
+                if gt_formatted == pred:#pred in gt_formatted or gt_formatted in pred:
+                    correct = 1
+                    if j == 0:
+                        score = 1
+    return correct, score
 
 def build_graph(graph: list) -> nx.Graph:
     G = nx.Graph()
@@ -172,35 +158,30 @@ def path_to_string(path: list) -> str: #Taken from utils.py
             result += f" -> {r} -> {t}"
     return result.strip()
 
-def get_shortest_path(q_entity: list, t: str, graph: nx.Graph, include_all_paths: bool) -> list: #Taken from graph_utils.py
+def get_shortest_path(q_entity: list, t: str, graph: nx.Graph, max_new_paths: int) -> list: #Taken from graph_utils.py
     paths = []
     for h in q_entity:
-        if include_all_paths:
-            try:
-                for p in nx.all_shortest_paths(graph, h, t):
-                    paths.append(p)
-            except:
-                continue
-        else:
-            try:
-                p = nx.shortest_path(graph, h, t)
+        try:
+            for p in nx.all_shortest_paths(graph, h, t):
                 paths.append(p)
-            except:
-                continue
+            if len(paths) > max_new_paths:
+                return paths
+        except:
+            continue
     #If no path found, return a dummy path
     if len(paths) == 0:
         h = q_entity[0] if len(q_entity) > 0 else t
         paths = [[h, t]]
     return paths
 
-def get_truth_paths(q_entity: list, a_entity: list, graph: nx.Graph, include_all_paths: bool) -> list: #Taken from graph utils
+def get_truth_paths(q_entity: list, a_entity: list, graph: nx.Graph, max_new_paths: int) -> list: #Taken from graph utils
     '''
     Get shortest paths connecting question and answer entities.
     '''
     # Select paths
     paths = []
     for t in a_entity:
-        paths += get_shortest_path(q_entity, t, graph, include_all_paths)
+        paths += get_shortest_path(q_entity, t, graph, max_new_paths)
     # Add relation to paths
     result_paths = []
     for p_idx, p in enumerate(paths):
@@ -219,7 +200,7 @@ def get_truth_paths(q_entity: list, a_entity: list, graph: nx.Graph, include_all
 
 def get_reasoning_paths(q_entity: list, a_entity: list, tuples: list):
     graph = build_graph(tuples)
-    result_paths = get_truth_paths(q_entity, a_entity, graph, include_all_paths=False)
+    result_paths = get_truth_paths(q_entity, a_entity, graph, max_new_paths=2000)
     reasoning_paths = [path_to_string(path) for path in result_paths]
     return reasoning_paths
 
@@ -265,10 +246,14 @@ def update_subgraph(question_dict): #KG dataset already generates the ID files s
     #     if not os.path.isdir(stage_dir):
     #         os.makedirs(stage_dir)
     # global2local, local2global = convert_global_to_local(question_dict)
+    with open(ENT_NAMES_FILE, 'r') as f:
+        entities_names = json.load(f)
     global_id2ent = {}
     with open(ENTITIES_FILE, "r") as f:
         for global_id, line in enumerate(f.readlines()):
-            global_id2ent[global_id] = line.strip()
+            ent = line.strip()
+            ent = entities_names[ent] if ent in entities_names else ent
+            global_id2ent[global_id] = ent
     # Get ent2id
     # with open(ENTITIES_FILE, "r") as f:
     #     for global_id, line in enumerate(f.readlines()):
@@ -298,20 +283,31 @@ def update_subgraph(question_dict): #KG dataset already generates the ID files s
             f.write(f"{KG_DELIMITER.join(trip).strip()}\n")
     return triples, query_entities
 
-def get_gnnrag_prompt(question, reasoning_paths):
-    messages = [
-        {"role": "user", "content": f"Based on the reasoning paths, please answer the given question in one sentence.\nReasoning paths: {reasoning_paths}\nQuestion: {question}\nAnswer:"}
-    ]
-    return messages
+def get_gnnrag_prompt(question, reasoning_paths, long_answer):
+    paths = "\n".join(reasoning_paths)
+    if long_answer:
+        return f"Based on the reasoning paths, please answer the given question in one sentence.\nReasoning paths: {paths}\nQuestion: {question}\nAnswer:"
+    return f"Based on the reasoning paths, please answer the given question. Please keep the answer as simple as possible and return all the possible answers as a list.\n Reasoning paths: {paths}\nQuestion: {question}\nAnswer:"
+
 
 @hydra.main(
     config_path="config", config_name="stage3_qa_ircot_inference", version_base=None
 )
-def main(cfg: DictConfig, data_split="dev", top_k=10) -> None:
+def main(cfg: DictConfig, data_split="test", top_k=10, long_answer=False) -> None:
     qa_prompt_builder = QAPromptBuilder(cfg.qa_prompt)
+    cfg.dataset.data_name = DATA_NAME # Overwrite yaml file with correct data name
     num_failures = 0
     scores = []
     recall = []
+    llm_model = LlamaForCausalLM.from_pretrained(
+        model_name,
+        cache_dir=CACHE_DIR,
+	token=LLAMA_TOKEN
+    ).to(device, dtype=torch.float16)
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_name, use_fast=False,
+        token=LLAMA_TOKEN
+    )
     with open(os.path.join(SRC_FOLDER, f"{data_split}.json"), "r") as f:
         for i, line in enumerate(tqdm(f.readlines())):
             question_dict = json.loads(line)
@@ -334,11 +330,9 @@ def main(cfg: DictConfig, data_split="dev", top_k=10) -> None:
             #except:
                 #num_failures += 1
             reasoning_paths = get_top_k(query_ids, ent_pred, id2ent, triples, top_k)
-            messages = get_gnnrag_prompt(question_dict["question"], reasoning_paths)
+            prompt = get_gnnrag_prompt(question_dict["question"], reasoning_paths, long_answer)
             #messages = qa_prompt_builder.build_input_prompt(question_dict["question"], docs)
-            score = evaluate_llm(messages, question_dict["answer"] if "answer" in question_dict else answer_node)
-            print(score)
-            import pdb; pdb.set_trace()
+            correct, score = evaluate_llm(prompt, question_dict, long_answer, llm_model, tokenizer)
             if score > 0:
                 scores.append(score)
             #else:
@@ -348,4 +342,5 @@ def main(cfg: DictConfig, data_split="dev", top_k=10) -> None:
     print(f"Final num failures: {num_failures}")
     print(f"Final retrieval recall: {np.mean(recall)}")
 
-main()
+if __name__ == '__main__':
+    main()

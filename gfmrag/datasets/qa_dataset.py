@@ -116,12 +116,12 @@ class QADataset(InMemoryDataset):
         with open(os.path.join(self.processed_dir, "rel2id.json")) as fin:
             self.rel2id = json.load(fin)
             self.id2rel = {v: k for k, v in self.rel2id.items()}
-        with open(
-            os.path.join(str(self.root), str(self.name), "raw", "dataset_corpus.json")
-        ) as fin:
-            self.doc = json.load(fin)
-        with open(os.path.join(self.raw_dir, "document2entities.json")) as fin:
-            self.doc2entities = json.load(fin)
+        #with open(
+        #    os.path.join(str(self.root), str(self.name), "raw", "dataset_corpus.json")
+        #) as fin:
+        #    self.doc = json.load(fin)
+        #with open(os.path.join(self.raw_dir, "document2entities.json")) as fin:
+        #    self.doc2entities = json.load(fin)
         if os.path.exists(os.path.join(self.raw_dir, "train.json")):
             with open(os.path.join(self.raw_dir, "train.json")) as fin:
                 self.raw_train_data = json.load(fin)
@@ -133,10 +133,10 @@ class QADataset(InMemoryDataset):
         else:
             self.raw_test_data = []
 
-        self.ent2docs = torch.load(
-            os.path.join(self.processed_dir, "ent2doc.pt"), weights_only=False
-        )  # (n_nodes, n_docs)
-        self.id2doc = {i: doc for i, doc in enumerate(self.doc2entities)}
+        #self.ent2docs = torch.load(
+        #    os.path.join(self.processed_dir, "ent2doc.pt"), weights_only=False
+        #)  # (n_nodes, n_docs)
+        #self.id2doc = {i: doc for i, doc in enumerate(self.doc2entities)}
 
     def _process(self) -> None:
         if is_main_process():
@@ -220,20 +220,20 @@ class QADataset(InMemoryDataset):
             self.ent2id = json.load(fin)
         with open(os.path.join(self.processed_dir, "rel2id.json")) as fin:
             self.rel2id = json.load(fin)
-        with open(os.path.join(self.raw_dir, "document2entities.json")) as fin:
-            self.doc2entities = json.load(fin)
+        #with open(os.path.join(self.raw_dir, "document2entities.json")) as fin:
+            #self.doc2entities = json.load(fin)
 
         num_nodes = self.kg.num_nodes
-        doc2id = {doc: i for i, doc in enumerate(self.doc2entities)}
+        #doc2id = {doc: i for i, doc in enumerate(self.doc2entities)}
         # Convert document to entities to entity to document
-        n_docs = len(self.doc2entities)
+        #n_docs = len(self.doc2entities)
         # Create a sparse tensor for entity to document
-        doc2ent = torch.zeros((n_docs, num_nodes))
-        for doc, entities in self.doc2entities.items():
-            entity_ids = [self.ent2id[ent] for ent in entities if ent in self.ent2id]
-            doc2ent[doc2id[doc], entity_ids] = 1
-        ent2doc = doc2ent.T.to_sparse()  # (n_nodes, n_docs)
-        torch.save(ent2doc, os.path.join(self.processed_dir, "ent2doc.pt"))
+        #doc2ent = torch.zeros((n_docs, num_nodes))
+        #for doc, entities in self.doc2entities.items():
+        #    entity_ids = [self.ent2id[ent] for ent in entities if ent in self.ent2id]
+        #    doc2ent[doc2id[doc], entity_ids] = 1
+        #ent2doc = doc2ent.T.to_sparse()  # (n_nodes, n_docs)
+        #torch.save(ent2doc, os.path.join(self.processed_dir, "ent2doc.pt"))
 
         #sample_id = []
         #questions = []

@@ -196,7 +196,7 @@ class GFMRetriever:
         graph_retriever = graph_retriever.to(device)
 
         qa_data.kg = qa_data.kg.to(device)
-        ent2docs = qa_data.ent2docs.to(device)
+        ent2docs = None#qa_data.ent2docs.to(device)
 
         ner_model = instantiate(cfg.graph_retriever.ner_model)
         el_model = instantiate(cfg.graph_retriever.el_model)
@@ -204,16 +204,16 @@ class GFMRetriever:
         el_model.index(list(qa_data.ent2id.keys()))
 
         # Create doc ranker
-        doc_ranker = instantiate(cfg.graph_retriever.doc_ranker, ent2doc=ent2docs)
-        doc_retriever = utils.DocumentRetriever(qa_data.doc, qa_data.id2doc)
+        doc_ranker = None#instantiate(cfg.graph_retriever.doc_ranker, ent2doc=ent2docs)
+        doc_retriever = None#utils.DocumentRetriever(qa_data.doc, qa_data.id2doc)
 
         text_emb_model = instantiate(
             OmegaConf.create(model_config["text_emb_model_config"])
         )
 
         entities_weight = None
-        if cfg.graph_retriever.init_entities_weight:
-            entities_weight = utils.get_entities_weight(ent2docs)
+        #if cfg.graph_retriever.init_entities_weight:
+        #    entities_weight = utils.get_entities_weight(ent2docs)
 
         return GFMRetriever(
             qa_data=qa_data,
